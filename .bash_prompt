@@ -1,0 +1,97 @@
+# bash_prompt
+
+# Based on @gf3’s Sexy Bash Prompt: https://github.com/gf3/dotfiles
+# iTerm2 prefs: import Solarized theme (disable bright colors for bold text)
+# Color ref: http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
+# More tips: http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+# Screenshot: http://i.imgur.com/DSJ1G.png
+
+# Example:
+# nicolas@host: ~/.dotfiles on master[!?]
+# $
+
+# Check that terminfo exists before changing TERM var to xterm-256color
+# Prevents prompt flashing in Mac OS X 10.6 Terminal.app
+if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
+    export TERM=gnome-256color
+elif infocmp xterm-256color >/dev/null 2>&1; then
+    export TERM=xterm-256color
+fi
+
+tput sgr 0 0
+
+# Base styles and color palette
+# Solarized colors
+# https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized
+BOLD=$(tput bold)
+RESET=$(tput sgr0)
+SOLAR_YELLOW=$(tput setaf 136)
+SOLAR_ORANGE=$(tput setaf 166)
+SOLAR_RED=$(tput setaf 124)
+SOLAR_MAGENTA=$(tput setaf 125)
+SOLAR_VIOLET=$(tput setaf 61)
+SOLAR_BLUE=$(tput setaf 33)
+SOLAR_CYAN=$(tput setaf 37)
+SOLAR_GREEN=$(tput setaf 64)
+SOLAR_WHITE=$(tput setaf 254)
+
+export SOLAR_YELLOW
+export SOLAR_ORANGE
+export SOLAR_RED
+export SOLAR_MAGENTA
+export SOLAR_VIOLET
+export SOLAR_BLUE
+export SOLAR_CYAN
+export SOLAR_GREEN
+export SOLAR_WHITE
+export BOLD
+export RESET
+
+style_user="\[${RESET}${SOLAR_ORANGE}\]"
+style_host="\[${RESET}${SOLAR_YELLOW}\]"
+style_path="\[${RESET}${SOLAR_GREEN}\]"
+style_chars="\[${RESET}${SOLAR_WHITE}\]"
+style_branch="${SOLAR_CYAN}"
+
+if [[ "$SSH_TTY" ]]; then
+    # connected via ssh
+    style_host="\[${BOLD}${SOLAR_RED}\]"
+elif [[ "$USER" == "root" ]]; then
+    # logged in as root
+    style_user="\[${BOLD}${SOLAR_RED}\]"
+fi
+
+
+# Git status.
+# Adapted from: https://github.com/cowboy/dotfiles/
+function prompt_git() {
+    local status output flags
+    status="$(git status 2>/dev/null)"
+    [[ $? != 0 ]] && return;
+    output="$(echo "$status" | awk '/# Initial commit/ {print "(init)"}')"
+    [[ "$output" ]] || output="$(echo "$status" | awk '/# On branch/ {print $4}')"
+    [[ "$output" ]] || output="$(git branch | perl -ne '/^\* (.*)/ && print $1')"
+    flags="$(
+    echo "$status" | awk 'BEGIN {r=""} \
+        /^# Changes to be committed:$/        {r=r "+"}\
+        /^# Changes not staged for commit:$/  {r=r "!"}\
+        /^# Untracked files:$/                {r=r "?"}\
+        END {print r}'
+    )"
+    if [[ "$flags" ]]; then
+        output="$output[$flags]"
+    fi
+    echo -ne "${SOLAR_WHITE} on ${style_branch}${output}"
+}
+
+
+# Build the prompt
+PS1="\n" # Newline
+PS1+="${style_user}\u"
+PS1+="${style_chars}@"
+PS1+="${style_host}\h"
+PS1+="${style_chars}: "
+PS1+="${style_path}\w"
+PS1+="\$(prompt_git)"
+PS1+="\n"
+PS1+="${style_chars}\$ \[${RESET}\]"

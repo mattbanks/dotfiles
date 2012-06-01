@@ -1,0 +1,27 @@
+# Link Sublime Text 2 Binary to Path, Make Default Editor
+# ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/.bin/subl
+export EDITOR='subl -w'
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+# Make some commands not show up in history
+export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+
+# Add node.js path
+export NODE_PATH='/usr/local/lib/node_modules'
+
+# if these bins exist, then add them to the PATH
+[ -d "/usr/bin" ] && PATH="$PATH:/usr/bin";
+[ -d "$HOME/bin" ] && PATH="$PATH:$HOME/bin";
+[ -d "$HOME/.bin" ] && PATH="$PATH:$HOME/.bin";
+[ -d "$HOME/.dotfiles/bin" ] && PATH="$PATH:$HOME/.dotfiles/bin";
+[ -d "$HOME/.rvm/bin" ] && PATH="$PATH:$HOME/.rvm/bin";
+
+# add to beginning of PATH so that it always take precedence over /usr/bin
+[ -d "/usr/local/bin" ] && PATH="/usr/local/bin:$PATH";
+
+export PATH
