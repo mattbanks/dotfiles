@@ -26,7 +26,6 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 ./.osx
 ```
 
-## upstream
+## Suggestions/Improvements
 
-Suggestions/improvements
-[let me know](https://github.com/mattbanks/dotfiles/issues)!
+Suggestions/improvements welcome - [let me know](https://github.com/mattbanks/dotfiles/issues)!
