@@ -7,7 +7,6 @@ alias -- -="cd -"
 # programs
 alias slt='open -a "Sublime Text 2"'
 
-
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
 # Long form no user group, color
@@ -27,7 +26,8 @@ alias catn="cat -n"
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
-alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+
 # Copy my public key to my clipboard
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
