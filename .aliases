@@ -4,9 +4,6 @@ alias ...="cd ../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
-# programs
-alias slt='open -a "Sublime Text 2"'
-
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
 # Long form no user group, color
