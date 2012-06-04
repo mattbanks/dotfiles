@@ -36,9 +36,6 @@ alias undopush="git push -f origin HEAD^:master"
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
-# Copy my public key to my clipboard
-alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
-
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
 
