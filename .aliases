@@ -60,7 +60,7 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Shortcuts
 alias d="cd ~/Dropbox"
-alias p="cd ~/Dropbox/Sites" #changing name to Projects soon
+alias p="cd ~/Dropbox/Projects"
 alias s="cd ~/Sites"
 alias st="subl"
 alias t="tar -pcvzf"
