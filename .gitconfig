@@ -1,17 +1,14 @@
 [alias]
-	# View the SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph
-	# Clone a repository including all submodules
 	c = clone --recursive
-	# Commit all changes
 	ca = !git add . && git add -u && git commit -a
-	# Switch to a branch, creating it if necessary
 	go = checkout -B
-	# Undo a `git push`
 	undopush = push -f origin HEAD^:master	
 	up = pull
 	p = push
-	s = status
+	s = status -s
+	df = diff --color --color-words --abbrev
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 [color]
 	ui = always
 [apply]
