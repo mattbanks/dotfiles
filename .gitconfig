@@ -1,9 +1,5 @@
 [alias]
-	l = log --pretty=oneline -n 20 --graph
-	c = clone --recursive
-	ca = !git add . && git add -u && git commit -a
-	go = checkout -B
-	undopush = push -f origin HEAD^:master	
+	c = commit -am
 	up = pull
 	p = push
 	s = status -s
