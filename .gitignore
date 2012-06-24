@@ -9,6 +9,9 @@ Desktop.ini
 ._*
 Thumbs.db
 
+# SASS cache
+.sass-cache
+
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
