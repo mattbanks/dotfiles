@@ -38,6 +38,14 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 ./.osx
 ```
 
+### Sensible Homebrew defaults
+
+Install [Homebrew](http://mxcl.github.com/homebrew/), then run the following to install core packages:
+
+```bash
+./.brew
+```
+
 ## Suggestions/Improvements
 
 Suggestions/improvements welcome - [let me know](https://github.com/mattbanks/dotfiles/issues)!
