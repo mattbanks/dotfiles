@@ -14,3 +14,5 @@ gem install rails
 gem install bundler
 gem install compass
 gem install capistrano
+gem install railsless-deploy
+gem install capistrano-ext
