@@ -40,10 +40,18 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 
 ### Sensible Homebrew defaults
 
-Install [Homebrew](http://mxcl.github.com/homebrew/), then run the following to install core packages:
+This script installs [Homebrew](http://mxcl.github.com/homebrew/) so you don't have to before-hand, then run the following to install core packages:
 
 ```bash
 ./.brew
+```
+
+### Package Management setup
+
+Make sure `./.brew` is installed before running this script ([Node.js](http://nodejs.org/) needs to be installed first). This installs [NPM](http://npmjs.org/) and [RVM](https://rvm.io/) and various web development packages.
+
+```bash
+./.packages
 ```
 
 ## Suggestions/Improvements
