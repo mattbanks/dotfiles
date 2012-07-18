@@ -1,12 +1,27 @@
 #!/bin/bash
 
-# NPM and Packages
-curl http://npmjs.org/install.sh | sh
+# Homebrew
+brew update
+brew upgrade
+brew install coreutils
+echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
+brew install wget --enable-iri
+brew tap homebrew/dupes
+brew install homebrew/dupes/grep
+brew install ack
+brew install git
+brew install node
+brew install phantomjs
+brew install rename
+brew install tree
+brew install webkit2png
+brew install z
+
+# NPM Packages
 npm install -g coffee-script
 npm install -g grunt
 
 # RVM and Gems
-bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )
 rvm install 1.9.3
 rvm use 1.9.3 --default
 gem update --system
