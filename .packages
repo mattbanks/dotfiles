@@ -16,6 +16,7 @@ brew install rename
 brew install tree
 brew install webkit2png
 brew install z
+brew install drush
 
 # NPM Packages
 npm install -g coffee-script

@@ -35,3 +35,6 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 
  # Load RVM function
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# Drush
+export PATH="/Applications/MAMP/bin/php/php5.3.14/bin:/Applications/MAMP/Library/bin/php:$PATH"
