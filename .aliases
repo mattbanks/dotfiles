@@ -74,6 +74,10 @@ alias sudo='sudo '
 # Homebrew, NPM, RVM, Gems Update
 alias pkgup="brew update; brew upgrade; npm update npm -g; npm update -g; rvm get stable; gem update --system; gem update"
 
+# Edit hosts file and vhosts config for local development
+alias edithost="sudo st /etc/hosts"
+alias editvhosts="sudo st /etc/apache2/extra/httpd-vhosts.conf"
+
 # File size
 alias fs="stat -c \"%s bytes\""
 
