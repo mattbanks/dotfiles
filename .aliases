@@ -78,6 +78,9 @@ alias pkgup="brew update; brew upgrade; npm update npm -g; npm update -g; rvm ge
 alias edithost="sudo st /etc/hosts"
 alias editvhosts="sudo st /etc/apache2/extra/httpd-vhosts.conf"
 
+# Restart Apache
+alias restartapache="sudo apachectl restart"
+
 # File size
 alias fs="stat -c \"%s bytes\""
 
