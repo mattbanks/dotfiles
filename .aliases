@@ -78,8 +78,10 @@ alias pkgup="brew update; brew upgrade; npm update npm -g; npm update -g; rvm ge
 alias edithost="sudo st /etc/hosts"
 alias editvhosts="sudo st /etc/apache2/extra/httpd-vhosts.conf"
 
-# Restart Apache
-alias restartapache="sudo apachectl restart"
+# Local Servers (Apache and MySQL)
+alias sstart="sudo apachectl start; mysql.server start"
+alias sstop="sudo apachectl stop; mysql.server stop"
+alias srestart="sudo apachectl restart; mysql.server restart"
 
 # File size
 alias fs="stat -c \"%s bytes\""
