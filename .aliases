@@ -71,8 +71,8 @@ alias v="vim"
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# Homebrew, NPM, RVM, Gems Update
-alias pkgup="brew update; brew upgrade; npm update npm -g; npm update -g; rvm get stable; gem update --system; gem update"
+# Homebrew, NPM, RVM, Gems Update, then cleanup Brew and Gems
+alias pkgup="brew update; brew upgrade; npm update npm -g; npm update -g; rvm get stable; gem update --system; gem update; brew cleanup; gem cleanup;"
 
 # Edit hosts file and vhosts config for local development
 alias edithost="sudo st /private/etc/hosts"
