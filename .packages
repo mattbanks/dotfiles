@@ -21,6 +21,9 @@ brew install drush
 # NPM Packages
 npm install -g coffee-script
 npm install -g grunt
+npm install -g jshint
+npm install -g coffee-script
+npm install -g uglify-js
 
 # RVM and Gems
 rvm install 1.9.3
