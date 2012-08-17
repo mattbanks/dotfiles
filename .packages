@@ -9,14 +9,16 @@ brew install wget --enable-iri
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 brew install ack
+brew install drush
 brew install git
+brew install jpeg-turbo
 brew install node
+brew install optipng
 brew install phantomjs
 brew install rename
 brew install tree
 brew install webkit2png
 brew install z
-brew install drush
 
 # NPM Packages
 npm install -g coffee-script
