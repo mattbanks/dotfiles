@@ -26,6 +26,7 @@ npm install -g grunt
 npm install -g jshint
 npm install -g coffee-script
 npm install -g uglify-js
+npm install -g bower
 
 # RVM and Gems
 rvm install 1.9.3
