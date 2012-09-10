@@ -39,3 +39,6 @@ gem install compass
 gem install capistrano
 gem install railsless-deploy
 gem install capistrano-ext
+
+# Yeoman
+curl -L get.yeoman.io | bash
