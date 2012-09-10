@@ -8,6 +8,7 @@ echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH.
 brew install wget --enable-iri
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
+brew tap josegonzalez/homebrew-php
 brew install ack
 brew install drush
 brew install git
