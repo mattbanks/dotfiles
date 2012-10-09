@@ -2,6 +2,13 @@
 
 Based on dotfiles by [Paul Irish](https://github.com/paulirish/dotfiles), [Mathias Bynens](https://github.com/mathiasbynens/dotfiles), [Ben Alman](https://github.com/cowboy/dotfiles), and [Nicolas Gallagher](https://github.com/necolas/dotfiles)
 
+## Prerequisites
+
+Install these before running the bootstrap installation script:
+
+- [Homebrew](http://mxcl.github.com/homebrew/)
+- [Node.js](http://nodejs.org/) (* install via package on website, not via Homebrew. It will cause issues.)
+
 ## Installation
 
 ### Using Git and the bootstrap script
@@ -9,8 +16,6 @@ Based on dotfiles by [Paul Irish](https://github.com/paulirish/dotfiles), [Mathi
 ```bash
 git clone https://github.com/mattbanks/dotfiles.git && cd dotfiles && ./bootstrap.sh
 ```
-
-Bootstrap script checks if [Homebrew](http://mxcl.github.com/homebrew/), [NPM](http://npmjs.org/), [RVM](https://rvm.io/) and [Node.js](http://nodejs.org/) are installed and, if not, installs them for you.
 
 To update, `cd` into your local `dotfiles` repository and then:
 
@@ -45,7 +50,7 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 This script installs a number of packages view brew, npm, and rubygems for local development:
 
 ```bash
-./.packages
+sudo ./.packages
 ```
 
 ## Suggestions/Improvements
