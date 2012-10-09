@@ -55,7 +55,7 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 This script installs a number of packages view brew, npm, and rubygems for local development:
 
 ```bash
-sudo ./.packages
+./.packages
 ```
 
 ## Suggestions/Improvements
