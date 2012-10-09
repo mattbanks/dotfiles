@@ -37,6 +37,12 @@ cd; curl -#L https://github.com/mattbanks/dotfiles/tarball/master | tar -xzv --s
 
 To update later on, just run that command again.
 
+### Syntax highlighting
+
+…is really important. even for these files.
+
+Install [Dotfiles Syntax Highlighting](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) via [Sublime Text 2 Package Control](http://wbond.net/sublime_packages/package_control)
+
 ### Sensible OS X defaults
 
 When setting up a new Mac, you may want to set some sensible OS X defaults:
