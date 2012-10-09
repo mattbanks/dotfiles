@@ -72,8 +72,8 @@ alias v="vim"
 alias sudo='sudo '
 
 # Homebrew, NPM, RVM, Gems Update, Cleanup Brew and Gems
-alias pkgup="brew update; brew upgrade; npm update npm -g; npm update -g; rvm get stable; gem update --system; gem update;" 
-alias pkgclean="brew cleanup; gem cleanup;"
+alias pkgup="brew update; brew upgrade; npm update -g; gem update --system; gem update;"
+alias pkgclean="brew cleanup; npm cache clean; gem cleanup;"
 
 # Edit hosts file and vhosts config for local development
 alias edithost="sudo st /private/etc/hosts"
