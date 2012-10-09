@@ -4,10 +4,7 @@ Based on dotfiles by [Paul Irish](https://github.com/paulirish/dotfiles), [Mathi
 
 ## Prerequisites
 
-Install these before running the bootstrap installation script:
-
-- [Homebrew](http://mxcl.github.com/homebrew/)
-- [Node.js](http://nodejs.org/) (* install via package on website, not via Homebrew. It will cause issues.)
+Install [Node.js](http://nodejs.org/) before running the bootstrap installation script. I recommend installing via the package on website, not via Homebrew, as it can cause npm issues.
 
 ## Installation
 
@@ -16,6 +13,8 @@ Install these before running the bootstrap installation script:
 ```bash
 git clone https://github.com/mattbanks/dotfiles.git && cd dotfiles && ./bootstrap.sh
 ```
+
+Bootstrap script checks if [Homebrew](http://mxcl.github.com/homebrew/) and [RVM](https://rvm.io/) are installed and, if not, installs them for you.
 
 To update, `cd` into your local `dotfiles` repository and then:
 
