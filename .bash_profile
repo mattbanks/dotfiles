@@ -35,3 +35,6 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 
 # Load RVM function
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# If possible, add tab completion for many more commands
+[ -f /etc/bash_completion ] && source /etc/bash_completion
