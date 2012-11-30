@@ -29,9 +29,8 @@ brew install z
 
 # NPM Packages
 npm install -g coffee-script
-npm install -g grunt
 npm install -g jshint
-npm install -g coffee-script
 npm install -g uglify-js
+npm install -g grunt
 npm install -g bower
 npm install -g yeoman
