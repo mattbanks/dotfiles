@@ -20,6 +20,7 @@ brew install ack
 brew install drush
 brew install git
 brew install jpeg-turbo
+brew install node
 brew install optipng
 brew install phantomjs
 brew install rename
