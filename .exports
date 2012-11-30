@@ -24,7 +24,7 @@ export NODE_PATH='/usr/local/lib/node_modules'
 [ -d "$HOME/.rvm/bin" ] && PATH="$PATH:$HOME/.rvm/bin";
 
 # add npm via brew to PATH
-[ -d "/usr/local/share/npm/bin" ] && PATH="/usr/local/bin:$PATH";
+[ -d "/usr/local/share/npm/bin" ] && PATH="/usr/local/share/npm/bin:$PATH";
 
 # add to beginning of PATH so that it always take precedence over /usr/bin
 [ -d "/usr/local/bin" ] && PATH="/usr/local/bin:$PATH";
