@@ -1,0 +1,20 @@
+{
+    // "sublimelinter_disable": [ "css" ],
+    "jshint_options":
+    {
+        "evil": true,
+        "eqeqeq": true,
+        "immed": true,
+        "newcap": true,
+        "nomen": true,
+        "es5": true,
+        "rhino": true,
+        "undef": true,
+        "white": false,
+        "devel": true,
+        "browser": true,
+        "trailing": true,
+        "jquery": true,
+        "curly": true
+    }
+}

@@ -1,0 +1,9 @@
+._*
+.DS_Store
+.svn
+.sass-cache
+Thumbs.db
+*~
+*.pyc
+*.rbc
+*.swp
