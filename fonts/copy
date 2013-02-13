@@ -1,4 +1,3 @@
 #!/bin/sh
 
 cp -R $ZSH/fonts/*.otf ~/Library/Fonts
-cp -R $ZSH/fonts/*.ttf ~/Library/Fonts
