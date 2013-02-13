@@ -1,4 +1,5 @@
 {
+    // "sublimelinter_disable": [ "css" ],
     "jshint_options":
     {
         "evil": true,
