@@ -1,0 +1,25 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"AndyJS2",
+		"ApacheConf.tmLanguage",
+		"Backbone.js",
+		"CoffeeScript",
+		"DocBlockr",
+		"Dotfiles Syntax Highlighting",
+		"EditorConfig",
+		"Emmet",
+		"jQuery",
+		"LESS",
+		"Package Control",
+		"SCSS",
+		"SideBarEnhancements",
+		"Solarized Color Scheme",
+		"SublimeLinter",
+		"Theme - Soda",
+		"Underscore.js Snippets",
+		"Wordpress"
+	]
+}
