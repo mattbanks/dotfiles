@@ -35,8 +35,11 @@ git_prompt_info () {
 }
 
 git_repository_name() {
-  top_path=$(git rev-parse --show-toplevel)
-  echo ${top_path[(ws:/:)-1]}
+  if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1
+  then
+    top_path=$(git rev-parse --show-toplevel)
+    echo ${top_path[(ws:/:)-1]}
+  fi
 }
 
 unpushed () {
@@ -89,7 +92,7 @@ directory_name(){
 export PROMPT='%{$fg[blue]%}%c %{$fg[white]%}%(!.#.›)%{$reset_color%} '
 set_prompt () {
   # export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
-  export RPROMPT="%{$fg[cyan]%}$(todo)%{$reset_color%} $(git_dirty)$(need_push)"
+  export RPROMPT="%{$fg[cyan]%}%{$reset_color%} $(git_dirty)$(need_push)"
 }
 
 precmd() {
