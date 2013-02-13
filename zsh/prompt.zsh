@@ -21,9 +21,9 @@ git_dirty() {
   else
     if [[ "$st" =~ ^nothing ]]
     then
-      echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
+      echo "%{$fg[green]%}$(git_prompt_info)%{$reset_color%}"
     else
-      echo "on %{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
+      echo "%{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
     fi
   fi
 }
@@ -32,6 +32,11 @@ git_prompt_info () {
  ref=$($git symbolic-ref HEAD 2>/dev/null) || return
 # echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
  echo "${ref#refs/heads/}"
+}
+
+git_repository_name() {
+  top_path=$(git rev-parse --show-toplevel)
+  echo ${top_path[(ws:/:)-1]}
 }
 
 unpushed () {
@@ -43,26 +48,27 @@ need_push () {
   then
     echo " "
   else
-    echo " with %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
+    echo " with %{$fg[magenta]%}unpushed%{$reset_color%} "
   fi
 }
 
 rb_prompt(){
   if (( $+commands[rbenv] ))
   then
-	  echo "%{$fg_bold[yellow]%}$(rbenv version | awk '{print $1}')%{$reset_color%}"
-	else
-	  echo ""
+    echo "%{$fg_bold[yellow]%}$(rbenv version | awk '{print $1}')%{$reset_color%}"
+  else
+    echo ""
   fi
 }
 
 # This keeps the number of todos always available the right hand side of my
-# command line. I filter it to only count those tagged as "+next", so it's more
-# of a motivation to clear out the list.
+# command line. I filter it to only count those tagged as "+git-repository-name"
+# to scope the count by the project I'm looking at.
 todo(){
   if (( $+commands[todo.sh] ))
   then
-    num=$(echo $(todo.sh ls +next | wc -l))
+    # num=$(echo $(todo.sh ls +next | wc -l))
+    num=$(echo $(todo.sh ls "+$(git_repository_name)" | wc -l))
     let todos=num-2
     if [ $todos != 0 ]
     then
@@ -79,9 +85,11 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
+# export PROMPT=$'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT='%{$fg[blue]%}%c %{$fg[white]%}%(!.#.›)%{$reset_color%} '
 set_prompt () {
-  export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
+  # export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
+  export RPROMPT="%{$fg[cyan]%}$(todo)%{$reset_color%} $(git_dirty)$(need_push)"
 }
 
 precmd() {
