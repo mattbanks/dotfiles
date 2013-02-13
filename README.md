@@ -1,63 +1,103 @@
-# Matt's dotfiles...
+# matt's dotfiles...
 
-Based on dotfiles by [Paul Irish](https://github.com/paulirish/dotfiles), [Mathias Bynens](https://github.com/mathiasbynens/dotfiles), [Ben Alman](https://github.com/cowboy/dotfiles), and [Nicolas Gallagher](https://github.com/necolas/dotfiles)
+This is my dotfiles repo. There are many like it, but this one is mine.
 
-## Prerequisites
+A large portion of this README comes straight from [Zach Holman's dotfiles](https://github.com/holman/dotfiles).
 
-Install [Node.js](http://nodejs.org/) before running the bootstrap installation script. I recommend installing via the package on website, not via Homebrew, as it can cause npm issues.
+## prerequisites
 
-## Installation
+Install [Homebrew](https://github.com/mxcl/homebrew) before running the bootstrap installation script. Having [Git](http://git-scm.com) might not hurt either.
 
-### Using Git and the bootstrap script
+Set your shell to ZSH, because it's better than Bash (at least I think so).
 
-```bash
-git clone https://github.com/mattbanks/dotfiles.git && cd dotfiles && ./bootstrap.sh
+`chsh -s /bin/zsh`
+
+Better yet, run the killer [laptop script](https://github.com/mattbanks/laptop) to get your machine all setup with Homebrew, Node.js, Git, and some other important development tools.
+
+## install
+
+Run this:
+
+```sh
+git clone https://github.com/mattbanks/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+script/bootstrap
 ```
 
-Bootstrap script checks if [Homebrew](http://mxcl.github.com/homebrew/) and [RVM](https://rvm.io/) are installed and, if not, installs them for you.
+This will symlink the appropriate files in `.dotfiles` to your home directory.
+Everything is configured and tweaked within `~/.dotfiles`.
 
-To update, `cd` into your local `dotfiles` repository and then:
+The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
+which sets up a few paths that'll be different on your particular machine.
 
-```bash
-./bootstrap.sh
+You'll also want to change `git/gitconfig.symlink`, which will set you up as
+committing as me. You probably don't want that.
+
+`dot` is a simple script that installs some dependencies, sets sane OS X
+defaults, and so on. Tweak this script, and occasionally run `dot` from
+time to time to keep your environment fresh and up-to-date. You can find
+this script in `bin/`.
+
+## sublime text 2 setup
+
+To pull in Sublime Text 2 User preferences, run:
+
+```sh
+cd ~/.dotfiles/
+sublime2/setup
 ```
 
-Alternatively, to update while avoiding the confirmation prompt:
-
-```bash
-./bootstrap.sh -f
-```
-
-### Git-free install
-
-```bash
-cd; curl -#L https://github.com/mattbanks/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh}
-```
-
-To update later on, just run that command again.
-
-### Syntax highlighting
+## syntax highlighting
 
 …is really important. even for these files.
 
 Install [Dotfiles Syntax Highlighting](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) via [Sublime Text 2 Package Control](http://wbond.net/sublime_packages/package_control)
 
-### Sensible OS X defaults
+## topical
 
-When setting up a new Mac, you may want to set some sensible OS X defaults:
+Everything's built around topic areas. If you're adding a new area to your
+forked dotfiles — say, "Java" — you can simply add a `java` directory and put
+files in there. Anything with an extension of `.zsh` will get automatically
+included into your shell. Anything with an extension of `.symlink` will get
+symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
-```bash
-./.osx
-```
+## what's inside
 
-### Package Management Batch Installation
+A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
+above and see what components may mesh up with you. Fork it, remove what you
+don't use, and build on what you do use.
 
-This script installs a number of packages view brew, npm, and rubygems for local development:
+## components
 
-```bash
-./.packages
-```
+There's a few special files in the hierarchy.
 
-## Suggestions/Improvements
+- **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
+  available everywhere.
+- **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
+  environment.
+- **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
+  expected to setup `$PATH` or similar.
+- **topic/completion.zsh**: Any file named `completion.zsh` is loaded
+  last and is expected to setup autocomplete.
+- **topic/\*.symlink**: Any files ending in `*.symlink` get symlinked into
+  your `$HOME`. This is so you can keep all of those versioned in your dotfiles
+  but still keep those autoloaded files in your home directory. These get
+  symlinked in when you run `rake install`.
 
-Suggestions/improvements welcome - [let me know](https://github.com/mattbanks/dotfiles/issues)!
+## bugs
+
+I use this as my dotfiles, so I know it works on my machines. If you run into any issues,
+feel free to [open an issue](https://github.com/mattbanks/dotfiles/issues) on this repository.
+
+Use your judgment, though. It may make more sense to
+[open an issue](https://github.com/holman/dotfiles/issues) on holman's repository, which will
+surely receive more attention from the community than mine will. I'll be pulling upstream
+changes every once in a while.
+
+## history
+
+This is a major rewrite to my old dotfiles. Your mileage may vary will upgrading - I deleted all my old files before I started.
+
+## thanks
+
+Based on some killer work by [Zach Holman](https://github.com/holman/dotfiles), [Paul Irish](https://github.com/paulirish/dotfiles), [Mathias Bynens](https://github.com/mathiasbynens/dotfiles), [Ben Alman](https://github.com/cowboy/dotfiles), [Nicolas Gallagher](https://github.com/necolas/dotfiles), and [Chris Lopresto](https://github.com/chrislopresto/dotfiles). These are all awesome developers and you should be following them.

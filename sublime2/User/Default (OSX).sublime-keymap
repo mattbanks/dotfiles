@@ -1,0 +1,7 @@
+[
+
+     { "keys": ["super+alt+7"], "command": "encode_html_entities" },
+     { "keys": ["shift+ctrl+u"], "command": "title_case" },
+     { "keys": ["super+enter"], "command": "insert", "args": {"characters": "<br>\n"} }
+
+]
