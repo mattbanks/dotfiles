@@ -2,3 +2,6 @@
 export BASH=$HOME/.dotfiles/bash
 
 [ -n "$PS1" ] && source $BASH/.bash_profile
+
+# Add RVM to PATH
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
