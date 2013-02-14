@@ -1,0 +1,4 @@
+# shortcut to this dotfiles path is $ZSH
+export BASH=$HOME/.dotfiles/bash
+
+[ -n "$PS1" ] && source $BASH/.bash_profile

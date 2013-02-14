@@ -1,0 +1,132 @@
+# Easier navigation: .., ..., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ~="cd ~"
+alias -- -="cd -"
+
+# List dir contents aliases
+# ref: http://ss64.com/osx/ls.html
+# Long form no user group, color
+alias l="ls -oG"
+# Order by last modified, long form no user group, color
+alias lt="ls -toG"
+# List all except . and ..., color, mark file types, long form no user group, file size
+alias la="ls -AGFoh"
+# List all except . and ..., color, mark file types, long form no use group, order by last modified, file size
+alias lat="ls -AGFoth"
+# List only directories
+alias lsd='ls -l | grep "^d"'
+
+# Concatenate and print content of files (add line numbers)
+alias catn="cat -n"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ifconfig -a | grep -o 'inet \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | grep -v '127\.0\.0\.1' | sed -e 's/inet //'"
+alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+
+# Copy my public key to my clipboard
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+
+# GIT STUFF
+
+# Undo a `git push`
+alias undopush="git push -f origin HEAD^:master"
+
+# git root
+alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
+
+# Enhanced WHOIS lookups
+alias whois="whois -h whois-servers.net"
+
+# Flush Directory Service cache
+alias flush="dscacheutil -flushcache"
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# Canonical hex dump; some systems have this symlinked
+type -t hd > /dev/null || alias hd="hexdump -C"
+
+# OS X has no `md5sum`, so use `md5` as a fallback
+type -t md5sum > /dev/null || alias md5sum="md5"
+
+# OS X has no `sha1sum`, so use `shasum` as a fallback
+command -v sha1sum > /dev/null || alias sha1sum="shasum"
+
+# Trim new lines and copy to clipboard
+alias c="tr -d '\n' | pbcopy"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
+
+# Shortcuts
+alias d="cd ~/Dropbox"
+alias p="cd ~/Dropbox/Projects"
+alias dl="cd ~/Downloads"
+alias s="cd ~/Sites"
+alias st="subl"
+alias stt="subl ."
+alias t="tar -pcvzf"
+alias tx="tar -pvxf"
+alias g="git"
+alias v="vim"
+alias o="open"
+alias oo="open ."
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Merge PDF files
+# Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
+alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+
+# Homebrew, NPM, RVM, Gems Update, Cleanup Brew and Gems
+alias pkgup="brew update; brew upgrade; sudo npm update -g; rvm get stable; gem update --system; gem update;"
+alias pkgclean="brew cleanup; npm cache clean; gem cleanup;"
+
+# Edit hosts file and vhosts config for local development
+alias edithost="sudo st /private/etc/hosts"
+alias editvhosts="sudo st /private/etc/apache2/extra/httpd-vhosts.conf"
+
+# Local Servers (Apache and MySQL)
+alias sstart="sudo apachectl start; mysql.server start"
+alias sstop="sudo apachectl stop; mysql.server stop"
+alias srestart="sudo apachectl restart; mysql.server restart"
+
+# File size
+alias fs="stat -c \"%s bytes\""
+
+# ROT13-encode text. Works for decoding, too! ;)
+alias rot13='tr a-zA-Z n-za-mN-ZA-M'
+
+# Empty the Trash on all mounted volumes and the main HDD
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# Disable Spotlight
+alias spotoff="sudo mdutil -a -i off"
+# Enable Spotlight
+alias spoton="sudo mdutil -a -i on"
+
+# PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
+alias plistbuddy="/usr/libexec/PlistBuddy"
+
+# Get OS X Software Updates, update Homebrew itself, and upgrade installed Homebrew packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
+
+# Start Screen Saver
+alias ss='open /System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app'
+
+# One of @janmoesen’s ProTip™s
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+	alias "$method"="lwp-request -m '$method'"
+done
