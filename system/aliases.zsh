@@ -1,13 +1,13 @@
 # grc overides for ls
 #   Made possible through contributions from generous benefactors like
 #   `brew install coreutils`
-if $(gls &>/dev/null)
-then
-  alias ls="gls -F --color"
-  alias l="gls -lAh --color"
-  alias ll="gls -l --color"
-  alias la='gls -A --color'
-fi
+# if $(gls &>/dev/null)
+# then
+#   alias ls="gls -F --color"
+#   alias l="gls -lAh --color"
+#   alias ll="gls -l --color"
+#   alias la='gls -A --color'
+# fi
 
 # Move or rename multiple files with wildcards and such
 # Thanks go to http://www.mfasold.net/blog/2008/11/moving-or-renaming-multiple-files/
@@ -69,6 +69,7 @@ alias p="cd ~/Dropbox/Projects"
 alias dl="cd ~/Downloads"
 alias s="cd ~/Sites"
 alias st="subl"
+alias stt="subl ."
 alias t="tar -pcvzf"
 alias tx="tar -pvxf"
 alias g="git"
