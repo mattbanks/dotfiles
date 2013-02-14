@@ -89,9 +89,9 @@ alias edithost="sudo st /private/etc/hosts"
 alias editvhosts="sudo st /private/etc/apache2/extra/httpd-vhosts.conf"
 
 # Local Servers (Apache and MySQL)
-# alias sstart="sudo apachectl start; mysql.server start"
-# alias sstop="sudo apachectl stop; mysql.server stop"
-# alias srestart="sudo apachectl restart; mysql.server restart"
+alias sstart="sudo apachectl start; mysql.server start"
+alias sstop="sudo apachectl stop; mysql.server stop"
+alias srestart="sudo apachectl restart; mysql.server restart"
 
 # File size
 alias fs="stat -c \"%s bytes\""
