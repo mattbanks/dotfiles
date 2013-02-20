@@ -6,13 +6,31 @@
 # to make sure you're on the latest and greatest.
 
 # Install fonts
-$ZSH/fonts/copy
+while true; do
+    read -p "Install Source Code Pro font?" yn
+    case $yn in
+        [Yy]* ) $ZSH/fonts/copy; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 
 # Set OS X defaults
-$ZSH/osx/set-defaults.sh
-
-# Upgrade homebrew
-brew update
+while true; do
+    read -p "Set OSX defaults?" yn
+    case $yn in
+        [Yy]* ) $ZSH/osx/set-defaults.sh; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 
 # Install homebrew packages
-$ZSH/homebrew/install.sh 2>&1
+while true; do
+    read -p "Run laptop setup (brew install with packages, node install, rvm and latest ruby install?" yn
+    case $yn in
+        [Yy]* ) zsh <(curl -s https://raw.github.com/mattbanks/laptop/master/mac); break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
