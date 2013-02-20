@@ -123,7 +123,7 @@ then
   while true; do
       read -p "Install dependencies?" yn
       case $yn in
-          [Yy]* ) bin/dot > /tmp/dotfiles-dot 2>&1; break;;
+          [Yy]* ) . bin/dot > /tmp/dotfiles-dot 2>&1; break;;
           [Nn]* ) break;;
           * ) echo "Please answer yes or no.";;
       esac
