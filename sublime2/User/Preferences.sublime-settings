@@ -19,6 +19,6 @@
 	],
 	"theme": "Soda Dark.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
-	"word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?",
+	// "word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?",
 	"word_wrap": true
 }
