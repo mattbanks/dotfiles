@@ -1,5 +1,9 @@
 {
-    // "sublimelinter_disable": [ "css" ],
+    "sublimelinter_syntax_map":
+    {
+        "jQueryJavaScript": "javascript"
+    },
+
     "jshint_options":
     {
         "evil": true,
