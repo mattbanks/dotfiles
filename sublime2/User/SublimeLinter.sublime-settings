@@ -18,7 +18,6 @@
         "noarg": true,
         "node": true,
         "undef": true,
-        "unused": true,
         "browser": true,
         "trailing": true,
         "jquery": true,
