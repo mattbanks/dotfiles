@@ -6,19 +6,25 @@
 
     "jshint_options":
     {
-        "evil": true,
+        "bitwise": true,
         "eqeqeq": true,
+        "eqnull": true,
         "immed": true,
         "newcap": true,
-        "nomen": true,
         "es5": true,
-        "rhino": true,
+        "esnext": true,
+        "latedef": true,
+        "noarg": true,
+        "node": true,
         "undef": true,
-        "white": false,
-        "devel": true,
         "browser": true,
         "trailing": true,
         "jquery": true,
-        "curly": true
+        "curly": true,
+        "globals": {
+            "Backbone": true,
+            "_": true,
+            "jQuery": true
+        }
     }
 }
