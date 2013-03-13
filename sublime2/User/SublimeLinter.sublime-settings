@@ -23,6 +23,7 @@
         "trailing": true,
         "jquery": true,
         "curly": true,
+        "supernew": true,
         "globals": {
             "Backbone": true,
             "_": true,
