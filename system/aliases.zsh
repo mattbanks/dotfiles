@@ -89,9 +89,9 @@ alias edithost="sudo st /private/etc/hosts"
 alias editvhosts="sudo st /private/etc/apache2/extra/httpd-vhosts.conf"
 
 # Local Servers (Apache and MySQL)
-alias sstart="sudo apachectl start; launchctl load ~/Library/LaunchAgents/com.mysql.mysqld.plist"
-alias sstop="sudo apachectl stop; launchctl unload ~/Library/LaunchAgents/com.mysql.mysqld.plist;"
-alias srestart="sudo apachectl restart; launchctl unload ~/Library/LaunchAgents/com.mysql.mysqld.plist; launchctl load ~/Library/LaunchAgents/com.mysql.mysqld.plist"
+alias sstart="sudo apachectl start; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+alias sstop="sudo apachectl stop; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist;"
+alias srestart="sudo apachectl restart; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 
 # File size
 alias fs="stat -c \"%s bytes\""
