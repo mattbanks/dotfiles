@@ -17,11 +17,6 @@ alias gca='git commit -a'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias grm="git status | grep deleted | awk '{\$1=\$2=\"\"; print \$0}' | \
+           sed 's/^[ \t]*//' | sed 's/ /\\\\ /g' | xargs git rm"
 alias gt="git tag -a"
-
-# Undo a `git push`
-#alias undopush="git push -f origin HEAD^:master"
-
-# git root
-#alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
