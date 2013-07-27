@@ -90,7 +90,8 @@ alias editvhosts="sudo st /private/etc/apache2/extra/httpd-vhosts.conf"
 
 # Vagrant
 alias vbox="cd ~/Sites/vagrant-box;"
-alias vup="vbox vagrant up;"
+alias vup="vbox; vagrant up;"
+alias vh="vbox; vagrant halt";
 alias vsh="vbox; vagrant ssh"
 
 # Local Servers (Apache and MySQL)
