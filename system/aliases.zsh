@@ -88,6 +88,11 @@ alias pkgclean="brew cleanup; npm cache clean; gem cleanup;"
 alias edithost="sudo st /private/etc/hosts"
 alias editvhosts="sudo st /private/etc/apache2/extra/httpd-vhosts.conf"
 
+# Vagrant
+alias vbox="cd ~/Sites/vagrant-box;"
+alias vup="vbox vagrant up;"
+alias vsh="vbox; vagrant ssh"
+
 # Local Servers (Apache and MySQL)
 alias sstart="sudo apachectl start; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 alias sstop="sudo apachectl stop; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist;"
