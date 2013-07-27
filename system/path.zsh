@@ -7,3 +7,7 @@ export PATH="$PATH:/usr/local/share/npm/bin"
 
 # Add RVM to PATH
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Add WP-CLI to PATH
+export PATH="$PATH:$HOME/.wp-cli/bin"
+export WP_CLI_PHP=/usr/bin/php
