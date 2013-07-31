@@ -10,7 +10,9 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 12,
+	"font_size": 13,
+	"line_padding_top": 2,
+    "line_padding_bottom": 2,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
