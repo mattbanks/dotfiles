@@ -1,0 +1,34 @@
+{
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+	"create_window_at_startup": false,
+	"ensure_newline_at_eof_on_save": true,
+	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".sass-cache",
+		"node_modules"
+	],
+	"font_face": "Source Code Pro",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 13,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 1.5,
+	"line_padding_top": 1.5,
+	"theme": "Soda Dark.sublime-theme",
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
+}
