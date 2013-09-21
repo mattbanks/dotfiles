@@ -1,0 +1,24 @@
+#!/bin/bash
+# Since we can't symlink the iTerm2 plist, we'll need to
+# manually copy stuff over.
+
+plist="com.googlecode.iterm2.plist"
+new_plist="/tmp/${plist}-$$"
+installed_plist="$HOME/Library/Preferences/$plist"
+source_plist="$ZSH/iterm2/$plist.xml"
+
+log()   { printf -- "-----> $*\n" ; return $? ; }
+warn()  { printf -- ">>>>>> $*\n" ; return $? ; }
+
+log "Converting binary plist to xml"
+plutil -convert xml1 -r -o $new_plist $installed_plist
+
+if [[ $? -eq 0 ]] ; then
+  cp -f "$new_plist" "$source_plist" && rm -f $new_plist
+  log "iTerm preferences copied to $source_plist in XML format."
+else
+  warn "The conversion from binary to XML failed."
+  exit 2
+fi
+
+exit $?
