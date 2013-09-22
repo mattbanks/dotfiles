@@ -81,23 +81,23 @@ alias oo="open ."
 alias sudo='sudo '
 
 # Homebrew, NPM, RVM, Gems Update, Cleanup Brew and Gems
-alias pkgup="brew update; brew upgrade; npm update -g; rvm get stable; gem update --system; gem update; cd ~/.wp-cli; php composer.phar update;"
+alias pkgup="brew update; brew upgrade; npm update -g; gem update --system; gem update;"
 alias pkgclean="brew cleanup; npm cache clean; gem cleanup;"
 
 # Edit hosts file and vhosts config for local development
-alias edithost="sudo st /private/etc/hosts"
-alias editvhosts="sudo st /private/etc/apache2/extra/httpd-vhosts.conf"
+# alias edithost="sudo st /private/etc/hosts"
+# alias editvhosts="sudo st /private/etc/apache2/extra/httpd-vhosts.conf"
 
 # Vagrant
-alias vbox="cd ~/vmdevbox"
-alias vup="vbox; vagrant up;"
-alias vh="vbox; vagrant halt;"
-alias vsh="vbox; vagrant ssh;"
+# alias vbox="cd ~/vmdevbox"
+# alias vup="vbox; vagrant up;"
+# alias vh="vbox; vagrant halt;"
+# alias vsh="vbox; vagrant ssh;"
 
 # Local Servers (Apache and MySQL)
-alias sstart="sudo apachectl start; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
-alias sstop="sudo apachectl stop; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist;"
-alias srestart="sudo apachectl restart; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+# alias sstart="sudo apachectl start; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+# alias sstop="sudo apachectl stop; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist;"
+# alias srestart="sudo apachectl restart; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 
 # File size
 alias fs="stat -c \"%s bytes\""

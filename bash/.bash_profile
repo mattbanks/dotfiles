@@ -37,10 +37,10 @@ complete -W "NSGlobalDomain" defaults
 complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book SystemUIServer" killall
 
 # Load RVM function
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
 # WP-CLI Bash completions
-source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
+# source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash

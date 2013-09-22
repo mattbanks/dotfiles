@@ -83,17 +83,17 @@ alias sudo='sudo '
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
 # Homebrew, NPM, RVM, Gems Update, Cleanup Brew and Gems
-alias pkgup="brew update; brew upgrade; sudo npm update -g; rvm get stable; gem update --system; gem update;"
+alias pkgup="brew update; brew upgrade; sudo npm update -g; gem update --system; gem update;"
 alias pkgclean="brew cleanup; npm cache clean; gem cleanup;"
 
 # Edit hosts file and vhosts config for local development
-alias edithost="sudo st /private/etc/hosts"
-alias editvhosts="sudo st /private/etc/apache2/extra/httpd-vhosts.conf"
+# alias edithost="sudo st /private/etc/hosts"
+# alias editvhosts="sudo st /private/etc/apache2/extra/httpd-vhosts.conf"
 
 # Local Servers (Apache and MySQL)
-alias sstart="sudo apachectl start; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
-alias sstop="sudo apachectl stop; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist;"
-alias srestart="sudo apachectl restart; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+# alias sstart="sudo apachectl start; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+# alias sstop="sudo apachectl stop; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist;"
+# alias srestart="sudo apachectl restart; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 
 # File size
 alias fs="stat -c \"%s bytes\""

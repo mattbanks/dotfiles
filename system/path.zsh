@@ -6,8 +6,8 @@ export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 export PATH="$PATH:/usr/local/share/npm/bin"
 
 # Add RVM to PATH
-export PATH="$PATH:$HOME/.rvm/bin"
+# export PATH="$PATH:$HOME/.rvm/bin"
 
 # Add WP-CLI to PATH
-export PATH="$PATH:$HOME/.wp-cli/bin"
-export WP_CLI_PHP=/usr/bin/php
+# export PATH="$PATH:$HOME/.wp-cli/bin"
+# export WP_CLI_PHP=/usr/bin/php
