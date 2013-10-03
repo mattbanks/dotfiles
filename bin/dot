@@ -9,7 +9,7 @@
 while true; do
     read -p "Install Source Code Pro font?" yn
     case $yn in
-        [Yy]* ) $HOME/.dotfiles/fonts/copy; break;;
+        [Yy]* ) $ZSH/fonts/copy; break;;
         [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
@@ -19,7 +19,7 @@ done
 while true; do
     read -p "Set OSX defaults?" yn
     case $yn in
-        [Yy]* ) $HOME/.dotfiles/osx/set-defaults.sh; break;;
+        [Yy]* ) $ZSH/osx/set-defaults.sh; break;;
         [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
