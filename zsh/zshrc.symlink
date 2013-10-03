@@ -44,4 +44,7 @@ do
   source $file
 done
 
+# Enable rbenv shims and autocompletion
+eval "$(rbenv init -)"
+
 unset config_files
