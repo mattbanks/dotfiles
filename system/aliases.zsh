@@ -91,6 +91,7 @@ alias pkgclean="brew cleanup; npm cache clean; gem cleanup;"
 # Vagrant
 alias vbox="cd ~/vmdevbox"
 alias vup="vbox; vagrant up;"
+alias vs="vbox; vagrant suspend;"
 alias vh="vbox; vagrant halt;"
 alias vsh="vbox; vagrant ssh;"
 
