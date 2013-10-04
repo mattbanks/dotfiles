@@ -118,17 +118,17 @@ setup_gitconfig
 install_dotfiles
 
 # If we are on a mac, lets install and setup homebrew
-if [ "$(uname -s)" == "Darwin" ]
-then
-  while true; do
-      read -p "Install dependencies?" yn
-      case $yn in
-          [Yy]* ) bin/dot; break;;
-          [Nn]* ) break;;
-          * ) echo "Please answer yes or no.";;
-      esac
-  done
-fi
+# if [ "$(uname -s)" == "Darwin" ]
+# then
+#   while true; do
+#       read -p "Install dependencies?" yn
+#       case $yn in
+#           [Yy]* ) bin/dot; break;;
+#           [Nn]* ) break;;
+#           * ) echo "Please answer yes or no.";;
+#       esac
+#   done
+# fi
 
 echo ''
 echo '  All installed!'
