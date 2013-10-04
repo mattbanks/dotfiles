@@ -29,7 +29,7 @@ done
 while true; do
     read -p "Run laptop setup (brew install with packages, node install, etc?" yn
     case $yn in
-        [Yy]* ) zsh <(curl -s https://raw.github.com/mattbanks/laptop/master/mac); break;;
+        [Yy]* ) "zsh <(curl -s https://raw.github.com/mattbanks/laptop/master/mac)"; break;;
         [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
