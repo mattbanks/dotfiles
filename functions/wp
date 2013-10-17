@@ -1,0 +1,6 @@
+# Proxy wp-cli to Vagrant so we can run it from our host machine
+wp() {
+    DIR=`basename $PWD`
+    ARGS=$*
+    ssh vagrant@192.168.56.101 "cd /var/www/${DIR} ; wp ${ARGS}"
+}
