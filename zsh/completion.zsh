@@ -5,6 +5,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' insert-tab pending
 
 # WP-CLI Bash completions
-# autoload bashcompinit
-# bashcompinit
-# source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
+autoload bashcompinit
+bashcompinit
+source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
