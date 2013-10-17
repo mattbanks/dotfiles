@@ -38,20 +38,20 @@ defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
-## sublime text 2 setup
+## sublime text 3 setup
 
-To pull in Sublime Text 2 User preferences, run:
+To pull in Sublime Text 3 User preferences, run:
 
 ```sh
 cd ~/.dotfiles/
-sublime2/setup
+sublime3/setup
 ```
 
 ## syntax highlighting
 
 …is really important. even for these files.
 
-Install [Dotfiles Syntax Highlighting](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) via [Sublime Text 2 Package Control](http://wbond.net/sublime_packages/package_control)
+Install [Dotfiles Syntax Highlighting](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) via [Sublime Text Package Control](https://sublime.wbond.net/)
 
 ## topical
 
