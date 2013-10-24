@@ -26,9 +26,6 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Expand print panel by default
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
-# Save to disk (not to iCloud) by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
@@ -60,6 +57,7 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 
 # Automatically illuminate built-in MacBook keyboard in low light
 defaults write com.apple.BezelServices kDim -bool true
+
 # Turn off keyboard illumination when computer is not used for 5 minutes
 defaults write com.apple.BezelServices kDimTime -int 300
 
@@ -159,14 +157,14 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 ###############################################################################
 
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+# defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 ###############################################################################
 # Terminal                                                                    #
 ###############################################################################
 
 # Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
+# defaults write com.apple.terminal StringEncodings -array 4
 
 ###############################################################################
 # Time Machine                                                                #
@@ -194,6 +192,7 @@ defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 
 # Hide the donate message
 defaults write org.m0k.transmission WarningDonate -bool false
+
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
