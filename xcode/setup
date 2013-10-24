@@ -2,8 +2,8 @@
 # Copy our color scheme over
 
 # Check if directory exists, if not create it
-if [ ! -d "~/Library/Developer/Xcode/UserData/FontAndColorThemes" ]; then
-  mkdir "~/Library/Developer/Xcode/UserData/FontAndColorThemes"
+if [ ! -d ~/Library/Developer/Xcode/UserData/FontAndColorThemes ]; then
+  mkdir ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 fi
 
-cp -R ~/Library/Developer/Xcode/UserData/FontAndColorThemes $ZSH/xcode/Jones.dvtcolortheme
+cp $ZSH/xcode/Jones.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes
