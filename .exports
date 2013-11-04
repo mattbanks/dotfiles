@@ -21,6 +21,7 @@ export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 [ -d "$HOME/bin" ] && PATH="$PATH:$HOME/bin";
 [ -d "$HOME/.bin" ] && PATH="$PATH:$HOME/.bin";
 [ -d "$HOME/.dotfiles/bin" ] && PATH="$PATH:$HOME/.dotfiles/bin";
+[ -d "$HOME/local/bin" ] && PATH="$PATH:$HOME/local/bin";
 [ -d "$HOME/.rvm/bin" ] && PATH="$PATH:$HOME/.rvm/bin";
 
 # add npm via brew to PATH
