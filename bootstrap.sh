@@ -15,7 +15,4 @@ else
 fi
 unset doIt
 
-# Run Package Manager Initialization
-./.pkginit
-
 source ~/.bash_profile
