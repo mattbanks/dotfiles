@@ -20,6 +20,7 @@ export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 [ -d "/usr/bin" ] && PATH="$PATH:/usr/bin";
 [ -d "$HOME/bin" ] && PATH="$PATH:$HOME/bin";
 [ -d "$HOME/.bin" ] && PATH="$PATH:$HOME/.bin";
+[ -d "/root/.wp-cli/bin" ] && PATH="$PATH:/root/.wp-cli/bin";
 [ -d "$HOME/.dotfiles/bin" ] && PATH="$PATH:$HOME/.dotfiles/bin";
 [ -d "$HOME/local/bin" ] && PATH="$PATH:$HOME/local/bin";
 [ -d "$HOME/.rvm/bin" ] && PATH="$PATH:$HOME/.rvm/bin";
