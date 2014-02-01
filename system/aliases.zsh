@@ -89,7 +89,7 @@ alias pkgclean="brew cleanup; npm cache clean; gem cleanup;"
 # alias editvhosts="sudo st /private/etc/apache2/extra/httpd-vhosts.conf"
 
 # Vagrant
-alias vbox="cd ~/vmdevbox"
+alias vbox="cd ~/vvv"
 alias vup="vbox; vagrant up;"
 alias vs="vbox; vagrant suspend;"
 alias vh="vbox; vagrant halt;"
