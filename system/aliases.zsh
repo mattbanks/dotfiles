@@ -81,7 +81,8 @@ alias oo="open ."
 alias sudo='sudo '
 
 # Homebrew, NPM, RVM, Gems Update, Cleanup Brew and Gems
-alias pkgup="brew update; brew upgrade; npm update -g; gem update --system; gem update;"
+alias npmup='npm -g list --depth 0 | grep -v "^/" | cut -f2 -d" " | cut -f1 -d@ | grep -v "^npm$" | xargs npm -g update'
+alias pkgup="brew update; brew upgrade; npmup; gem update --system; gem update;"
 alias pkgclean="brew cleanup; npm cache clean; gem cleanup;"
 
 # Edit hosts file and vhosts config for local development
