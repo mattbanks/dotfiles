@@ -101,6 +101,9 @@ alias vsh="vbox; vagrant ssh;"
 # alias sstop="sudo apachectl stop; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist;"
 # alias srestart="sudo apachectl restart; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 
+# Set MySQL alias to use MAMP Pro's MySQL
+alias mysql=" /Applications/MAMP/Library/bin/mysql"
+
 # File size
 alias fs="stat -c \"%s bytes\""
 
