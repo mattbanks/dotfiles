@@ -12,3 +12,8 @@ bashcompinit
 if [ -f $(brew --prefix)/etc/bash_completion.d/wp-completion.bash ]; then
 	. $(brew --prefix)/etc/bash_completion.d/wp-completion.bash
 fi
+
+# NPM Bash completions from Homebrew
+if [ -f $(brew --prefix)/etc/bash_completion.d/npm ]; then
+	. $(brew --prefix)/etc/bash_completion.d/npm
+fi
