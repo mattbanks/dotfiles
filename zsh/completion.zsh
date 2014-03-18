@@ -7,3 +7,8 @@ zstyle ':completion:*' insert-tab pending
 # WP-CLI Bash completions
 autoload bashcompinit
 bashcompinit
+
+# Homebrew Bash completions
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+	. $(brew --prefix)/etc/bash_completion
+fi
