@@ -80,9 +80,8 @@ alias oo="open ."
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# Homebrew, NPM, RVM, Gems Update, Cleanup Brew and Gems
-alias npmup='npm -g list --depth 0 | grep -v "^/" | cut -f2 -d" " | cut -f1 -d@ | grep -v "^npm$" | xargs npm -g update'
-alias pkgup="brew update; brew upgrade; npmup; sudo gem update --system; sudo gem update;"
+# Homebrew, NPM, Gems Update, Cleanup Brew and Gems
+alias pkgup="brew update; brew upgrade; npm update -g; sudo gem update --system; sudo gem update;"
 alias pkgclean="brew cleanup; npm cache clean; sudo gem cleanup;"
 
 # Edit hosts file and vhosts config for local development
