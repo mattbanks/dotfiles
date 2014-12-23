@@ -28,7 +28,7 @@
 	],
 	"line_padding_bottom": 1.5,
 	"line_padding_top": 1.5,
-	"theme": "Soda Dark.sublime-theme",
+	"theme": "Seti.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true
 }

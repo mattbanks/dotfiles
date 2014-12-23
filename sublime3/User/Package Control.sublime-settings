@@ -3,6 +3,7 @@
 	[
 		"AdvancedNewFile",
 		"Backbone.js",
+		"Color Highlighter",
 		"DocBlockr",
 		"Dotfiles Syntax Highlighting",
 		"EditorConfig",
@@ -11,6 +12,7 @@
 		"jQuery",
 		"LESS",
 		"SCSS",
+		"Seti_UI",
 		"SideBarEnhancements",
 		"Solarized Color Scheme",
 		"Theme - Soda",
