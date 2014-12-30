@@ -1,4 +1,4 @@
-#!/bin/sh\
+#!/bin/sh
 #
 # Safely update all top-level NPM global packages
 #
