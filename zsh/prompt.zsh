@@ -15,7 +15,6 @@ git_branch() {
 
 git_dirty() {
   if $(! $git status -s &> /dev/null)
-  if [[ $st == "" ]]
   then
     echo ""
   else
@@ -72,11 +71,17 @@ directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-# export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
-export PROMPT=$'\n%{$fg[yellow]%}%n: %{$fg[blue]%}%~ \n %{$fg[white]%}%(!.#.›)%{$reset_color%} '
+user_name() {
+  echo "%{$fg_bold[yellow]%}%n%{$reset_color%}"
+}
+
+full_path() {
+  echo "%{$fg[blue]%}%~ \n %{$fg[white]%}%(!.#.›)%{$reset_color%}"
+}
+
+export PROMPT=$'\n$(user_name): $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
-  # export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
-  export RPROMPT="%{$fg[cyan]%}%{$reset_color%} $(git_dirty)$(need_push)"
+  export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
 
 precmd() {
