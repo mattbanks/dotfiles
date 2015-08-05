@@ -5,20 +5,24 @@
 	"installed_packages":
 	[
 		"AdvancedNewFile",
-		"Backbone.js",
+		"Alignment",
 		"Color Highlighter",
 		"DocBlockr",
 		"Dotfiles Syntax Highlighting",
 		"EditorConfig",
 		"Emmet",
 		"GitGutter",
+		"Handlebars",
 		"jQuery",
 		"LESS",
+		"Material Theme",
 		"Package Control",
 		"SCSS",
 		"Seti_UI",
 		"SideBarEnhancements",
 		"Solarized Color Scheme",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
 		"Underscore.js Snippets",
 		"WordPress"
 	]

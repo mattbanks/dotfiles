@@ -1,7 +1,8 @@
 {
+	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
 	"folder_exclude_patterns":
@@ -15,10 +16,6 @@
 		".idea"
 	],
 	"font_face": "Source Code Pro",
-	"font_options":
-	[
-		"subpixel_antialias"
-	],
 	"font_size": 13,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
@@ -26,9 +23,15 @@
 	[
 		"Vintage"
 	],
-	"line_padding_bottom": 1.5,
-	"line_padding_top": 1.5,
-	"theme": "Seti.sublime-theme",
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"overlay_scroll_bars": "enabled",
+	"theme": "Material-Theme.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true
 }
