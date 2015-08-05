@@ -1,0 +1,52 @@
+"*":
+  "exception-reporting":
+    userId: "bd6ebad1-8d08-df36-542e-70237afa9876"
+  "release-notes":
+    viewedVersion: "0.95.0"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "f0927718331c072990cb750aafe7bbb7c24695ca"
+  editor:
+    fontFamily: "Source Code Pro"
+    preferredLineLength: 130
+    softWrap: true
+    invisibles: {}
+    showIndentGuide: true
+  core:
+    ignoredNames: [
+      ".git"
+      ".svn"
+      ".DS_Store"
+      ".idea"
+      ".sass-cache"
+      "node_modules"
+    ]
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax"
+    ]
+  "spell-check":
+    grammars: [
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+    ]
+  "tree-view":
+    hideIgnoredNames: true
+  "autocomplete-plus":
+    confirmCompletion: "tab and enter"
+  docblockr: {}
+  minimap:
+    displayPluginsControls: false
+  "one-dark-ui": {}
+  "atom-material-ui":
+    panelContrast: true
+    compactTreeView: true
+    showTabIcons: true
+  "highlight-selected": {}
+  pigments: {}
+  linter: {}
+  "linter-jshint": {}
+  "atom-beautify": {}
+  emmet: {}
