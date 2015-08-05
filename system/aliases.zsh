@@ -9,11 +9,6 @@
 #   alias la='gls -A --color'
 # fi
 
-# Move or rename multiple files with wildcards and such
-# Thanks go to http://www.mfasold.net/blog/2008/11/moving-or-renaming-multiple-files/
-autoload -U zmv
-alias mmv='noglob zmv -W'
-
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -56,9 +51,6 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 # OS X has no `sha1sum`, so use `shasum` as a fallback
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
-# Trim new lines and copy to clipboard
-# alias c="tr -d '\n' | pbcopy"
-
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
@@ -83,10 +75,6 @@ alias sudo='sudo '
 # Homebrew, NPM, Gems Update, Cleanup Brew and Gems
 alias pkgup="brew update; brew upgrade --all; npm-upgrade; gem update --system; gem update;"
 alias pkgclean="brew cleanup; npm cache clean; gem cleanup;"
-
-# Edit hosts file and vhosts config for local development
-# alias edithost="sudo st /private/etc/hosts"
-# alias editvhosts="sudo st /private/etc/apache2/extra/httpd-vhosts.conf"
 
 # Vagrant
 alias vup="vagrant up"
