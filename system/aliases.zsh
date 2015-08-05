@@ -72,7 +72,6 @@ alias st="subl"
 alias stt="subl ."
 alias t="tar -pcvzf"
 alias tx="tar -pvxf"
-alias git="hub"
 alias g="git"
 alias v="vim"
 alias o="open"
@@ -90,16 +89,10 @@ alias pkgclean="brew cleanup; npm cache clean; gem cleanup;"
 # alias editvhosts="sudo st /private/etc/apache2/extra/httpd-vhosts.conf"
 
 # Vagrant
-alias vbox="cd ~/vvv"
-alias vup="vbox; vagrant up;"
-alias vs="vbox; vagrant suspend;"
-alias vh="vbox; vagrant halt;"
-alias vsh="vbox; vagrant ssh;"
-
-# Local Servers (Apache and MySQL)
-# alias sstart="sudo apachectl start; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
-# alias sstop="sudo apachectl stop; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist;"
-# alias srestart="sudo apachectl restart; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist; launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+alias vup="vagrant up"
+alias vs="vagrant suspend"
+alias vh="vagrant halt"
+alias vsh="vagrant ssh"
 
 # File size
 alias fs="stat -c \"%s bytes\""
