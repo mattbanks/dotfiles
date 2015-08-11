@@ -73,7 +73,7 @@ alias oo="open ."
 alias sudo='sudo '
 
 # Homebrew, NPM, Gems Update, Cleanup Brew and Gems
-alias pkgup="brew update; brew upgrade --all; npm-upgrade; gem update --system; gem update;"
+alias pkgup="brew update; brew upgrade --all; npm-upgrade; composer self-update; gem update --system; gem update;"
 alias pkgclean="brew cleanup; npm cache clean; gem cleanup;"
 
 # Vagrant
