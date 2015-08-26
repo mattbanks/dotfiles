@@ -26,6 +26,10 @@
       "atom-material-ui"
       "atom-material-syntax"
     ]
+    disabledPackages: [
+      "linter-eslint"
+      "linter-jshint"
+    ]
   "spell-check":
     grammars: [
       "source.gfm"
@@ -43,10 +47,14 @@
   "atom-material-ui":
     panelContrast: true
     compactTreeView: true
-    showTabIcons: true
   "highlight-selected": {}
   pigments: {}
   linter: {}
-  "linter-jshint": {}
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
   "atom-beautify": {}
   emmet: {}
+  "the-closer":
+    closeWindowTogetherWithLastTab: false
+  "linter-eslint":
+    useGlobalEslint: true
