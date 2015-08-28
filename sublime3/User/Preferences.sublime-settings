@@ -1,5 +1,25 @@
 {
 	"always_show_minimap_viewport": true,
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		"*.min.css",
+		"*.min.js",
+		"*-min.js",
+		"*.map"
+	],
 	"bold_folder_labels": true,
 	"caret_style": "phase",
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
@@ -13,6 +33,7 @@
 		"CVS",
 		".sass-cache",
 		"node_modules",
+		"bower_components",
 		".idea"
 	],
 	"font_face": "Source Code Pro",
