@@ -46,40 +46,11 @@ need_push () {
   fi
 }
 
-# ruby_version() {
-#   if (( $+commands[rbenv] ))
-#   then
-#     echo "$(rbenv version | awk '{print $1}')"
-#   fi
-
-#   if (( $+commands[rvm-prompt] ))
-#   then
-#     echo "$(rvm-prompt | awk '{print $1}')"
-#   fi
-# }
-
-# rb_prompt() {
-#   if ! [[ -z "$(ruby_version)" ]]
-#   then
-#     echo "%{$fg_bold[yellow]%}$(ruby_version)%{$reset_color%} "
-#   else
-#     echo ""
-#   fi
-# }
-
 directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-user_name() {
-  echo "%{$fg_bold[yellow]%}%n%{$reset_color%}"
-}
-
-# full_path() {
-#   echo "%{$fg[blue]%}%~ \n %{$fg[white]%}%(!.#.›)%{$reset_color%}"
-# }
-
-export PROMPT=$'\n$(user_name): $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n%{$fg_bold[yellow]%}%n%{$reset_color%}: $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
