@@ -8,7 +8,7 @@
   metrics:
     userId: "f0927718331c072990cb750aafe7bbb7c24695ca"
   editor:
-    fontFamily: "Source Code Pro"
+    fontFamily: "Hack"
     preferredLineLength: 130
     softWrap: true
     invisibles: {}
@@ -28,7 +28,7 @@
     ]
     disabledPackages: [
       "linter-eslint"
-      "linter-jshint"
+      "linter-xo"
     ]
   "spell-check":
     grammars: [
@@ -47,14 +47,23 @@
   "atom-material-ui":
     panelContrast: true
     compactTreeView: true
-  "highlight-selected": {}
+  "highlight-selected":
+    lightTheme: true
   pigments: {}
   linter: {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
-  "atom-beautify": {}
+  "atom-beautify":
+    _analyticsUserId: "8b9e6b6c-7ca9-4b13-8b9d-ee875e13ba81"
   emmet: {}
   "the-closer":
     closeWindowTogetherWithLastTab: false
   "linter-eslint":
     useGlobalEslint: true
+  "toggle-packages":
+    togglePackages: [
+      "linter-xo"
+      "linter-jshint"
+    ]
+  "status-bar": {}
+  "linter-scss-lint": {}
