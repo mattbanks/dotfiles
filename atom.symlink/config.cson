@@ -26,10 +26,6 @@
       "atom-material-ui"
       "atom-material-syntax"
     ]
-    disabledPackages: [
-      "linter-eslint"
-      "linter-xo"
-    ]
   "spell-check":
     grammars: [
       "source.gfm"
@@ -60,6 +56,7 @@
     closeWindowTogetherWithLastTab: false
   "linter-eslint":
     useGlobalEslint: true
+    globalNodePath: "/usr/local"
   "toggle-packages":
     togglePackages: [
       "linter-xo"
