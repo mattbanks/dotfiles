@@ -26,6 +26,10 @@
       "atom-material-ui"
       "atom-material-syntax"
     ]
+    disabledPackages: [
+      "linter-eslint"
+      "linter-csslint"
+    ]
   "spell-check":
     grammars: [
       "source.gfm"
@@ -34,6 +38,7 @@
     ]
   "tree-view":
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: false
   "autocomplete-plus":
     confirmCompletion: "tab and enter"
   docblockr: {}
@@ -63,4 +68,10 @@
       "linter-jshint"
     ]
   "status-bar": {}
-  "linter-scss-lint": {}
+  "linter-scss-lint":
+    executablePath: "/Users/mattbanks/.rbenv/shims/scss-lint"
+  "find-and-replace":
+    scrollToResultOnLiveSearch: true
+  react: {}
+  tabs:
+    usePreviewTabs: true
