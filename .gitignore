@@ -6,6 +6,7 @@ sublime3/User/Side Bar.sublime-settings
 atom.symlink/.apm
 atom.symlink/.node-gyp
 atom.symlink/.storage
+atom.symlink/blob-store
 atom.symlink/compile-cache/
 atom.symlink/packages
 atom.symlink/storage
