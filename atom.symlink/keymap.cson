@@ -1,0 +1,3 @@
+# Force the fucking keyboard shortcuts from Emmet to stop blocking markdown preview
+'.editor:not(.mini)':
+  'ctrl-shift-M': 'markdown-preview:toggle'
