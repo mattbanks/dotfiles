@@ -1,20 +1,22 @@
 "*":
-  "exception-reporting":
-    userId: "bd6ebad1-8d08-df36-542e-70237afa9876"
-  "release-notes":
-    viewedVersion: "0.95.0"
-  welcome:
-    showOnStartup: false
-  metrics:
-    userId: "f0927718331c072990cb750aafe7bbb7c24695ca"
-  editor:
-    fontFamily: "Hack"
-    preferredLineLength: 130
-    softWrap: true
-    invisibles: {}
-    showIndentGuide: true
-    softTabs: false
+  "atom-beautify":
+    _analyticsUserId: "8b9e6b6c-7ca9-4b13-8b9d-ee875e13ba81"
+  "atom-material-ui":
+    fonts: {}
+    panels:
+      panelContrast: true
+    tabs: {}
+    treeView:
+      compactList: true
+    ui:
+      panelContrast: true
+  "autocomplete-plus":
+    confirmCompletion: "tab and enter"
   core:
+    disabledPackages: [
+      "linter-eslint"
+      "linter-xo"
+    ]
     ignoredNames: [
       ".git"
       ".svn"
@@ -27,56 +29,53 @@
       "atom-material-ui"
       "atom-material-syntax"
     ]
-    disabledPackages: [
-      "linter-eslint"
-      "linter-jshint"
-    ]
+  docblockr: {}
+  editor:
+    fontFamily: "Hack"
+    invisibles: {}
+    preferredLineLength: 130
+    showIndentGuide: true
+    softTabs: false
+    softWrap: true
+  emmet: {}
+  "exception-reporting":
+    userId: "bd6ebad1-8d08-df36-542e-70237afa9876"
+  "find-and-replace":
+    scrollToResultOnLiveSearch: true
+  "highlight-selected":
+    lightTheme: true
+  linter: {}
+  "linter-eslint":
+    globalNodePath: "/usr/local"
+    useGlobalEslint: true
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+  metrics:
+    userId: "f0927718331c072990cb750aafe7bbb7c24695ca"
+  minimap:
+    displayPluginsControls: false
+  "one-dark-ui": {}
+  pigments: {}
+  react: {}
+  "release-notes":
+    viewedVersion: "0.95.0"
   "spell-check":
     grammars: [
       "source.gfm"
       "text.git-commit"
       "text.plain"
     ]
-  "tree-view":
-    hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
-  "autocomplete-plus":
-    confirmCompletion: "tab and enter"
-  docblockr: {}
-  minimap:
-    displayPluginsControls: false
-  "one-dark-ui": {}
-  "highlight-selected":
-    lightTheme: true
-  pigments: {}
-  linter: {}
-  "linter-jshint":
-    disableWhenNoJshintrcFileInPath: true
-  "atom-beautify":
-    _analyticsUserId: "8b9e6b6c-7ca9-4b13-8b9d-ee875e13ba81"
-  emmet: {}
+  "status-bar": {}
+  tabs:
+    usePreviewTabs: true
   "the-closer":
     closeWindowTogetherWithLastTab: false
-  "linter-eslint":
-    useGlobalEslint: true
-    globalNodePath: "/usr/local"
   "toggle-packages":
     togglePackages: [
       "linter-xo"
       "linter-jshint"
     ]
-  "status-bar": {}
-  "find-and-replace":
-    scrollToResultOnLiveSearch: true
-  react: {}
-  tabs:
-    usePreviewTabs: true
-  "atom-material-ui":
-    fonts: {}
-    tabs: {}
-    ui:
-      panelContrast: true
-    treeView:
-      compactList: true
-    panels:
-      panelContrast: true
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
