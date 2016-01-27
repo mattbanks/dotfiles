@@ -1,3 +1,7 @@
 # Force the fucking keyboard shortcuts from Emmet to stop blocking markdown preview
 '.editor:not(.mini)':
   'ctrl-shift-M': 'markdown-preview:toggle'
+
+# Make Emmet expand in React JSX files
+'atom-text-editor[data-grammar~="jsx"]:not([mini])':
+  'tab': 'emmet:expand-abbreviation-with-tab'

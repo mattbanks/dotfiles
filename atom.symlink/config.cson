@@ -15,7 +15,7 @@
   core:
     disabledPackages: [
       "linter-eslint"
-      "linter-xo"
+      "linter-jshint"
     ]
     ignoredNames: [
       ".git"
@@ -44,6 +44,7 @@
     scrollToResultOnLiveSearch: true
   "highlight-selected":
     lightTheme: true
+  "language-babel": {}
   linter: {}
   "linter-eslint":
     globalNodePath: "/usr/local"
@@ -79,3 +80,13 @@
     hideIgnoredNames: true
   welcome:
     showOnStartup: false
+".babel.regexp.source":
+  editor:
+    preferredLineLength: 130
+".coffee.jsx.source":
+  editor:
+    autoIndent: false
+    preferredLineLength: 130
+".js.jsx.source":
+  editor:
+    preferredLineLength: 130
