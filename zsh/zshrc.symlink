@@ -48,6 +48,9 @@ done
 # Enable rbenv shims and autocompletion
 eval "$(rbenv init -)"
 
+# Enable docker
+$ eval $(docker-machine env docker-host)
+
 # Enable ZSH Syntax Highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
