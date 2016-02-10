@@ -5,9 +5,10 @@
     fonts: {}
     panels:
       panelContrast: true
-    tabs: {}
+    tabs:
+      showTabIcons: "Show on active tab"
     treeView:
-      compactList: true
+      compactList: false
     ui:
       panelContrast: true
   "autocomplete-plus":
