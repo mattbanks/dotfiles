@@ -22,4 +22,4 @@ reload-docker() {
 }
 
 # invoke this immeadiately
-reload-docker
+# reload-docker
