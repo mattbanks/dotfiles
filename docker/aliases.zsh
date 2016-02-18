@@ -23,3 +23,6 @@ reload-docker() {
 
 # invoke this immeadiately
 # reload-docker
+
+alias dmstart="docker-machine start $DOCKER_MACHINE_NAME && reload-docker"
+alias dmstop="docker-machine stop $DOCKER_MACHINE_NAME"
