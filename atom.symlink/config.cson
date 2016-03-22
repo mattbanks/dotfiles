@@ -3,12 +3,9 @@
     _analyticsUserId: "8b9e6b6c-7ca9-4b13-8b9d-ee875e13ba81"
   "atom-material-ui":
     fonts: {}
-    panels:
-      panelContrast: true
-    tabs:
-      showTabIcons: "Show on active tab"
+    tabs: {}
     treeView:
-      compactList: false
+      compactList: true
     ui:
       panelContrast: true
   "autocomplete-plus":

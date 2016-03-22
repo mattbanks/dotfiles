@@ -22,7 +22,7 @@
 	],
 	"bold_folder_labels": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
 	"folder_exclude_patterns":
@@ -37,12 +37,15 @@
 		".idea"
 	],
 	"font_face": "Hack",
-	"font_size": 13,
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 14,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Material Theme",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -52,8 +55,9 @@
 	],
 	"line_padding_bottom": 3,
 	"line_padding_top": 3,
+	"material_theme_contrast_mode": true,
 	"overlay_scroll_bars": "enabled",
-	"theme": "Default.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true
 }

@@ -13,7 +13,7 @@
 		{
 			"jshint":
 			{
-				"@disable": false,
+				"@disable": true,
 				"args":
 				[
 				],
@@ -23,7 +23,7 @@
 			},
 			"xo":
 			{
-				"@disable": true,
+				"@disable": false,
 				"args":
 				[
 				],
