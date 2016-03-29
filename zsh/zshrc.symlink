@@ -5,7 +5,7 @@ export ZSH=$HOME/.dotfiles
 export PROJECTS=~/Code
 
 # init z   https://github.com/rupa/z
-. `brew --prefix`/etc/profile.d/z.sh
+. /usr/local/etc/profile.d/z.sh
 
 # bind up and down to search
 bindkey "^[[A" history-search-backward
