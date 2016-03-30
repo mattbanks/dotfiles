@@ -54,4 +54,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Enable VV completion
 # source $( echo $(which vv)-completions)
 
+# Specify your defaults in this environment variable
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 unset config_files
