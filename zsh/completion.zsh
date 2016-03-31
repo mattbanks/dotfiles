@@ -17,3 +17,6 @@ zstyle ':completion:*' insert-tab pending
 # if [ -f $(brew --prefix)/etc/bash_completion.d/npm ]; then
 # 	. $(brew --prefix)/etc/bash_completion.d/npm
 # fi
+
+# AWS CLI completions from Homebrew
+source /usr/local/share/zsh/site-functions/_aws
