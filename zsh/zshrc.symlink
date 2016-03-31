@@ -1,3 +1,7 @@
+# load pure prompt
+autoload -U promptinit && promptinit
+prompt pure
+
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
