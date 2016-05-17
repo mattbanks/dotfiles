@@ -7,6 +7,7 @@
 	[
 		"AdvancedNewFile",
 		"Alignment",
+		"AutoPEP8",
 		"Babel",
 		"Color Highlighter",
 		"DocBlockr",
@@ -28,6 +29,7 @@
 		"SublimeLinter",
 		"SublimeLinter-contrib-xo",
 		"SublimeLinter-jshint",
+		"SublimeLinter-pep8",
 		"Underscore.js Snippets",
 		"WordPress"
 	]
