@@ -1,23 +1,26 @@
-# .editorconfig
-# More info: editorconfig.org
+# EditorConfig coding styles definitions. For more information about the
+# properties used in this file, please see the EditorConfig documentation:
+# http://editorconfig.org/
 
+# indicate this is the root of the project
 root = true
 
 [*]
-indent_style = tab
-end_of_line = lf
 charset = utf-8
-indent_size = 2
-trim_trailing_whitespace = true
+end_of_line = lf
 insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[Makefile]
+indent_style = tab
+
+[*.js]
+indent_size = 2
 
 [*.md]
 trim_trailing_whitespace = false
 
-[package.json]
-# package.json adhere to --save-dev manipulation styles
+[*.go]
 indent_style = tab
-
-[Makefile]
-indent_style = tab
-indent_size = 1
