@@ -45,16 +45,14 @@
   "highlight-selected":
     lightTheme: true
   "language-babel": {}
-  linter: {}
+  linter:
+    showErrorPanel: false
   "linter-eslint":
     globalNodePath: "/usr/local"
     useGlobalEslint: true
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
-  "linter-pep8":
-    ignoreErrorCodes: [
-      "E501"
-    ]
+  "linter-pep8": {}
   metrics:
     userId: "f0927718331c072990cb750aafe7bbb7c24695ca"
   minimap:
@@ -79,6 +77,7 @@
     togglePackages: [
       "linter-xo"
       "linter-jshint"
+      "linter-eslint"
     ]
   "tree-view":
     hideIgnoredNames: true
