@@ -16,6 +16,7 @@
     disabledPackages: [
       "linter-eslint"
       "linter-jshint"
+      "react"
     ]
     ignoredNames: [
       ".git"
