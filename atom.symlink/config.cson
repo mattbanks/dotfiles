@@ -46,8 +46,7 @@
   "highlight-selected":
     lightTheme: true
   "language-babel": {}
-  linter:
-    showErrorPanel: false
+  linter: {}
   "linter-eslint":
     globalNodePath: "/usr/local"
     useGlobalEslint: true
