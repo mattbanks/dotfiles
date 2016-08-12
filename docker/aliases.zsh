@@ -1,9 +1,9 @@
 #!/bin/sh
-export DOCKER_MACHINE_NAME=docker-host
+# export DOCKER_MACHINE_NAME=docker-host
 
 alias dm="docker-machine"
 alias dc="docker-compose"
-alias dmr="docker-machine restart $DOCKER_MACHINE_NAME && reload-docker"
+# alias dmr="docker-machine restart $DOCKER_MACHINE_NAME && reload-docker"
 alias di="docker images"
 alias dps="docker ps"
 alias dcps="docker-compose ps"
