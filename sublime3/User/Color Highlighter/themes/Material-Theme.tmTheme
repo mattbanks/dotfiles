@@ -16,15 +16,15 @@
 <key>name</key>
 <string>mon_color</string>
 <key>scope</key>
-<string>mcol_EC551FFF</string>
+<string>mcol_46be8aFF</string>
 <key>settings</key>
 <dict>
 <key>background</key>
-<string>#EC551FFF</string>
+<string>#46be8aFF</string>
 <key>foreground</key>
-<string>#461605FF</string>
+<string>#133828FF</string>
 <key>caret</key>
-<string>#461605FF</string>
+<string>#133828FF</string>
 </dict>
 </dict>
 
@@ -32,15 +32,15 @@
 <key>name</key>
 <string>mon_text_color</string>
 <key>scope</key>
-<string>mcol_text_EC551FFF</string>
+<string>mcol_text_46be8aFF</string>
 <key>settings</key>
 <dict>
 <key>background</key>
 <string>#263239FF</string>
 <key>foreground</key>
-<string>#EC551FFF</string>
+<string>#46be8aFF</string>
 <key>caret</key>
-<string>#461605FF</string>
+<string>#133828FF</string>
 </dict>
 </dict>
 
@@ -48,15 +48,15 @@
 <key>name</key>
 <string>mon_color</string>
 <key>scope</key>
-<string>mcol_000000FF</string>
+<string>mcol_76838fFF</string>
 <key>settings</key>
 <dict>
 <key>background</key>
-<string>#000000FF</string>
+<string>#76838fFF</string>
 <key>foreground</key>
-<string>#FFFFFFFF</string>
+<string>#22262AFF</string>
 <key>caret</key>
-<string>#FFFFFFFF</string>
+<string>#22262AFF</string>
 </dict>
 </dict>
 
@@ -64,15 +64,15 @@
 <key>name</key>
 <string>mon_text_color</string>
 <key>scope</key>
-<string>mcol_text_000000FF</string>
+<string>mcol_text_76838fFF</string>
 <key>settings</key>
 <dict>
 <key>background</key>
 <string>#263239FF</string>
 <key>foreground</key>
-<string>#000000FF</string>
+<string>#76838fFF</string>
 <key>caret</key>
-<string>#FFFFFFFF</string>
+<string>#22262AFF</string>
 </dict>
 </dict>
 
@@ -80,15 +80,15 @@
 <key>name</key>
 <string>mon_color</string>
 <key>scope</key>
-<string>mcol_CBCBCBFF</string>
+<string>mcol_D6494BFF</string>
 <key>settings</key>
 <dict>
 <key>background</key>
-<string>#CBCBCBFF</string>
+<string>#D6494BFF</string>
 <key>foreground</key>
-<string>#343434FF</string>
+<string>#3E0E0EFF</string>
 <key>caret</key>
-<string>#343434FF</string>
+<string>#3E0E0EFF</string>
 </dict>
 </dict>
 
@@ -96,15 +96,15 @@
 <key>name</key>
 <string>mon_text_color</string>
 <key>scope</key>
-<string>mcol_text_CBCBCBFF</string>
+<string>mcol_text_D6494BFF</string>
 <key>settings</key>
 <dict>
 <key>background</key>
 <string>#263239FF</string>
 <key>foreground</key>
-<string>#CBCBCBFF</string>
+<string>#D6494BFF</string>
 <key>caret</key>
-<string>#343434FF</string>
+<string>#3E0E0EFF</string>
 </dict>
 </dict>
 
@@ -112,15 +112,15 @@
 <key>name</key>
 <string>mon_color</string>
 <key>scope</key>
-<string>mcol_ffffffFF</string>
+<string>mcol_f3f7f9FF</string>
 <key>settings</key>
 <dict>
 <key>background</key>
-<string>#ffffffFF</string>
+<string>#f3f7f9FF</string>
 <key>foreground</key>
-<string>#000000FF</string>
+<string>#060A0CFF</string>
 <key>caret</key>
-<string>#000000FF</string>
+<string>#060A0CFF</string>
 </dict>
 </dict>
 
@@ -128,15 +128,15 @@
 <key>name</key>
 <string>mon_text_color</string>
 <key>scope</key>
-<string>mcol_text_ffffffFF</string>
+<string>mcol_text_f3f7f9FF</string>
 <key>settings</key>
 <dict>
 <key>background</key>
 <string>#263239FF</string>
 <key>foreground</key>
-<string>#ffffffFF</string>
+<string>#f3f7f9FF</string>
 <key>caret</key>
-<string>#000000FF</string>
+<string>#060A0CFF</string>
 </dict>
 </dict>
 
@@ -149,6 +149,8 @@
 				<string>#263238</string>
 				<key>caret</key>
 				<string>#FFCC00</string>
+				<key>findHighlight</key>
+				<string>#F8E71C</string>
 				<key>foreground</key>
 				<string>#eeffff</string>
 				<key>guide</key>
@@ -159,10 +161,8 @@
 				<string>#65737e</string>
 				<key>lineHighlight</key>
 				<string>#00000050</string>
-				<key>phantomCss</key>
-				<string><![CDATA[ html { position: relative; } ]]></string>
 				<key>popupCss</key>
-				<string><![CDATA[ html { background-color: #263238; color: #eeffff; padding: 16px; } a { color: #B2CCD6; display: block; line-height: 16px; } .error, .deleted { color: #FF5370; } .success, .inserted { color: #C3E88D; } .warning, .modified { color: #FFCB6B; } ]]></string>
+				<string><![CDATA[ html { background-color: #263238; color: #eeffff; padding: 16px; } a { color: #B2CCD6; line-height: 16px; } .error, .deleted { color: #FF5370; } .success, .inserted { color: #C3E88D; } .warning, .modified { color: #FFCB6B; } ]]></string>
 				<key>selection</key>
 				<string>#80CBC420</string>
 				<key>selectionBorder</key>
