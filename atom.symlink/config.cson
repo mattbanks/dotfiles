@@ -42,6 +42,8 @@
     userId: "bd6ebad1-8d08-df36-542e-70237afa9876"
   "find-and-replace":
     scrollToResultOnLiveSearch: true
+  "go-debug":
+    panelInitialVisible: false
   "highlight-selected":
     lightTheme: true
   "language-babel": {}
