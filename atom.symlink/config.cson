@@ -25,6 +25,7 @@
       ".sass-cache"
       "node_modules"
     ]
+    telemetryConsent: "no"
     themes: [
       "atom-material-ui"
       "atom-material-syntax"
@@ -44,6 +45,8 @@
     scrollToResultOnLiveSearch: true
   "go-debug":
     panelInitialVisible: false
+  "go-plus":
+    panelDisplayMode: "closed"
   "highlight-selected":
     lightTheme: true
   "language-babel": {}

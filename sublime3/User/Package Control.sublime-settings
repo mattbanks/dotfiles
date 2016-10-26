@@ -19,6 +19,7 @@
 		"JavaScript & NodeJS Snippets",
 		"Jinja2",
 		"jQuery",
+		"JSONLint",
 		"LESS",
 		"Material Theme",
 		"Package Control",
@@ -32,6 +33,7 @@
 		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-contrib-xo",
 		"SublimeLinter-jshint",
+		"SublimeLinter-json",
 		"SublimeLinter-pep8",
 		"Underscore.js Snippets",
 		"WordPress"
