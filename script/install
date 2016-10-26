@@ -1,14 +1,31 @@
 #!/usr/bin/env bash
 #
-# Run all dotfiles installers.
+# Setup new machine
 
 set -e
 
-cd "$(dirname $0)"/..
+###############################################################################
+# Prerequisites
+###############################################################################
+# Install Xcode from Mac App Store
+# Install iTerm2 - http://www.iterm2.com
+# Install Atom - https://atom.io
+# Install Sublime Text 3 - http://www.sublimetext.com/3
 
-# Run Homebrew through the Brewfile
-echo "› brew bundle"
-brew bundle
+# Make sure we have Xcode command line tools
+xcode-select --install
 
-# find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+# Run laptop install script to setup homebrew, git, node, ruby, etc for development
+zsh <(curl -s https://raw.github.com/mattbanks/laptop/master/mac)
+
+# Setup Atom
+apm stars --install
+
+# Setup Sublime Text 3
+$ZSH/sublime3/setup
+
+# Setup Xcode color theme
+$ZSH/xcode/setup
+
+# Setup macOS defaults
+$ZSH/macos/set-defaults.sh

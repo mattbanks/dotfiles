@@ -38,13 +38,14 @@ defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
-## sublime text 3 setup
+## new machine setup
 
-To pull in Sublime Text 3 User preferences, run:
+To setup a new machine with brew, node, ruby and run setup for Atom, Sublime
+Text 3, Atom, Xcode, etc, run:
 
 ```sh
 cd ~/.dotfiles/
-sublime3/setup
+script/install
 ```
 
 ## topical
@@ -75,7 +76,6 @@ There's a few special files in the hierarchy.
   expected to setup `$PATH` or similar.
 - **topic/completion.zsh**: Any file named `completion.zsh` is loaded
   last and is expected to setup autocomplete.
-- **topic/install.sh**: Any file named `install.sh` is executed when you run `script/install`. To avoid being loaded automatically, its extension is `.sh`, not `.zsh`.
 - **topic/\*.symlink**: Any file ending in `*.symlink` gets symlinked into
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
   but still keep those autoloaded files in your home directory. These get
