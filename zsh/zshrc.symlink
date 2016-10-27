@@ -49,6 +49,9 @@ do
   source $file
 done
 
+# Enable rbenv shims and autocompletion
+eval "$(rbenv init -)"
+
 # Enable ZSH Syntax Highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
