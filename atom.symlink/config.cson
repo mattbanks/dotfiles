@@ -11,6 +11,8 @@
       panelContrast: true
   "autocomplete-plus":
     confirmCompletion: "tab and enter"
+  "autocomplete-python":
+    useKite: false
   core:
     disabledPackages: [
       "linter-eslint"
@@ -33,6 +35,7 @@
   docblockr: {}
   editor:
     fontFamily: "Hack"
+    fontSize: 15
     invisibles: {}
     preferredLineLength: 130
     showIndentGuide: true
