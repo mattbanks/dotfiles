@@ -11,6 +11,8 @@
       panelContrast: true
   "autocomplete-plus":
     confirmCompletion: "tab and enter"
+  "autocomplete-python":
+    useKite: false
   core:
     disabledPackages: [
       "linter-eslint"
@@ -56,7 +58,10 @@
     useGlobalEslint: true
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
-  "linter-pep8": {}
+  "linter-pep8":
+    ignoreErrorCodes: [
+      "E501"
+    ]
   metrics:
     userId: "f0927718331c072990cb750aafe7bbb7c24695ca"
   minimap:
