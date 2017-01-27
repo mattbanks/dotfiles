@@ -59,7 +59,7 @@
     useGlobalEslint: true
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
-  "linter-pep8":
+  "linter-pycodestyle":
     ignoreErrorCodes: [
       "E501"
     ]
