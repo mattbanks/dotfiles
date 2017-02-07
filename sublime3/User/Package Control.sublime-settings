@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"AdvancedNewFile",
 		"Alignment",
 		"AutoPEP8",
@@ -36,7 +37,6 @@
 		"SublimeLinter-json",
 		"SublimeLinter-pep8",
 		"Underscore.js Snippets",
-		"WordPress",
-		"zz File Icons"
+		"WordPress"
 	]
 }
