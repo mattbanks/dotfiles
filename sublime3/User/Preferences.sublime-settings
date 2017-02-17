@@ -46,6 +46,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Dotfiles Syntax Highlighting",
 		"Vintage"
 	],
 	"indent_guide_options":
