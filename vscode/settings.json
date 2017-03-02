@@ -4,8 +4,12 @@
     "editor.lineHeight": 22,
     "editor.fontFamily": "Hack, monospace",
     "editor.scrollBeyondLastLine": false,
-    "editor.wrappingColumn": 0,
+    "editor.minimap.enabled": true,
     "xo.enable": true,
     "workbench.welcome.enabled": false,
-    "window.reopenFolders": "none"
+    "window.reopenFolders": "none",
+    "editor.wordWrap": false,
+    "editor.dragAndDrop": true,
+    "workbench.colorTheme": "Material Theme",
+    "workbench.iconTheme": "material-icon-theme"
 }
