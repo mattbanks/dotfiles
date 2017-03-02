@@ -8,7 +8,7 @@
     "xo.enable": true,
     "workbench.welcome.enabled": false,
     "window.reopenFolders": "none",
-    "editor.wordWrap": false,
+    "editor.wordWrap": "off",
     "editor.dragAndDrop": true,
     "workbench.colorTheme": "Material Theme",
     "workbench.iconTheme": "material-icon-theme"
