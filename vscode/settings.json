@@ -4,12 +4,13 @@
     "editor.lineHeight": 22,
     "editor.fontFamily": "Hack, monospace",
     "editor.scrollBeyondLastLine": false,
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "editor.dragAndDrop": true,
     "xo.enable": true,
     "workbench.welcome.enabled": false,
-    "window.reopenFolders": "none",
-    "editor.wordWrap": "off",
-    "editor.dragAndDrop": true,
     "workbench.colorTheme": "Material Theme",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "window.reopenFolders": "none",
+    "window.newWindowDimensions": "inherit"
 }
