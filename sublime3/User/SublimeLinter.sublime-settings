@@ -69,6 +69,7 @@
             "json (settings)": "json", 
             "json (stylelint)": "json", 
             "json (sublime)": "json", 
+            "json (tern js)": "json", 
             "php": "html", 
             "python django": "python", 
             "xml (config)": "xml", 
