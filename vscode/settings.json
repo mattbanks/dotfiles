@@ -12,5 +12,13 @@
     "workbench.colorTheme": "Material Theme",
     "workbench.iconTheme": "material-icon-theme",
     "window.reopenFolders": "none",
-    "window.newWindowDimensions": "inherit"
+    "window.newWindowDimensions": "maximized",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true
+    }
 }
