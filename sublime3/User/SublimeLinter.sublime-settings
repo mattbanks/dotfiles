@@ -17,6 +17,12 @@
                 "args": [], 
                 "excludes": []
             }, 
+            "json": {
+                "@disable": false, 
+                "args": [], 
+                "excludes": [], 
+                "strict": true
+            }, 
             "pep8": {
                 "@disable": false, 
                 "args": [], 
@@ -28,6 +34,8 @@
             "xo": {
                 "@disable": false, 
                 "args": [], 
+                "disable_if_not_dependency": true, 
+                "enable_if_dependency": true, 
                 "excludes": []
             }
         }, 
@@ -82,6 +90,10 @@
             "yaml (stylelint)": "yaml", 
             "yaml (yarn)": "yaml"
         }, 
+        "tooltip_fontsize": "1rem", 
+        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme", 
+        "tooltip_theme_excludes": [], 
+        "tooltips": true, 
         "warning_color": "DDB700", 
         "wrap_find": true
     }

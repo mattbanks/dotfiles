@@ -7,9 +7,9 @@
 	<key>colorSpaceName</key>
 	<string>sRGB</string>
 	<key>name</key>
-	<string>Material-Theme-Darker</string>
+	<string>Material-Theme-Palenight</string>
 	<key>semanticClass</key>
-	<string>material.theme.darker</string>
+	<string>material.theme.palenight</string>
 	<key>settings</key>
 	<array>
 <dict>
@@ -36,7 +36,7 @@
 <key>settings</key>
 <dict>
 <key>background</key>
-<string>#212122FF</string>
+<string>#292D3fFF</string>
 <key>foreground</key>
 <string>#FFFFFFFF</string>
 <key>caret</key>
@@ -48,33 +48,33 @@
 			<key>settings</key>
 			<dict>
 				<key>activeGuide</key>
-				<string>#FFFFFF50</string>
+				<string>#828ED5</string>
 				<key>background</key>
-				<string>#212121</string>
+				<string>#292D3E</string>
 				<key>caret</key>
 				<string>#FFCC00</string>
 				<key>findHighlight</key>
 				<string>#F8E71C</string>
 				<key>foreground</key>
-				<string>#eeffffff</string>
+				<string>#959DCB</string>
 				<key>guide</key>
-				<string>#42424270</string>
+				<string>#4E557980</string>
 				<key>gutterForeground</key>
-				<string>#424242</string>
+				<string>#3A3F58</string>
 				<key>invisibles</key>
-				<string>#65737e</string>
+				<string>#4E5579</string>
 				<key>lineHighlight</key>
-				<string>#00000050</string>
+				<string>#00000030</string>
 				<key>popupCss</key>
-				<string><![CDATA[ html { background-color: #212121; color: #eeffffff; padding: 16px; } a { color: #B2CCD6; line-height: 16px; } .error, .deleted { color: #FF5370; } .success, .inserted { color: #C3E88D; } .warning, .modified { color: #FFCB6B; } .type { color: #89DDFF; font-style: italic; } .param { color: #F78C6C; } .current { text-decoration: underline; } ]]></string>
+				<string><![CDATA[ html { background-color: #292D3E; color: #959DCB; padding: 16px; } a { color: #B2CCD6; line-height: 16px; } .error, .deleted { color: #FF5370; } .success, .inserted { color: #C3E88D; } .warning, .modified { color: #FFCB6B; } .type { color: #89DDFF; font-style: italic; } .param { color: #F78C6C; } .current { text-decoration: underline; } ]]></string>
 				<key>selection</key>
-				<string>#61616150</string>
+				<string>#717CB440</string>
 				<key>selectionBorder</key>
-				<string>#61616150</string>
+				<string>#717CB440</string>
 				<key>shadow</key>
 				<string>#00000010</string>
 				<key>stackGuide</key>
-				<string>#42424280</string>
+				<string>#4E5579</string>
 			</dict>
 		</dict>
 		<dict>
@@ -87,7 +87,7 @@
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
-				<string>#4A4A4A</string>
+				<string>#676E95</string>
 			</dict>
 		</dict>
 		<dict>
@@ -98,7 +98,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#eeffffff</string>
+				<string>#959DCB</string>
 			</dict>
 		</dict>
 		<dict>
@@ -576,7 +576,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#eeffffff</string>
+				<string>#959DCB</string>
 			</dict>
 		</dict>
 		<dict>
@@ -598,7 +598,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#65737e</string>
+				<string>#4E5579</string>
 			</dict>
 		</dict>
 		<dict>
@@ -694,9 +694,9 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#65737e</string>
+				<string>#4E5579</string>
 				<key>foreground</key>
-				<string>#65737e</string>
+				<string>#4E5579</string>
 			</dict>
 		</dict>
 		<dict>
@@ -764,7 +764,7 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#00000050</string>
+				<string>#00000030</string>
 			</dict>
 		</dict>
 		<dict>
@@ -775,7 +775,7 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#00000050</string>
+				<string>#00000030</string>
 			</dict>
 		</dict>
 		<dict>
@@ -786,7 +786,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#eeffffff</string>
+				<string>#959DCB</string>
 			</dict>
 		</dict>
 		<dict>
@@ -799,7 +799,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#65737e</string>
+				<string>#4E5579</string>
 			</dict>
 		</dict>
 		<dict>
@@ -810,7 +810,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#4A4A4A</string>
+				<string>#676E95</string>
 			</dict>
 		</dict>
 		<dict>
@@ -832,11 +832,11 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#00000050</string>
+				<string>#00000030</string>
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#65737e</string>
+				<string>#4E5579</string>
 			</dict>
 		</dict>
 		<dict>
@@ -849,7 +849,7 @@
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#eeffffff</string>
+				<string>#959DCB</string>
 			</dict>
 		</dict>
 		<dict>
@@ -956,7 +956,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#65737e</string>
+				<string>#4E5579</string>
 			</dict>
 		</dict>
 		<dict>
@@ -967,7 +967,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#65737e</string>
+				<string>#4E5579</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1038,6 +1038,6 @@
 		</dict>
 	</array>
 	<key>uuid</key>
-	<string>4F44C0F5-1F8D-4C52-8BAB-F0951904C1EC</string>
+	<string>133d1250-19c6-4565-bc93-b37fd36f7fc9</string>
 </dict>
 </plist>
