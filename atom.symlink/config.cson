@@ -64,7 +64,7 @@
       "E501"
     ]
   "linter-ui-default":
-    panelHeight: 93
+    panelHeight: 174
     showPanel: true
   metrics:
     userId: "f0927718331c072990cb750aafe7bbb7c24695ca"
