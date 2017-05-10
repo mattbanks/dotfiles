@@ -1,0 +1,4 @@
+#!/bin/sh
+# Install extensions for Visual Studio Code
+
+for extension in $(cat vscode/extensions.txt); do code --install-extension $extension; done

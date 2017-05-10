@@ -1,5 +1,5 @@
 #!/bin/sh
-# Setup a machine for Sublime Text 3
+# Setup a machine for Visual Studio Code
 set -x
 
 # symlink settings in

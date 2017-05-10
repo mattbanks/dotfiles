@@ -1,0 +1,4 @@
+#!/bin/sh
+# Backup extensions for Visual Studio Code
+
+code --list-extensions > vscode/extensions.txt
