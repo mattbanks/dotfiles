@@ -1,8 +1,8 @@
 // Place your settings in this file to overwrite the default settings
 {
     "editor.fontSize": 14,
-    "editor.lineHeight": 22,
-    "editor.fontFamily": "Hack, monospace",
+    "editor.lineHeight": 23,
+    "editor.fontFamily": "'Fira Code', Hack, monospace",
     "editor.fontLigatures": true,
     "editor.scrollBeyondLastLine": false,
     "editor.minimap.enabled": false,
