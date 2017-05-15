@@ -30,11 +30,11 @@
     telemetryConsent: "no"
     themes: [
       "atom-material-ui"
-      "atom-material-syntax"
+      "one-dark-syntax"
     ]
   docblockr: {}
   editor:
-    fontFamily: "Hack"
+    fontFamily: "Fira Code"
     fontSize: 15
     invisibles: {}
     preferredLineLength: 130
