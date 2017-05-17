@@ -1,9 +1,13 @@
+sublime3/User/oscrypto-ca-bundle.crt
 sublime3/User/Package Control.ca-list
 sublime3/User/Package Control.ca-bundle
 sublime3/User/Package Control.cache
 sublime3/User/Package Control.last-run
+sublime3/User/Package Control.merged-ca-bundle
 sublime3/User/Package Control.system-ca-bundle
 sublime3/User/Package Control.ca-certs
+sublime3/User/Color Highlighter/**
+sublime3/User/SublimeLinter/**
 
 atom.symlink/.apm
 atom.symlink/.node-gyp
