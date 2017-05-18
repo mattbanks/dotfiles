@@ -45,7 +45,7 @@ Text 3, Atom, Xcode, etc, run:
 
 ```sh
 cd ~/.dotfiles/
-script/install
+script/setup_machine
 ```
 
 ## topical
