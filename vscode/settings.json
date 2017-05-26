@@ -28,5 +28,9 @@
     },
     "files.associations": {
         "*.docker": "dockerfile"
-    }
-}
+    },
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.4
+  }
