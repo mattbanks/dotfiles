@@ -1,23 +1,21 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.fontSize": 15,
-    "editor.lineHeight": 22,
+    "editor.detectIndentation": true,
+    "editor.dragAndDrop": true,
     "editor.fontFamily": "'Fira Code', Hack, monospace",
     "editor.fontLigatures": true,
-    "editor.scrollBeyondLastLine": false,
-    "editor.minimap.enabled": false,
-    "editor.wordWrap": "on",
-    "editor.dragAndDrop": true,
-    "editor.detectIndentation": true,
+    "editor.fontSize": 15,
     "editor.insertSpaces": true,
-    "editor.tabSize": 2,
+    "editor.lineHeight": 22,
+    "editor.minimap.enabled": true,
+    "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderIndentGuides": true,
-    "xo.enable": true,
-    "workbench.welcome.enabled": false,
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "material-icon-theme",
-    "window.reopenFolders": "none",
-    "window.newWindowDimensions": "maximized",
+    "editor.scrollBeyondLastLine": false,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "files.associations": {
+        "*.docker": "dockerfile"
+    },
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -26,11 +24,14 @@
         "**/.DS_Store": true,
         "**/node_modules": true
     },
-    "files.associations": {
-        "*.docker": "dockerfile"
-    },
     "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "terminal.integrated.fontSize": 14,
-    "terminal.integrated.lineHeight": 1.4
+    "terminal.integrated.lineHeight": 1.4,
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+    "window.newWindowDimensions": "inherit",
+    "window.reopenFolders": "none",
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.welcome.enabled": false,
+    "xo.enable": true
   }
