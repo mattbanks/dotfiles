@@ -20,6 +20,7 @@
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
+        "**/.sass-cache": true,
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/node_modules": true
