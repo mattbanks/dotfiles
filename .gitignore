@@ -12,6 +12,7 @@ sublime3/User/SublimeLinter/**
 atom.symlink/.apm
 atom.symlink/.node-gyp
 atom.symlink/.storage
+atom.symlink/github.cson
 atom.symlink/blob-store
 atom.symlink/compile-cache/
 atom.symlink/packages
