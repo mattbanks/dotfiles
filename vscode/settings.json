@@ -1,5 +1,6 @@
 // Place your settings in this file to overwrite the default settings
 {
+    "editor.autoIndent": true,
     "editor.detectIndentation": true,
     "editor.dragAndDrop": true,
     "editor.fontFamily": "'Fira Code', Hack, monospace",
@@ -30,9 +31,9 @@
     "terminal.integrated.lineHeight": 1.4,
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "window.newWindowDimensions": "inherit",
-    "window.reopenFolders": "none",
+    "window.restoreWindows": "none",
     "workbench.colorTheme": "One Dark Pro",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.welcome.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
     "xo.enable": true
   }
