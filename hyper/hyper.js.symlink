@@ -90,7 +90,7 @@ module.exports = {
     bell: 'SOUND',
 
     // if true, selected text will automatically be copied to the clipboard
-    copyOnSelect: true
+    copyOnSelect: true,
 
     // if true, on right click selected text will be copied or pasted if no
     // selection is present (true by default on Windows)
@@ -100,6 +100,13 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+    // hyper tabs plugin
+    hyperTabs: {
+      trafficButtons: true,
+      tabIconsColored: true,
+      activityColor: 'salmon'
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -110,7 +117,8 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hyper-snazzy',
-    'hyperlinks'
+    'hyperlinks',
+    'hyper-tabs-enhanced'
   ],
 
   // in development, you can create a directory under
