@@ -12,7 +12,6 @@ lukehoban.Go
 ms-vscode.atom-keybindings
 naumovs.color-highlight
 neilding.language-liquid
-nemesarial.dust
 rebornix.Ruby
 samverschueren.linter-xo
 timothymclane.react-redux-es6-snippets
