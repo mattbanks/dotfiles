@@ -57,7 +57,7 @@
 	"line_padding_top": 3,
 	"material_theme_contrast_mode": true,
 	"overlay_scroll_bars": "enabled",
-	"theme": "Material-Theme.sublime-theme",
+	"theme": "One Dark.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true
 }
