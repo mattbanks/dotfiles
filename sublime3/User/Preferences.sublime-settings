@@ -22,7 +22,7 @@
 	],
 	"bold_folder_labels": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/One Dark (SL).tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
 	"folder_exclude_patterns":
@@ -57,7 +57,7 @@
 	"line_padding_top": 3,
 	"material_theme_contrast_mode": true,
 	"overlay_scroll_bars": "enabled",
-	"theme": "One Dark.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true
 }
