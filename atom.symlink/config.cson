@@ -3,6 +3,7 @@
     general:
       _analyticsUserId: "8b9e6b6c-7ca9-4b13-8b9d-ee875e13ba81"
   "atom-material-ui":
+    colors: {}
     fonts: {}
     tabs: {}
     treeView:
@@ -64,7 +65,7 @@
       "E501"
     ]
   "linter-ui-default":
-    panelHeight: 174
+    panelHeight: 155
     showPanel: true
   metrics:
     userId: "f0927718331c072990cb750aafe7bbb7c24695ca"
