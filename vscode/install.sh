@@ -24,17 +24,14 @@ dbaeumer.vscode-eslint
 donjayamanne.python
 eg2.vscode-npm-script
 hollowtree.vue-snippets
-jasonnutter.search-node-modules
 lukehoban.Go
 ms-vscode.atom-keybindings
 naumovs.color-highlight
 neilding.language-liquid
-nemesarial.dust
 rebornix.Ruby
 samverschueren.linter-xo
 timothymclane.react-redux-es6-snippets
 tungvn.wordpress-snippet
-waderyan.nodejs-extension-pack
 xabikos.JavaScriptSnippets
 zhuangtongfa.Material-theme
 "
