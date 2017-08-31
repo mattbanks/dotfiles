@@ -1,24 +1,15 @@
 #!/bin/sh
 #
-# Welcome to Matt's laptop script, forked from thoughbot!
-# Be prepared to turn your laptop (or desktop, no haters here)
-# into an awesome development machine.
+# setup_machine
+#
+# `setup_machine` handles setting up a new machine
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd -P)
 
 set -e
 
 # Make sure we have Xcode command line tools
 xcode-select --install
-
-# Fancy echo for scripts
-fancy_echo() {
-  local fmt="$1"; shift
-
-  # shellcheck disable=SC2059
-  printf "\n$fmt\n" "$@"
-}
-
-# shellcheck disable=SC2154
-trap 'ret=$?; test $ret -ne 0 && printf "failed\n\n" >&2; exit $ret' EXIT
 
 # Create ~/.bin if it doesn't exist
 if [ ! -d "$HOME/.bin/" ]; then
@@ -29,6 +20,10 @@ fi
 if [ ! -d "$HOME/Code/" ]; then
   mkdir "$HOME/Code"
 fi
+
+# Setup SSH public key if it doesn't exist
+echo "› Checking for SSH key, generating one if it doesn't exist ..."
+  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
 
 # Create /usr/local if it doesn't exist,
 # or update the permissions so we own it
@@ -44,39 +39,12 @@ else
   sudo chown -R "$LOGNAME:admin" "$HOMEBREW_PREFIX"
 fi
 
-# Update shell to zsh
-update_shell() {
-  local shell_path;
-  shell_path="$(which zsh)"
-
-  fancy_echo "Changing your shell to zsh ..."
-  if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
-    fancy_echo "Adding '$shell_path' to /etc/shells"
-    sudo sh -c "echo $shell_path >> /etc/shells"
-  fi
-  chsh -s "$shell_path"
-}
-
-case "$SHELL" in
-  */zsh)
-    if [ "$(which zsh)" != '/usr/local/bin/zsh' ] ; then
-      update_shell
-    fi
-    ;;
-  *)
-    update_shell
-    ;;
-esac
-
-# Setup SSH public key if it doesn't exist
-fancy_echo "Checking for SSH key, generating one if it doesn't exist ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
-
 # Install homebrew
-$ZSH/homebrew/install.sh
+echo "› $DOTFILES/homebrew/setup"
+"$DOTFILES_ROOT/homebrew/setup.sh"
 
 # Run Homebrew through the Brewfile
-fancy_echo "› brew bundle ..."
+echo "› brew bundle ..."
 brew bundle
 
 # Install latest ruby with rbenv
@@ -89,7 +57,7 @@ gem_install_or_update() {
   fi
 }
 
-fancy_echo "Configuring Ruby ..."
+echo "› Configuring Ruby ..."
 find_latest_ruby() {
   rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//'
 }
@@ -110,20 +78,13 @@ number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
 
 # Install npm packages
-$ZSH/node/install.sh
+echo "› Configuring Node and NPM ..."
+"$DOTFILES_ROOT/node/setup.sh"
 
-# Setup Atom
-$ZSH/bin/atom-package-install
-
-# Setup Sublime Text 3
-$ZSH/sublime3/setup
-
-# Setup Visual Studio Code
-$ZSH/vscode/setup
-$ZSH/bin/vscode-extensions-install
-
-# Setup Xcode color theme
-$ZSH/xcode/setup
+# Run all installs
+echo "› $DOTFILES/script/install"
+"$DOTFILES/script/install"
 
 # Setup macOS defaults
-$ZSH/macos/set-defaults.sh
+echo "› Setting macOS defaults ..."
+"$DOTFILES_ROOT/macos/set-defaults.sh"

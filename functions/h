@@ -1,1 +1,3 @@
-cd ~/$1;
+#!/bin/sh
+# shellcheck disable=SC2164
+cd "$HOME/$1"

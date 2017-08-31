@@ -1,26 +1,23 @@
-# Use `hub` as our git wrapper:
-#   http://defunkt.github.com/hub/
-hub_path=$(which hub)
-if (( $+commands[hub] ))
-then
-  alias git=$hub_path
-fi
-
-# The rest of my fun git aliases
+#!/bin/sh
 alias gl='git pull --prune'
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias glg="git log --graph --decorate --oneline --abbrev-commit"
+alias glga="glg --all"
 alias gp='git push origin HEAD'
-
-# Remove `+` and `-` from start of diff lines; just rely upon color.
-alias gd='git diff --color | sed "s/^\([^-+ ]*\)[-+ ]/\\1/" | less -r'
-alias gdt='git difftool'
+alias gpa='git push origin --all'
+alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gco='git checkout'
-alias gcb='git copy-branch-name'
 alias gb='git branch'
-alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
-alias gac='git add -A && git commit -m'
-alias grm="git status | grep deleted | awk '{\$1=\$2=\"\"; print \$0}' | \
-           perl -pe 's/^[ \t]*//' | sed 's/ /\\\\ /g' | xargs git rm"
-alias gt="git tag -a"
+alias ga='git add'
+alias gaa='git add -A'
+alias gcm='git commit -m'
+alias gcam='git commit -a -m'
+alias gs='git status -sb'
+alias gcl='git clone'
+alias gcb='git-copy-branch-name'
+alias gpr='gp && git pr'
+
+gi() {
+	curl -s "https://www.gitignore.io/api/$*"
+}
