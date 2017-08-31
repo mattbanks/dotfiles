@@ -2,9 +2,10 @@
 
 if which exa >/dev/null 2>&1; then
 	alias ls='exa'
-	alias l='exa -la --git'
-	alias la='exa -laa --git'
-	alias ll='exa -l --git'
+	alias l='exa -lah --git'
+	alias la='exa -laah --git'
+	alias ll='exa -lh --git'
+	alias lt='exa -lhT'
 else
 	if [ "$(uname -s)" = "Darwin" ]; then
 		alias ls="ls -FG"
