@@ -1,4 +1,4 @@
-# carlos' dotfiles
+# matt's dotfiles
 
 > Config files for ZSH, Node, Ruby, Go, Editors, Terminals and more.
 
