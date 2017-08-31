@@ -1,8 +1,0 @@
-[user]
-	name = Matt Banks
-	email = mjbanks@gmail.com
-[include]
-	path = /Users/mattbanks/.gitconfig.local
-[dotfiles]
-	managed = true
-	lastupdate = 201708311239
