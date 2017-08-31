@@ -30,3 +30,6 @@ done
 
 # Link all sublime-settings files
 ln -sf "$DOTFILES"/sublime3/*.sublime-settings "$ST3_LOCAL/Packages/User/"
+
+# Link subl command
+ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/.bin/subl
