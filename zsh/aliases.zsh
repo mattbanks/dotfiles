@@ -1,3 +1,2 @@
-alias reload!='. ~/.zshrc'
-
-alias cls='clear' # Good 'ol Clear Screen command
+#!/bin/sh
+alias reload!='exec "$SHELL" -l'

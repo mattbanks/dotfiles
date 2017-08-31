@@ -1,1 +1,2 @@
-export PATH="/usr/local/share/npm/bin:$PATH"
+#!/bin/sh
+export PATH="$PATH:$HOME/.npm/bin"

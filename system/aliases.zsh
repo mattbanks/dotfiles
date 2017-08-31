@@ -1,13 +1,20 @@
-# grc overides for ls
-#   Made possible through contributions from generous benefactors like
-#   `brew install coreutils`
-# if $(gls &>/dev/null)
-# then
-#   alias ls="gls -F --color"
-#   alias l="gls -lAh --color"
-#   alias ll="gls -l --color"
-#   alias la='gls -A --color'
-# fi
+#!/bin/sh
+
+if which exa >/dev/null 2>&1; then
+	alias ls='exa'
+	alias l='exa -la --git'
+	alias la='exa -laa --git'
+	alias ll='exa -l --git'
+else
+	if [ "$(uname -s)" = "Darwin" ]; then
+		alias ls="ls -FG"
+	else
+		alias ls="ls -F --color"
+	fi
+	alias l="ls -lAh"
+	alias la="ls -A"
+	alias ll="ls -l"
+fi
 
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
@@ -15,78 +22,32 @@ alias ...="cd ../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
-# List dir contents aliases
-# ref: http://ss64.com/osx/ls.html
-# Long form no user group, color
-alias l="ls -oG"
-# Order by last modified, long form no user group, color
-alias lt="ls -toG"
-# List all except . and ..., color, mark file types, long form no user group, file size
-alias la="ls -AGFoh"
-# List all except . and ..., color, mark file types, long form no use group, order by last modified, file size
-alias lat="ls -AGFoth"
-# List only directories
-alias lsd='ls -l | grep "^d"'
-# List only files
-alias lsf='ls -l | grep -v "^d"'
+alias grep="grep --color=auto"
+alias duf="du -sh * | sort -hr"
+alias less="less -r"
 
-# Concatenate and print content of files (add line numbers)
-alias catn="cat -n"
+# quick hack to make watch work with aliases
+alias watch='watch '
 
-# IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ifconfig -a | grep -o 'inet \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | grep -v '127\.0\.0\.1' | sed -e 's/inet //'"
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
-
-# Enhanced WHOIS lookups
-alias whois="whois -h whois-servers.net"
-
-# Flush Directory Service cache
-alias flush="dscacheutil -flushcache"
-
-# View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
-# OS X has no `sha1sum`, so use `shasum` as a fallback
-command -v sha1sum > /dev/null || alias sha1sum="shasum"
-
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
+# open, pbcopy and pbpaste on linux
+if [ "$(uname -s)" != "Darwin" ]; then
+	if [ -z "$(command -v pbcopy)" ]; then
+		if [ -n "$(command -v xclip)" ]; then
+			alias pbcopy="xclip -selection clipboard"
+			alias pbpaste="xclip -selection clipboard -o"
+		elif [ -n "$(command -v xsel)" ]; then
+			alias pbcopy="xsel --clipboard --input"
+			alias pbpaste="xsel --clipboard --output"
+		fi
+	fi
+	if [ -e /usr/bin/xdg-open ]; then
+		alias open="xdg-open"
+	fi
+fi
 
 # Shortcuts
-alias d="cd ~/Dropbox"
 alias df="cd ~/.dotfiles"
 alias dl="cd ~/Downloads"
-alias s="cd ~/Sites"
-alias st="subl"
-alias stt="subl ."
 alias t="tar -pcvzf"
 alias tx="tar -pvxf"
-alias g="git"
-alias v="vim"
-alias o="open"
 alias oo="open ."
-
-# Enable aliases to be sudo’ed
-alias sudo='sudo '
-
-# Homebrew, NPM, Gems Update, Cleanup Brew and Gems
-alias pkgup="brew update; brew upgrade; npm update -g; composer self-update; gem update --system; gem update;"
-alias pkgclean="brew cleanup; npm cache clean; gem cleanup;"
-
-# Vagrant
-alias vup="vagrant up"
-alias vs="vagrant suspend"
-alias vh="vagrant halt"
-alias vsh="vagrant ssh"
-
-# File size
-alias fs="stat -c \"%s bytes\""
-
-# ROT13-encode text. Works for decoding, too! ;)
-alias rot13='tr a-zA-Z n-za-mN-ZA-M'
-
-# Quick way to rebuild the Launch Services database and get rid
-# of duplicates in the Open With submenu.
-alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user; killall Finder; open -a TotalFinder'
