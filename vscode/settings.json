@@ -22,7 +22,8 @@
   "eslint.autoFixOnSave": true,
   "extensions.ignoreRecommendations": false,
   "files.associations": {
-    "*.docker": "dockerfile"
+    "*.docker": "dockerfile",
+    ".gitignore": "shellscript"
   },
   "files.exclude": {
     "**/.git": true,
