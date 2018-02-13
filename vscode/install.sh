@@ -18,11 +18,8 @@ PeterJausovec.vscode-docker
 Zignd.html-css-class-completion
 abusaidm.html-snippets
 bajdzis.vscode-twig-pack
-christian-kohler.npm-intellisense
-christian-kohler.path-intellisense
+bungcip.better-toml
 dbaeumer.vscode-eslint
-donjayamanne.python
-eg2.vscode-npm-script
 hollowtree.vue-snippets
 lukehoban.Go
 ms-vscode.atom-keybindings
