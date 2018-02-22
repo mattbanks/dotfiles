@@ -1,0 +1,5 @@
+#!/bin/sh
+# shellcheck disable=SC2164
+function fixcamera() {
+    sudo killall VDCAssistant
+}
