@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# Limits the dotnet process, because it runs out of control
+#
+# USAGE:
+#
+#   $ limitprocess Chrome
+#   # => limits all processes matching "Chrome" to 60% CPU
+#
+cpu_limit=60
+pids=`pgrep -f "$@"`
+for pid in ${pids}; do
+	echo "> PID=${pid}, CPU=${cpu_limit}"
+	sudo cputhrottle ${pid} ${cpu_limit} &
+done
