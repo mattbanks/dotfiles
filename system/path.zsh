@@ -1,5 +1,5 @@
 #!/bin/sh
-export PATH="$PATH:$DOTFILES/bin"
+export PATH="$PATH:$DOTFILES/bin:$HOME/.bin"
 
 # Homebrew python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
