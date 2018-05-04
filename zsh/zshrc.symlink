@@ -8,9 +8,6 @@ export PROJECTS="$HOME/Code"
 # your default editor
 export EDITOR='code'
 
-# phantomjs path
-export PHANTOMJS_BIN='/usr/local/bin/phantomjs'
-
 # homebrew cask directory
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
