@@ -32,11 +32,7 @@ module.exports = {
     css: '',
 
     // custom css to embed in the terminal window
-    termCSS: `
-        x-screen x-row {
-            font-variant-ligatures: initial;
-        }
-    `,
+    termCSS: '',
 
     // set to `true` (without backticks) if you're using a Linux setup that doesn't show native menus
     // default: `false` on Linux, `true` on Windows (ignored on macOS)
@@ -90,7 +86,7 @@ module.exports = {
     bell: 'SOUND',
 
     // if true, selected text will automatically be copied to the clipboard
-    copyOnSelect: true,
+    copyOnSelect: true
 
     // if true, on right click selected text will be copied or pasted if no
     // selection is present (true by default on Windows)
@@ -100,13 +96,6 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
-
-    // hyper tabs plugin
-    hyperTabs: {
-      trafficButtons: true,
-      tabIconsColored: true,
-      activityColor: 'salmon'
-    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -116,9 +105,7 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    'hyper-snazzy',
-    'hyperlinks',
-    'hyper-tabs-enhanced'
+    'hyper-snazzy'
   ],
 
   // in development, you can create a directory under
