@@ -13,6 +13,7 @@ if test "$(which code)"; then
 	# from `code --list-extensions`
 	modules="
 EditorConfig.EditorConfig
+Mikael.Angular-BeastCode
 PKief.material-icon-theme
 PeterJausovec.vscode-docker
 Zignd.html-css-class-completion
@@ -20,13 +21,13 @@ abusaidm.html-snippets
 bajdzis.vscode-twig-pack
 bungcip.better-toml
 dbaeumer.vscode-eslint
-hollowtree.vue-snippets
+eg2.tslint
 lukehoban.Go
+mauve.terraform
+mikestead.dotenv
 ms-vscode.atom-keybindings
 naumovs.color-highlight
 neilding.language-liquid
-rebornix.Ruby
-samverschueren.linter-xo
 timothymclane.react-redux-es6-snippets
 tungvn.wordpress-snippet
 xabikos.JavaScriptSnippets
