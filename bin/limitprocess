@@ -8,7 +8,8 @@
 #   # => limits all processes matching "Chrome" to 60% CPU
 #
 cpu_limit=60
-pids=`pgrep -f "$@"`
+pids=`pidof "$@"`
+
 for pid in ${pids}; do
 	echo "> PID=${pid}, CPU=${cpu_limit}"
 	sudo cputhrottle ${pid} ${cpu_limit} &
