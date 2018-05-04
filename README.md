@@ -2,12 +2,6 @@
 
 > Config files for ZSH, Node, Ruby, Go, Editors, Terminals and more.
 
-[ap]: https://github.com/getantibody/antibody
-[ab]: https://img.shields.io/badge/powered%20by-antibody-blue.svg?style=flat-square
-[tb]: https://img.shields.io/travis/caarlos0/dotfiles/master.svg?style=flat-square
-[tp]: https://travis-ci.org/caarlos0/dotfiles
-[scrn]: /docs/screenshot.png
-
 ## Installation
 
 ### Dependencies
