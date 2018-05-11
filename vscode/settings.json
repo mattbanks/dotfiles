@@ -1,5 +1,12 @@
-// Place your settings in this file to overwrite the default settings
 {
+	"cSpell.enabledLanguageIds": [
+		"html",
+		"jade",
+		"json",
+		"markdown",
+		"plaintext",
+		"text"
+	],
 	"editor.autoIndent": true,
 	"editor.detectIndentation": true,
 	"editor.dragAndDrop": true,
@@ -25,6 +32,8 @@
 		"*.docker": "dockerfile",
 		".gitignore": "shellscript"
 	},
+	// Save Unix-style LF line endings by default.
+	"files.eol": "\n",
 	"files.exclude": {
 		"**/.git": true,
 		"**/.svn": true,
@@ -34,12 +43,14 @@
 		"**/.DS_Store": true,
 		"**/node_modules": true
 	},
+	"git.confirmSync": false,
 	"material-icon-theme.showUpdateMessage": false,
 	"telemetry.enableTelemetry": false,
 	"terminal.external.osxExec": "iTerm.app",
 	"terminal.integrated.fontSize": 14,
 	"terminal.integrated.lineHeight": 1.4,
 	"terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+	"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\bash.exe",
 	"window.newWindowDimensions": "inherit",
 	"window.restoreWindows": "none",
 	"window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
@@ -49,7 +60,6 @@
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.sideBar.location": "left",
 	"workbench.startupEditor": "newUntitledFile",
-	"xo.enable": true,
 	// Override formatOnSave for JavaScript and HTML
 	"[javascript]": {
 		"editor.formatOnSave": false
