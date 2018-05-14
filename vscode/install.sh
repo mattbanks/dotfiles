@@ -22,10 +22,10 @@ bajdzis.vscode-twig-pack
 bungcip.better-toml
 dbaeumer.vscode-eslint
 eg2.tslint
-lukehoban.Go
 mauve.terraform
 mikestead.dotenv
 ms-vscode.atom-keybindings
+ms-vscode.Go
 naumovs.color-highlight
 neilding.language-liquid
 timothymclane.react-redux-es6-snippets
