@@ -12,24 +12,34 @@ if test "$(which code)"; then
 
 	# from `code --list-extensions`
 	modules="
+2gua.rainbow-brackets
 EditorConfig.EditorConfig
-Mikael.Angular-BeastCode
-PKief.material-icon-theme
-PeterJausovec.vscode-docker
 Zignd.html-css-class-completion
+aaron-bond.better-comments
 abusaidm.html-snippets
 bajdzis.vscode-twig-pack
 bungcip.better-toml
+CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
+dsznajder.es7-react-js-snippets
 eg2.tslint
 mauve.terraform
+Mikael.Angular-BeastCode
 mikestead.dotenv
+mrmlnc.vscode-scss
 ms-vscode.atom-keybindings
 ms-vscode.Go
+ms-vsliveshare.vsliveshare
+msjsdiag.debugger-for-chrome
 naumovs.color-highlight
 neilding.language-liquid
+PeterJausovec.vscode-docker
+PKief.material-icon-theme
+seveseves.ngx-translate-zombies
+streetsidesoftware.code-spell-checker
 timothymclane.react-redux-es6-snippets
 tungvn.wordpress-snippet
+wix.vscode-import-cost
 xabikos.JavaScriptSnippets
 zhuangtongfa.Material-theme
 "
