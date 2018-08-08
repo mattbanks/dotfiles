@@ -18,12 +18,14 @@ Zignd.html-css-class-completion
 aaron-bond.better-comments
 abusaidm.html-snippets
 bajdzis.vscode-twig-pack
+ban.spellright
 bungcip.better-toml
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 dsznajder.es7-react-js-snippets
+eamodio.gitlens
 eg2.tslint
-mauve.terraform
+felixfbecker.php-debug
 Mikael.Angular-BeastCode
 mikestead.dotenv
 mrmlnc.vscode-scss
@@ -36,7 +38,6 @@ neilding.language-liquid
 PeterJausovec.vscode-docker
 PKief.material-icon-theme
 seveseves.ngx-translate-zombies
-streetsidesoftware.code-spell-checker
 timothymclane.react-redux-es6-snippets
 tungvn.wordpress-snippet
 wix.vscode-import-cost

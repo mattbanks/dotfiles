@@ -44,6 +44,9 @@
     "**/node_modules": true
   },
   "git.confirmSync": false,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
   "material-icon-theme.showUpdateMessage": false,
   "telemetry.enableTelemetry": false,
   "terminal.external.osxExec": "iTerm.app",
