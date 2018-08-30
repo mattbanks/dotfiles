@@ -16,16 +16,15 @@ if test "$(which code)"; then
 EditorConfig.EditorConfig
 Zignd.html-css-class-completion
 aaron-bond.better-comments
-abusaidm.html-snippets
 bajdzis.vscode-twig-pack
 ban.spellright
-bungcip.better-toml
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
 eg2.tslint
 felixfbecker.php-debug
+johnpapa.Angular2
 Mikael.Angular-BeastCode
 mikestead.dotenv
 mrmlnc.vscode-scss
@@ -37,8 +36,8 @@ naumovs.color-highlight
 neilding.language-liquid
 PeterJausovec.vscode-docker
 PKief.material-icon-theme
+quicktype.quicktype
 seveseves.ngx-translate-zombies
-timothymclane.react-redux-es6-snippets
 tungvn.wordpress-snippet
 wix.vscode-import-cost
 xabikos.JavaScriptSnippets
