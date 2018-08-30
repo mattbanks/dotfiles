@@ -1,13 +1,5 @@
 {
   "breadcrumbs.enabled": false,
-  "cSpell.enabledLanguageIds": [
-    "html",
-    "jade",
-    "json",
-    "markdown",
-    "plaintext",
-    "text"
-  ],
   "editor.autoIndent": true,
   "editor.detectIndentation": true,
   "editor.dragAndDrop": true,
@@ -48,6 +40,10 @@
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
   },
+  "gitlens.currentLine.scrollable": false,
+  "gitlens.gitExplorer.location": "scm",
+  "gitlens.historyExplorer.location": "scm",
+  "gitlens.resultsExplorer.location": "scm",
   "material-icon-theme.showUpdateMessage": false,
   "telemetry.enableTelemetry": false,
   "terminal.external.osxExec": "iTerm.app",
