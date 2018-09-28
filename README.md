@@ -19,6 +19,10 @@ Change your shell to zsh:
 
 `chsh -s /bin/zsh`
 
+In Mojave, you need to enable Full Disk Access for iTerm and Terminal:
+
+> Settings.app -> "Security & Privacy" -> "Full Disk Access"
+
 ### Install
 
 Then, run these steps:
