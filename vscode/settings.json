@@ -52,7 +52,10 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.lineHeight": 1.4,
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\bash.exe",
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "terminal.integrated.shellArgs.windows": [
+    "--login"
+  ],
   "window.newWindowDimensions": "inherit",
   "window.restoreWindows": "none",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
@@ -67,5 +70,6 @@
   },
   "[html]": {
     "editor.formatOnSave": false
-  }
+  },
+  "sync.gist": "aa0c5c41c63c1fd810d089ea771b1268"
 }
