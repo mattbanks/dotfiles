@@ -13,8 +13,6 @@ if test "$(which code)"; then
 	# from `code --list-extensions`
 	modules="
 2gua.rainbow-brackets
-EditorConfig.EditorConfig
-Zignd.html-css-class-completion
 aaron-bond.better-comments
 bajdzis.vscode-twig-pack
 ban.spellright
@@ -22,7 +20,9 @@ CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
+EditorConfig.EditorConfig
 eg2.tslint
+esbenp.prettier-vscode
 felixfbecker.php-debug
 johnpapa.Angular2
 Mikael.Angular-BeastCode
@@ -30,7 +30,6 @@ mikestead.dotenv
 mrmlnc.vscode-scss
 ms-vscode.atom-keybindings
 ms-vscode.Go
-ms-vsliveshare.vsliveshare
 msjsdiag.debugger-for-chrome
 naumovs.color-highlight
 neilding.language-liquid
@@ -38,10 +37,12 @@ PeterJausovec.vscode-docker
 PKief.material-icon-theme
 quicktype.quicktype
 seveseves.ngx-translate-zombies
+Shan.code-settings-sync
 tungvn.wordpress-snippet
 wix.vscode-import-cost
 xabikos.JavaScriptSnippets
 zhuangtongfa.Material-theme
+Zignd.html-css-class-completion
 "
 	for module in $modules; do
 		code --install-extension "$module" || true
