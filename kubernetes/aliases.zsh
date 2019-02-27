@@ -6,6 +6,9 @@ kubectl() {
 	command kubectl "$@"
 }
 
+# Set KUBE_EDITOR so vscode works properly
+export KUBE_EDITOR='code -w'
+
 alias kx='kubectx'
 alias kn='kubens'
 
