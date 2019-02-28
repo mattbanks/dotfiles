@@ -8,7 +8,7 @@ else
 fi
 
 # better diffs
-if which diff-so-fancy >/dev/null 2>&1; then
+if command -v diff-so-fancy >/dev/null 2>&1; then
 	git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 fi
 

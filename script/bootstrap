@@ -88,8 +88,8 @@ install_dotfiles() {
 }
 
 find_zsh() {
-	if which zsh >/dev/null 2>&1 && grep "$(which zsh)" /etc/shells >/dev/null; then
-		which zsh
+	if command -v zsh >/dev/null 2>&1 && grep "$(command -v zsh)" /etc/shells >/dev/null; then
+		command -v zsh
 	else
 		echo "/bin/zsh"
 	fi

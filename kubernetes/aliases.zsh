@@ -1,11 +1,5 @@
 #!/bin/sh
 
-kubectl() {
-	# shellcheck disable=SC1090,SC2039
-	source <(command kubectl completion zsh)
-	command kubectl "$@"
-}
-
 # Set KUBE_EDITOR so vscode works properly
 export KUBE_EDITOR='code -w'
 
