@@ -6,7 +6,8 @@ export DOTFILES="$HOME/.dotfiles"
 export PROJECTS="$HOME/Code"
 
 # your default editor
-export EDITOR='code'
+export EDITOR='vim'
+export VEDITOR='code'
 
 # homebrew cask directory
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -47,3 +48,5 @@ unset config_files updated_at
 # want in your public, versioned repo.
 # shellcheck disable=SC1090
 [ -f ~/.localrc ] && . ~/.localrc
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
