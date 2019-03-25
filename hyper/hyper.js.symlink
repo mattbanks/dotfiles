@@ -105,7 +105,8 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    'hyper-snazzy'
+	'hyper-snazzy',
+	'hyperterm-tabs'
   ],
 
   // in development, you can create a directory under
