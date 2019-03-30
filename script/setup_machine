@@ -9,7 +9,8 @@ DOTFILES_ROOT=$(pwd -P)
 set -e
 
 # Make sure we have Xcode command line tools
-if [ xcode-select -p 1>/dev/null;echo $? !== 0 ]; then
+XCODE_INSTALLED="xcode-select -p 1>/dev/null;echo $?"
+if [ XCODE_INSTALLED !== "0" ]; then
 	xcode-select --install
 fi
 
