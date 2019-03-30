@@ -85,8 +85,8 @@ echo "› Configuring Node and NPM ..."
 "$DOTFILES_ROOT/node/setup.sh"
 
 # Run all installs
-echo "› $DOTFILES/script/install"
-"$DOTFILES/script/install"
+echo "› Running all installs"
+"$DOTFILES_ROOT/script/install"
 
 # Setup macOS defaults
 echo "› Setting macOS defaults ..."
