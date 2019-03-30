@@ -10,7 +10,7 @@ set -e
 
 # Make sure we have Xcode command line tools
 XCODE_INSTALLED="xcode-select -p 1>/dev/null;echo $?"
-if [ XCODE_INSTALLED !== "0" ]; then
+if [ ! XCODE_INSTALLED == "0" ]; then
 	xcode-select --install
 fi
 
