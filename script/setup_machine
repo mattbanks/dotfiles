@@ -11,7 +11,7 @@ set -e
 # Make sure we have Xcode command line tools
 XCODE_INSTALLED="xcode-select -p 1>/dev/null;echo $?"
 if [ XCODE_INSTALLED != "0" ]; then
-	echo "› Xcode command line tools already installs"
+	echo "› Xcode command line tools already installed"
 else
 	xcode-select --install
 fi
