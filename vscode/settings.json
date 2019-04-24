@@ -73,7 +73,11 @@
     "editor.formatOnSave": false
   },
   "[html]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "sync.gist": "aa0c5c41c63c1fd810d089ea771b1268",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
