@@ -1,5 +1,6 @@
 {
   "breadcrumbs.enabled": false,
+  "css.validate": false,
   "editor.autoIndent": true,
   "editor.detectIndentation": true,
   "editor.dragAndDrop": true,
@@ -17,9 +18,23 @@
   "editor.scrollBeyondLastLine": false,
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
   "editor.wordWrap": "on",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
   "eslint.alwaysShowStatus": true,
   "eslint.autoFixOnSave": true,
+  "eslint.run": "onSave",
+  "eslint.validate": [
+    { "language": "javascript", "autoFix": true },
+    { "language": "javascriptreact", "autoFix": true },
+    { "language": "vue", "autoFix": true },
+    { "language": "vue-html", "autoFix": true },
+    { "language": "html", "autoFix": true }
+  ],
   "extensions.ignoreRecommendations": false,
   "files.associations": {
     "*.docker": "dockerfile",
@@ -36,6 +51,9 @@
     "**/.DS_Store": true,
     "**/node_modules": true
   },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
   "git.confirmSync": false,
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
@@ -47,16 +65,27 @@
   "gitlens.views.lineHistory.location": "scm",
   "gitlens.views.compare.location": "scm",
   "gitlens.views.search.location": "scm",
+  "html.format.enable": false,
+  "javascript.format.enable": false,
+  "jest.autoEnable": false,
+  "jest.enableCodeLens": false,
+  "json.format.enable": false,
   "material-icon-theme.showUpdateMessage": false,
+  "prettier.disableLanguages": [],
+  "scss.validate": false,
+  "stylelint.enable": true,
   "telemetry.enableTelemetry": false,
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.lineHeight": 1.4,
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-  "terminal.integrated.shellArgs.windows": [
-    "--login"
-  ],
+  "terminal.integrated.shellArgs.windows": ["--login"],
+  "vetur.format.enable": false,
+  "vetur.validation.template": false,
+  "vetur.completion.tagCasing": "initial",
+  "vetur.validation.script": false,
+  "vetur.validation.style": false,
   "window.newWindowDimensions": "inherit",
   "window.restoreWindows": "none",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
@@ -66,18 +95,19 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "newUntitledFile",
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
-  "[typescript]": {
-    "editor.formatOnSave": false
-  },
   "[html]": {
     "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "sync.gist": "aa0c5c41c63c1fd810d089ea771b1268",
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "sync.gist": "aa0c5c41c63c1fd810d089ea771b1268"
 }
