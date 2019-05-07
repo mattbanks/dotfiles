@@ -65,6 +65,7 @@
   "gitlens.views.lineHistory.location": "scm",
   "gitlens.views.compare.location": "scm",
   "gitlens.views.search.location": "scm",
+  "go.useLanguageServer": true,
   "html.format.enable": false,
   "javascript.format.enable": false,
   "jest.autoEnable": false,
