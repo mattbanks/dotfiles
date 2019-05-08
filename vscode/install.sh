@@ -14,8 +14,9 @@ if command -v code >/dev/null; then
 	modules="
 2gua.rainbow-brackets
 aaron-bond.better-comments
-ban.spellright
 bungcip.better-toml
+christian-kohler.npm-intellisense
+christian-kohler.path-intellisense
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 dsznajder.es7-react-js-snippets
@@ -23,6 +24,8 @@ eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
 felixfbecker.php-debug
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
 jpoissonnier.vscode-styled-components
 mikestead.dotenv
 mrmlnc.vscode-scss
@@ -34,15 +37,18 @@ naumovs.color-highlight
 octref.vetur
 Orta.vscode-jest
 PeterJausovec.vscode-docker
+pflannery.vscode-versionlens
 PKief.material-icon-theme
 Prisma.vscode-graphql
 quicktype.quicktype
 shinnn.stylelint
+streetsidesoftware.code-spell-checker
 tungvn.wordpress-snippet
 wix.vscode-import-cost
 xabikos.JavaScriptSnippets
 zhuangtongfa.Material-theme
 Zignd.html-css-class-completion
+
 "
 	for module in $modules; do
 		code --install-extension "$module" || true
