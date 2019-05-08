@@ -1,5 +1,12 @@
 {
   "breadcrumbs.enabled": false,
+  "cSpell.userWords": [
+    "Fira",
+    "gitignore",
+    "gitlens",
+    "monospace",
+    "stylelint"
+  ],
   "css.validate": false,
   "editor.autoIndent": true,
   "editor.detectIndentation": true,
@@ -109,6 +116,5 @@
   },
   "[typescript]": {
     "editor.formatOnSave": false
-  },
-  "sync.gist": "aa0c5c41c63c1fd810d089ea771b1268"
+  }
 }
