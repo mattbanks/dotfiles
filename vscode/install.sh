@@ -14,9 +14,7 @@ if command -v code >/dev/null; then
 	modules="
 2gua.rainbow-brackets
 aaron-bond.better-comments
-bajdzis.vscode-twig-pack
 ban.spellright
-budparr.language-hugo-vscode
 bungcip.better-toml
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
@@ -25,9 +23,7 @@ eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
 felixfbecker.php-debug
-johnpapa.Angular2
 jpoissonnier.vscode-styled-components
-Mikael.Angular-BeastCode
 mikestead.dotenv
 mrmlnc.vscode-scss
 ms-vscode.atom-keybindings
@@ -35,14 +31,12 @@ ms-vscode.Go
 ms-vscode.vscode-typescript-tslint-plugin
 msjsdiag.debugger-for-chrome
 naumovs.color-highlight
-neilding.language-liquid
 octref.vetur
 Orta.vscode-jest
 PeterJausovec.vscode-docker
 PKief.material-icon-theme
 Prisma.vscode-graphql
 quicktype.quicktype
-Shan.code-settings-sync
 shinnn.stylelint
 tungvn.wordpress-snippet
 wix.vscode-import-cost
