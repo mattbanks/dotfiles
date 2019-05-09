@@ -37,7 +37,6 @@ naumovs.color-highlight
 octref.vetur
 Orta.vscode-jest
 PeterJausovec.vscode-docker
-pflannery.vscode-versionlens
 PKief.material-icon-theme
 Prisma.vscode-graphql
 quicktype.quicktype
@@ -48,7 +47,6 @@ wix.vscode-import-cost
 xabikos.JavaScriptSnippets
 zhuangtongfa.Material-theme
 Zignd.html-css-class-completion
-
 "
 	for module in $modules; do
 		code --install-extension "$module" || true
