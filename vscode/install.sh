@@ -26,7 +26,6 @@ esbenp.prettier-vscode
 felixfbecker.php-debug
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
-jpoissonnier.vscode-styled-components
 mikestead.dotenv
 mrmlnc.vscode-scss
 ms-vscode.atom-keybindings
@@ -38,7 +37,6 @@ octref.vetur
 Orta.vscode-jest
 PeterJausovec.vscode-docker
 PKief.material-icon-theme
-Prisma.vscode-graphql
 quicktype.quicktype
 shinnn.stylelint
 streetsidesoftware.code-spell-checker
