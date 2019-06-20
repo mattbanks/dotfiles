@@ -17,7 +17,7 @@ aaron-bond.better-comments
 bungcip.better-toml
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
-CoenraadS.bracket-pair-colorizer
+CoenraadS.bracket-pair-colorizer-2
 dbaeumer.vscode-eslint
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
@@ -28,14 +28,15 @@ formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 mikestead.dotenv
 mrmlnc.vscode-scss
+ms-azuretools.vscode-docker
 ms-vscode.atom-keybindings
+ms-vscode.cpptools
 ms-vscode.Go
 ms-vscode.vscode-typescript-tslint-plugin
 msjsdiag.debugger-for-chrome
 naumovs.color-highlight
 octref.vetur
 Orta.vscode-jest
-PeterJausovec.vscode-docker
 PKief.material-icon-theme
 quicktype.quicktype
 shinnn.stylelint
