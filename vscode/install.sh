@@ -23,14 +23,12 @@ dsznajder.es7-react-js-snippets
 eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
-felixfbecker.php-debug
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 mikestead.dotenv
 mrmlnc.vscode-scss
 ms-azuretools.vscode-docker
 ms-vscode.atom-keybindings
-ms-vscode.cpptools
 ms-vscode.Go
 ms-vscode.vscode-typescript-tslint-plugin
 msjsdiag.debugger-for-chrome
@@ -38,11 +36,9 @@ naumovs.color-highlight
 octref.vetur
 Orta.vscode-jest
 PKief.material-icon-theme
-quicktype.quicktype
 shinnn.stylelint
 streetsidesoftware.code-spell-checker
 tungvn.wordpress-snippet
-wix.vscode-import-cost
 xabikos.JavaScriptSnippets
 zhuangtongfa.Material-theme
 Zignd.html-css-class-completion
