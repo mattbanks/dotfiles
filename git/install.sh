@@ -13,7 +13,7 @@ if command -v diff-so-fancy >/dev/null 2>&1; then
 fi
 
 # use vscode as mergetool
-# if which code >/dev/null 2>&1; then
+# if command -v code >/dev/null 2>&1; then
 # 	git config --global merge.tool vscode
 # 	git config --global mergetool.vscode.cmd "code --wait $MERGED"
 # fi

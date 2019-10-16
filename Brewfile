@@ -3,8 +3,6 @@ cask_args appdir: '/Applications'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'heroku/brew'
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
 
 brew 'awscli'
 brew 'coreutils'

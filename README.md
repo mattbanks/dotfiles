@@ -27,7 +27,7 @@ In Mojave, you need to enable Full Disk Access for iTerm and Terminal:
 
 Then, run these steps:
 
-```sh
+```console
 $ git clone https://github.com/mattbanks/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./script/bootstrap
