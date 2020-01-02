@@ -45,6 +45,9 @@
   ],
   "css.validate": false,
   "editor.autoIndent": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "editor.detectIndentation": true,
   "editor.dragAndDrop": true,
   "editor.fontFamily": "'Fira Code', Hack, monospace",
