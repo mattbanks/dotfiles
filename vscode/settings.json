@@ -44,7 +44,7 @@
     "stylelint"
   ],
   "css.validate": false,
-  "editor.autoIndent": true,
+  "editor.autoIndent": "full",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -72,15 +72,7 @@
   },
   "emmet.triggerExpansionOnTab": true,
   "eslint.alwaysShowStatus": true,
-  "eslint.autoFixOnSave": true,
   "eslint.run": "onSave",
-  "eslint.validate": [
-    { "language": "javascript", "autoFix": true },
-    { "language": "javascriptreact", "autoFix": true },
-    { "language": "vue", "autoFix": true },
-    { "language": "vue-html", "autoFix": true },
-    { "language": "html", "autoFix": true }
-  ],
   "extensions.ignoreRecommendations": false,
   "files.associations": {
     "*.docker": "dockerfile",
