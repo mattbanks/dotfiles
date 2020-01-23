@@ -22,9 +22,9 @@ naumovs.color-highlight
 octref.vetur
 Orta.vscode-jest
 PKief.material-icon-theme
-shinnn.stylelint
 streetsidesoftware.code-spell-checker
+stylelint.vscode-stylelint
 tungvn.wordpress-snippet
 xabikos.JavaScriptSnippets
-zhuangtongfa.Material-theme
+zhuangtongfa.material-theme
 Zignd.html-css-class-completion
