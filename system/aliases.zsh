@@ -33,7 +33,7 @@ alias duf="du -sh * | sort -hr"
 alias less="less -r"
 
 # quick hack to make watch work with aliases
-alias watch='watch '
+alias watch='watch -c -d -t '
 
 # open, pbcopy and pbpaste on linux
 if [ "$(uname -s)" != "Darwin" ]; then
