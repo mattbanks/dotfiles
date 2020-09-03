@@ -41,6 +41,8 @@
 	lineNumber = true
 [push]
 	default = simple
+[pull]
+	ff = only
 [submodule]
 	fetchJobs = 4
 [log]
