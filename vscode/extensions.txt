@@ -12,6 +12,7 @@ esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 golang.go
+GraphQL.vscode-graphql
 jpoissonnier.vscode-styled-components
 mikestead.dotenv
 mrmlnc.vscode-scss
@@ -23,7 +24,6 @@ naumovs.color-highlight
 octref.vetur
 Orta.vscode-jest
 PKief.material-icon-theme
-Prisma.vscode-graphql
 streetsidesoftware.code-spell-checker
 stylelint.vscode-stylelint
 tungvn.wordpress-snippet
