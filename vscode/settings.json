@@ -111,7 +111,7 @@
   "jest.enableCodeLens": false,
   "json.format.enable": false,
   "material-icon-theme.showUpdateMessage": false,
-  "prettier.disableLanguages": [],
+  "prettier.disableLanguages": ["javascript", "javascriptreact"],
   "scss.validate": false,
   "stylelint.enable": true,
   "telemetry.enableTelemetry": false,
@@ -142,6 +142,9 @@
   "[javascript]": {
     "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
