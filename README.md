@@ -1,25 +1,18 @@
 # matt's dotfiles
 
-> Config files for ZSH, Node, Ruby, Go, Editors, Terminals and more.
+> Config files for ZSH, Node, Go, Editors, Terminals and more.
 
 ## Installation
 
 ### Dependencies
 
-First, make sure you have all those things installed:
+First, make sure you have macOS developer tools installed:
 
-- `git`: to clone the repo
-- `curl`: to download some stuff
-- `tar`: to extract downloaded stuff
-- `zsh`: to actually run the dotfiles
-- `sudo`: some configs may need that
-- `brew`: setup scripts assume this is installed
+> `xcode-select --install`
 
-Change your shell to zsh:
+Then, install Homebrew ([install instructions here](https://brew.sh)).
 
-`chsh -s /bin/zsh`
-
-In Mojave, you need to enable Full Disk Access for iTerm and Terminal:
+In macOS, you need to enable Full Disk Access for iTerm and Terminal:
 
 > Settings.app -> "Security & Privacy" -> "Full Disk Access"
 

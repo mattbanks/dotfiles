@@ -16,11 +16,6 @@ else
 	xcode-select --install
 fi
 
-# Create ~/.bin if it doesn't exist
-if [ ! -d "$HOME/.bin/" ]; then
-  mkdir "$HOME/.bin"
-fi
-
 # Create ~/Code if it doesn't exist
 if [ ! -d "$HOME/Code/" ]; then
   mkdir "$HOME/Code"
@@ -28,7 +23,7 @@ fi
 
 # Setup SSH public key if it doesn't exist
 echo "› Checking for SSH key, generating one if it doesn't exist ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+  [[ -f ~/.ssh/id_ed25519.pub ]] || ssh-keygen -t ed25519
 
 # Create /usr/local if it doesn't exist,
 # or update the permissions so we own it
@@ -51,36 +46,6 @@ echo "› $DOTFILES/homebrew/setup"
 # Run Homebrew through the Brewfile
 echo "› brew bundle ..."
 brew bundle
-
-# Install latest ruby with rbenv
-gem_install_or_update() {
-  if gem list "$1" --installed > /dev/null; then
-    gem update "$@"
-  else
-    gem install "$@"
-    rbenv rehash
-  fi
-}
-
-echo "› Configuring Ruby ..."
-find_latest_ruby() {
-  rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//'
-}
-
-ruby_version="$(find_latest_ruby)"
-# shellcheck disable=SC2016
-eval "$(rbenv init -)"
-
-if ! rbenv versions | grep -Fq "$ruby_version"; then
-  RUBY_CONFIGURE_OPTS=--with-openssl-dir=/usr/local/opt/openssl rbenv install -s "$ruby_version"
-fi
-
-rbenv global "$ruby_version"
-rbenv shell "$ruby_version"
-gem update --system
-gem_install_or_update 'bundler'
-number_of_cores=$(sysctl -n hw.ncpu)
-bundle config --global jobs $((number_of_cores - 1))
 
 # Install npm packages
 echo "› Configuring Node and NPM ..."
