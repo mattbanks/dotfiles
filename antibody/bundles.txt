@@ -1,9 +1,4 @@
 # this block is in alphabetic order
-caarlos0/ports kind:path
-caarlos0/zsh-git-fetch-merge kind:path
-caarlos0/zsh-git-sync kind:path
-caarlos0/zsh-mkc
-caarlos0/zsh-open-pr kind:path
 mafredri/zsh-async
 rupa/z
 zsh-users/zsh-completions
