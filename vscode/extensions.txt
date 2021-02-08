@@ -1,5 +1,6 @@
 2gua.rainbow-brackets
 aaron-bond.better-comments
+apollographql.vscode-apollo
 bungcip.better-toml
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
@@ -26,6 +27,7 @@ octref.vetur
 Orta.vscode-jest
 PKief.material-icon-theme
 samverschueren.linter-xo
+steoates.autoimport
 streetsidesoftware.code-spell-checker
 stylelint.vscode-stylelint
 tungvn.wordpress-snippet
