@@ -46,6 +46,7 @@
   ],
   "css.validate": false,
   "editor.autoIndent": "full",
+  "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
