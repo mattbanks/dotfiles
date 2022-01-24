@@ -1,3 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-git commit -a -t <(echo "fix: $1")

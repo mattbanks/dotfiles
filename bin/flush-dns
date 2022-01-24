@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# I always forget this crap.
-#
-sudo killall -HUP mDNSResponder

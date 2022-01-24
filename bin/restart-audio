@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# Kills coreaudiod on macOS.
-#
-# This fixes the "no sound" issue that happens occasionally.
-#
-sudo pkill -9 -f coreaudio
