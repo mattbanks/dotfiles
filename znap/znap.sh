@@ -7,22 +7,16 @@
 
 source ~/Code/znap/zsh-snap/znap.zsh  # Start Znap
 
-# this block is in alphabetic order
-znap source mafredri/zsh-async
+# set the prompt
+znap prompt sindresorhus/pure
+
+# setup plugins
 znap source rupa/z
 znap source zsh-users/zsh-completions
 znap source zsh-users/zsh-autosuggestions
-# TODO - re-enable lazy loading when znap fixes the bug that it has
-# https://github.com/marlonrichert/zsh-snap/discussions/174#109
-# znap source lukechilds/zsh-nvm
-
-# these should be at last!
-znap source sindresorhus/pure
-znap source zdharma/fast-syntax-highlighting
 znap source zsh-users/zsh-history-substring-search
+znap source zsh-users/zsh-syntax-highlighting
 
-# TODO - possibly remove this when znap fixes the bug that it has
-# https://github.com/marlonrichert/zsh-snap/discussions/174#109
 # Lazy load NVM and Node with znap
 sourcenvm='source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
 znap function nvm $sourcenvm
