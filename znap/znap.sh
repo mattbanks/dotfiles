@@ -12,9 +12,19 @@ znap source mafredri/zsh-async
 znap source rupa/z
 znap source zsh-users/zsh-completions
 znap source zsh-users/zsh-autosuggestions
-znap source lukechilds/zsh-nvm
+# TODO - re-enable lazy loading when znap fixes the bug that it has
+# https://github.com/marlonrichert/zsh-snap/discussions/174#109
+# znap source lukechilds/zsh-nvm
 
 # these should be at last!
 znap source sindresorhus/pure
 znap source zdharma/fast-syntax-highlighting
 znap source zsh-users/zsh-history-substring-search
+
+# TODO - possibly remove this when znap fixes the bug that it has
+# https://github.com/marlonrichert/zsh-snap/discussions/174#109
+# Lazy load NVM and Node with znap
+znap function nvm 'source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
+znap function node 'source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
+znap function npm 'source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
+znap function npx 'source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
