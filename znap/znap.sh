@@ -24,7 +24,8 @@ znap source zsh-users/zsh-history-substring-search
 # TODO - possibly remove this when znap fixes the bug that it has
 # https://github.com/marlonrichert/zsh-snap/discussions/174#109
 # Lazy load NVM and Node with znap
-znap function nvm 'source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
-znap function node 'source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
-znap function npm 'source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
-znap function npx 'source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
+sourcenvm='source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
+znap function nvm $sourcenvm
+znap function node $sourcenvm
+znap function npm $sourcenvm
+znap function npx $sourcenvm
