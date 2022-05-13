@@ -18,8 +18,10 @@ znap source zsh-users/zsh-history-substring-search
 znap source zsh-users/zsh-syntax-highlighting
 
 # Lazy load NVM and Node with znap
+# We need to make sure we lazy load NVM in for global NPM packages too. This is messy.
 sourcenvm='source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
 znap function nvm $sourcenvm
 znap function node $sourcenvm
 znap function npm $sourcenvm
 znap function npx $sourcenvm
+znap function ncu $sourcenvm
