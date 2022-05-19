@@ -1,9 +1,5 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'heroku/brew'
-
 brew 'awscli'
 brew 'coreutils'
 brew 'diff-so-fancy'
@@ -12,7 +8,4 @@ brew 'git'
 brew 'go'
 brew 'imagemagick'
 brew 'node'
-brew 'openssl'
-brew 'python'
 brew 'yarn'
-brew 'zsh'
