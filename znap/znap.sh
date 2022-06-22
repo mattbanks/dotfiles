@@ -16,12 +16,15 @@ znap source zsh-users/zsh-completions
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-history-substring-search
 znap source zsh-users/zsh-syntax-highlighting
+znap source lukechilds/zsh-nvm
 
+# Note - leaving here in case need to re-enable at a later date
+#
 # Lazy load NVM and Node with znap
 # We need to make sure we lazy load NVM in for global NPM packages too. This is messy.
-sourcenvm='source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
-znap function nvm $sourcenvm
-znap function node $sourcenvm
-znap function npm $sourcenvm
-znap function npx $sourcenvm
-znap function ncu $sourcenvm
+# sourcenvm='source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
+# znap function nvm $sourcenvm
+# znap function node $sourcenvm
+# znap function npm $sourcenvm
+# znap function npx $sourcenvm
+# znap function ncu $sourcenvm
