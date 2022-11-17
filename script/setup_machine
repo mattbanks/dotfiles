@@ -47,8 +47,12 @@ echo "› $DOTFILES/homebrew/setup"
 echo "› brew bundle ..."
 brew bundle
 
+# Install nvm and Node 18
+echo "› Configuring NVM and Node ..."
+"$DOTFILES_ROOT/nvm/setup.sh"
+
 # Install npm packages
-echo "› Configuring Node and NPM ..."
+echo "› Configuring NPM ..."
 "$DOTFILES_ROOT/node/setup.sh"
 
 # Run all installs
