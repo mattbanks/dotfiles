@@ -11,6 +11,7 @@ formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 golang.go
 GraphQL.vscode-graphql
+GraphQL.vscode-graphql-syntax
 jpoissonnier.vscode-styled-components
 mikestead.dotenv
 mrmlnc.vscode-scss
