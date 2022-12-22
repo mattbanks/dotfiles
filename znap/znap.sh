@@ -7,8 +7,11 @@
 
 source ~/Code/znap/zsh-snap/znap.zsh  # Start Znap
 
-# set the prompt
-znap prompt sindresorhus/pure
+# Only load Pure prompt outside of Warp
+if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+  # set the prompt
+  znap prompt sindresorhus/pure
+fi
 
 # setup plugins
 znap source rupa/z
