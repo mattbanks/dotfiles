@@ -18,7 +18,7 @@
 	ui = true
 [core]
 	excludesfile = ~/.gitignore
-	editor = vim
+	editor = code --wait
 	compression = -1
 	autocrlf = input
 	whitespace = trailing-space,space-before-tab
@@ -27,15 +27,14 @@
 	whitespace = nowarn
 [help]
 	autocorrect = 1
-[merge]
-	tool = Kaleidoscope
-[mergetool]
-	prompt = false
-	keepBackup = false
 [diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = code
+[mergetool "code"]
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
 [grep]
 	extendRegexp = true
 	lineNumber = true
