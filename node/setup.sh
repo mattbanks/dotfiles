@@ -3,4 +3,4 @@
 # Install npm packages
 
 npm install -g npm
-npm install -g eslint fkill-cli gatsby-cli http-server npm-check-updates typescript
+npm install -g gatsby-cli http-server npm-check-updates typescript
