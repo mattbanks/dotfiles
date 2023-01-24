@@ -18,6 +18,9 @@ for file in ${(M)config_files:#*/path.zsh}; do
   source "$file"
 done
 
+# disable git maintenance for znap
+zstyle ':znap:*:*' git-maintenance off
+
 # load znap plugins
 source $DOTFILES/znap/znap.sh
 
