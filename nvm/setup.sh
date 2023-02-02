@@ -4,4 +4,4 @@
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 nvm install --lts
-nvm default 18
+nvm alias default 18
