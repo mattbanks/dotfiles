@@ -5,5 +5,5 @@ cask_args appdir: '/Applications'
 
 # brew 'diff-so-fancy'
 brew 'exa'
-# brew 'git'
+brew 'git'
 brew 'go'
