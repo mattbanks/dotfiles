@@ -28,13 +28,9 @@
 [help]
 	autocorrect = 1
 [diff]
-	tool = default-difftool
-[difftool "default-difftool"]
-	cmd = code --wait --diff $LOCAL $REMOTE
+	tool = Kaleidoscope
 [merge]
-	tool = code
-[mergetool "code"]
-	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+	tool = Kaleidoscope
 [grep]
 	extendRegexp = true
 	lineNumber = true
@@ -46,6 +42,10 @@
 	fetchJobs = 4
 [log]
 	showSignature = false
+[difftool "code"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "code"]
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [mergetool "Kaleidoscope"]
