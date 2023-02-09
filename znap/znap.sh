@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # Download Znap, if it's not there yet.
-[[ -f ~/Code/znap/zsh-snap/znap.zsh ]] ||
+[[ -f ~/Developer/znap/zsh-snap/znap.zsh ]] ||
     git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/Code/znap/zsh-snap
+        https://github.com/marlonrichert/zsh-snap.git ~/Developer/znap/zsh-snap
 
-source ~/Code/znap/zsh-snap/znap.zsh  # Start Znap
+source ~/Developer/znap/zsh-snap/znap.zsh  # Start Znap
 
 # Only load Pure prompt outside of Warp
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then

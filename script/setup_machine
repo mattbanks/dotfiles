@@ -16,9 +16,9 @@ else
 	xcode-select --install
 fi
 
-# Create ~/Code if it doesn't exist
-if [ ! -d "$HOME/Code/" ]; then
-  mkdir "$HOME/Code"
+# Create ~/Developer if it doesn't exist
+if [ ! -d "$HOME/Developer/" ]; then
+  mkdir "$HOME/Developer"
 fi
 
 # Setup SSH public key if it doesn't exist
