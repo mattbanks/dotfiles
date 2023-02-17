@@ -18,6 +18,9 @@ for file in ${(M)config_files:#*/path.zsh}; do
   source "$file"
 done
 
+# disable brew analytics
+export HOMEBREW_NO_ANALYTICS=1
+
 # disable git maintenance for znap
 zstyle ':znap:*:*' git-maintenance off
 
