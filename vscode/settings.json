@@ -119,7 +119,7 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.lineHeight": 1.4,
-  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "terminal.integrated.shell.osx": "/bin/zsh",
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
   "terminal.integrated.shellArgs.windows": ["--login"],
   "vetur.format.enable": false,
