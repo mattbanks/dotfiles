@@ -1,5 +1,5 @@
 cask_args appdir: '/Applications'
 
-brew 'exa'
+brew 'eza'
 brew 'git'
 brew 'go'

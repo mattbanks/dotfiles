@@ -35,7 +35,7 @@ This will symlink the appropriate files in `.dotfiles` to your home directory.
 
 For both Linux and macOS:
 
-- `exa`: for better `ls`.
+- `eza`: for better `ls`.
 
 ### macOS defaults
 
