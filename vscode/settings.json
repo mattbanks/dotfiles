@@ -48,7 +48,7 @@
   "editor.autoIndent": "full",
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "editor.detectIndentation": true,
   "editor.dragAndDrop": true,
@@ -130,8 +130,6 @@
   "window.newWindowDimensions": "inherit",
   "window.restoreWindows": "none",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "window.zoomLevel": 0,
-  "workbench.activityBar.visible": true,
   "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "left",
