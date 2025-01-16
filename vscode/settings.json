@@ -150,5 +150,6 @@
   },
   "[typescript]": {
     "editor.formatOnSave": false
-  }
+  },
+  "dotnetAcquisitionExtension.sharedExistingDotnetPath": "/usr/local/share/dotnet/sdk"
 }
