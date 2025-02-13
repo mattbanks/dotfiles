@@ -1,5 +1,7 @@
 #!/bin/sh
 brew update
 brew outdated | xargs brew fetch
-brew upgrade --formula --cask
+brew upgrade
+brew upgrade --cask
 brew cleanup
+brew cleanup --cask
