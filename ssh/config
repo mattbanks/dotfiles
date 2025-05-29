@@ -4,3 +4,4 @@ Host *
   UseKeychain yes
 
 Include ~/.ssh/config.local
+Include ~/.dotfiles-private/ssh/ssh_config.private

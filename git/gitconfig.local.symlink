@@ -51,3 +51,5 @@
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
+[includeIf "gitdir:~/Developer/Work/"]
+    path = ~/.dotfiles-private/git-overrides/work.gitconfig
