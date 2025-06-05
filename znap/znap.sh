@@ -20,6 +20,7 @@ znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-history-substring-search
 znap source zsh-users/zsh-syntax-highlighting
 znap source lukechilds/zsh-nvm
+znap source davidparsson/zsh-pyenv-lazy
 
 # Note - leaving here in case need to re-enable at a later date
 #
