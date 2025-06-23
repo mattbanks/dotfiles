@@ -1,7 +1,17 @@
 cask_args appdir: '/Applications'
 
 brew 'eza'
-brew 'git'
 brew 'git-lfs'
+brew 'git'
 brew 'go'
+brew 'iperf3'
+brew 'libb2'
+brew 'openssl'
 brew 'pandoc'
+brew 'pyenv-virtualenv'
+brew 'pyenv'
+brew 'readline'
+brew 'sqlite3'
+brew 'tcl-tk@8's
+brew 'xz'
+brew 'zlib'
