@@ -44,6 +44,9 @@ for file in ${(M)config_files:#*/completion.zsh}; do
   source "$file"
 done
 
+# uv completions
+eval "$(uv generate-shell-completion zsh)"
+
 unset config_files updated_at
 
 # use .localrc for SUPER SECRET CRAP that you don't
