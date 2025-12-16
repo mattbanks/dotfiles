@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Master update script - updates all package managers
+update-all() {
+    echo "🚀 Updating all package managers..."
+    echo ""
+
+    # Update Homebrew
+    echo "🍺 Updating Homebrew..."
+    brew bump
+    if [ $? -ne 0 ]; then
+        echo "⚠️  Homebrew update failed"
+    fi
+
+    echo ""
+
+    # Update znap
+    echo "⚡ Updating znap..."
+    znap pull
+    if [ $? -ne 0 ]; then
+        echo "⚠️  znap update failed"
+    fi
+
+    echo ""
+
+    # Update npm global packages
+    npm-update-global
+    if [ $? -ne 0 ]; then
+        echo "⚠️  npm global update failed"
+    fi
+
+    echo ""
+
+    # Update Claude CLI
+    echo "🤖 Updating Claude CLI..."
+    claude update
+    if [ $? -ne 0 ]; then
+        echo "⚠️  Claude CLI update failed"
+    fi
+
+    echo ""
+    echo "🎉 All updates complete!"
+}
+
+# Always execute the function when script is run
+update-all "$@"

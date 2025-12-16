@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Function to update all outdated global npm packages
+npm-update-global() {
+    echo "🔍 Checking for outdated global npm packages..."
+
+    # Get list of outdated packages in JSON format
+    local outdated_json=$(npm outdated -g --json 2>/dev/null)
+
+    # Check if there are any outdated packages
+    if [ -z "$outdated_json" ] || [ "$outdated_json" = "{}" ]; then
+        echo "✅ All global npm packages are up to date!"
+        return 0
+    fi
+
+    # Extract package names from the JSON output
+    local packages=$(echo "$outdated_json" | grep -o '"[^"]*":' | sed 's/"//g' | sed 's/://g')
+
+    if [ -z "$packages" ]; then
+        echo "✅ All global npm packages are up to date!"
+        return 0
+    fi
+
+    echo "📦 Found outdated packages:"
+    echo "$packages" | sed 's/^/  - /'
+    echo ""
+
+    # Update each package
+    echo "🔄 Updating packages..."
+    while IFS= read -r package; do
+        if [ -n "$package" ]; then
+            echo "  ⬆️  Updating $package..."
+            npm install -g "$package"
+        fi
+    done <<< "$packages"
+
+    echo ""
+    echo "✅ All global npm packages updated!"
+}
+
+# Always execute the function when script is run
+# This works whether called directly or from another script
+npm-update-global "$@"
