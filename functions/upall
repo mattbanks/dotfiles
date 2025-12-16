@@ -24,7 +24,7 @@ update-all() {
     echo ""
 
     # Update npm global packages
-    npm-update-global
+    npmupg
     if [ $? -ne 0 ]; then
         echo "⚠️  npm global update failed"
     fi
