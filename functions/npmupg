@@ -13,8 +13,13 @@ npm-update-global() {
         return 0
     fi
 
-    # Extract package names from the JSON output
-    local packages=$(echo "$outdated_json" | grep -o '"[^"]*":' | sed 's/"//g' | sed 's/://g')
+    # Extract package names from the JSON output (top-level keys only)
+    # Use jq if available, otherwise fall back to sed
+    if command -v jq &> /dev/null; then
+        local packages=$(echo "$outdated_json" | jq -r 'keys[]' 2>/dev/null)
+    else
+        local packages=$(echo "$outdated_json" | sed -n 's/^[[:space:]]*"\([^"]*\)"[[:space:]]*:[[:space:]]*{/\1/p')
+    fi
 
     if [ -z "$packages" ]; then
         echo "✅ All global npm packages are up to date!"
