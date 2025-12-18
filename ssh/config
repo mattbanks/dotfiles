@@ -20,6 +20,8 @@ Include ~/.dotfiles-private/ssh/ssh_config.private
 
 # Generic settings for all hosts — put this at the bottom
 Host *
+  AddKeysToAgent yes
   ServerAliveInterval 60
   StrictHostKeyChecking no
   UseKeychain yes
+  IdentitiesOnly yes
