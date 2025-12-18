@@ -1,3 +1,6 @@
+Include ~/.ssh/config.local
+Include ~/.dotfiles-private/ssh/ssh_config.private
+
 # Personal GitHub
 Host github.com
   HostName github.com
@@ -5,9 +8,6 @@ Host github.com
   IdentityFile ~/.ssh/id_ed25519
   UseKeychain yes
   AddKeysToAgent yes
-
-Include ~/.ssh/config.local
-Include ~/.dotfiles-private/ssh/ssh_config.private
 
 # Generic settings for all hosts — put this at the bottom
 Host *
