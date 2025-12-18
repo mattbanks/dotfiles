@@ -6,15 +6,6 @@ Host github.com
   UseKeychain yes
   AddKeysToAgent yes
 
-# Work GitHub alias
-Host github-work
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/id_ed25519_work
-  IdentitiesOnly yes
-  UseKeychain yes
-  AddKeysToAgent yes
-
 Include ~/.ssh/config.local
 Include ~/.dotfiles-private/ssh/ssh_config.private
 
