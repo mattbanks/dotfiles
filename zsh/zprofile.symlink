@@ -1,3 +1,8 @@
 #!/bin/zsh
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Load any Keychain-saved SSH keys into the agent
+# This is to make sure all SSH keys get loaded since
+# I'm using multiple for various Github accounts
+/usr/bin/ssh-add --apple-load-keychain -A >/dev/null 2>&1
