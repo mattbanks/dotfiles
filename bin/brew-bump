@@ -2,5 +2,4 @@
 brew update
 brew outdated | xargs brew fetch
 brew upgrade
-brew upgrade --cask
 brew cleanup
