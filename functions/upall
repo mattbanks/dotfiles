@@ -32,10 +32,14 @@ update-all() {
     echo ""
 
     # Update Claude CLI
-    echo "🤖 Updating Claude CLI..."
-    claude update
-    if [ $? -ne 0 ]; then
-        echo "⚠️  Claude CLI update failed"
+    if command -v claude &> /dev/null; then
+        echo "🤖 Updating Claude CLI..."
+        claude update
+        if [ $? -ne 0 ]; then
+            echo "⚠️  Claude CLI update failed"
+        fi
+    else
+        echo "⏭️  Skipping Claude CLI (not installed)"
     fi
 
     echo ""
