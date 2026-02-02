@@ -49,6 +49,10 @@ eval "$(uv generate-shell-completion zsh)"
 
 unset config_files updated_at
 
+# pull in dotfiles-private zsh aliases and data
+# shellcheck disable=SC1090
+[ -f ~/.dotfiles-private/zsh/private.zsh ] && . ~/.dotfiles-private/zsh/private.zsh
+
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
 # shellcheck disable=SC1090
