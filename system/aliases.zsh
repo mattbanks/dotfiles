@@ -57,3 +57,6 @@ alias dl="cd ~/Downloads"
 alias t="tar -pcvzf"
 alias tx="tar -pvxf"
 alias oo="open ."
+
+# Tailscale
+alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
