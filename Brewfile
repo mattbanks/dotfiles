@@ -1,10 +1,22 @@
 cask_args appdir: '/Applications'
 
+brew 'awscli'
 brew 'eza'
+brew 'gh'
 brew 'git-lfs'
 brew 'git'
 brew 'go'
-brew 'pandoc'
 brew 'pyenv'
 brew 'sqlite3'
 brew 'uv'
+
+# Pyenv build dependencies
+brew 'openssl'
+brew 'readline'
+brew 'sqlite3'
+brew 'xz'
+brew 'tcl-tk@8'
+brew 'libb2'
+brew 'zstd'
+brew 'zlib'
+brew 'pkgconfig'
