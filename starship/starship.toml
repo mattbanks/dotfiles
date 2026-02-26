@@ -215,12 +215,13 @@ min_time = 2000
 format = "took [$duration]($style) "
 
 [git_status]
-# Remove outer brackets and space-separate each indicator
-format = '([$all_status$ahead_behind]($style))'
-modified = "!${count} "
-staged = "+${count} "
-untracked = "?${count} "
-deleted = "✘${count} "
-ahead = "⇡${count} "
-behind = "⇣${count} "
-diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+format = '(\[ $all_status$ahead_behind\] )'
+modified = '[!${count}](yellow) '
+staged = '[+${count}](green) '
+untracked = '[?${count}](red) '
+deleted = '[✘${count}](red) '
+conflicted = '[~${count}](red bold) '
+stashed = ''
+ahead = '[⇡${count}](cyan) '
+behind = '[⇣${count}](cyan) '
+diverged = '[⇕⇡${ahead_count}⇣${behind_count}](cyan) '
