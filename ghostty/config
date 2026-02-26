@@ -2,7 +2,7 @@
 # https://ghostty.org/docs/config/reference
 
 # Font
-font-family = "Fira Code"
+font-family = "Hack Nerd Font"
 font-size = 14
 
 # Theme
@@ -16,6 +16,14 @@ window-padding-x = 12
 window-padding-y = 12
 window-padding-balance = true
 window-show-tab-bar = always
+resize-overlay = never
+scrollback-limit = 10000
+
+# Mouse
+mouse-hide-while-typing = true
+
+# Updates
+auto-update = check
 
 # Use Option key as Alt (useful for shell word navigation, etc.)
 macos-option-as-alt = true
