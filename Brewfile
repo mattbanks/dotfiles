@@ -7,6 +7,7 @@ brew 'git-lfs'
 brew 'git'
 brew 'go'
 brew 'pyenv'
+brew 'pyenv-virtualenv'
 brew 'sqlite3'
 brew 'uv'
 

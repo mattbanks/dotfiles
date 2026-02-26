@@ -1,0 +1,38 @@
+#!/bin/sh
+# update python to the latest stable version with pyenv
+function pyenvup() {
+  if ! command -v pyenv &>/dev/null; then
+    echo "pyenv not found"
+    return 1
+  fi
+
+  local -r current_version=$(pyenv version-name)
+  local -r latest_version=$(pyenv install --list | grep -E '^\s+3\.[0-9]+\.[0-9]+$' | tail -1 | tr -d ' ')
+
+  if [ -z "$latest_version" ]; then
+    echo "Could not determine latest Python version"
+    return 1
+  fi
+
+  if [ "$current_version" = "$latest_version" ]; then
+    echo "Already on latest Python ($current_version)"
+    return 0
+  fi
+
+  echo "Upgrading Python: $current_version -> $latest_version"
+
+  local -r packages_file=$(mktemp)
+  PYENV_VERSION="$current_version" pip freeze --exclude-editable | grep -vE "^(pip|setuptools|wheel)==" > "$packages_file"
+
+  pyenv install "$latest_version"
+  pyenv global "$latest_version"
+
+  pip install --upgrade pip setuptools wheel
+  if [ -s "$packages_file" ]; then
+    pip install -r "$packages_file"
+  fi
+
+  rm "$packages_file"
+  pyenv uninstall -f "$current_version"
+  pyenv rehash
+}
