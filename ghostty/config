@@ -1,0 +1,34 @@
+# Ghostty configuration
+# https://ghostty.org/docs/config/reference
+
+# Font
+font-family = "Fira Code"
+font-size = 14
+
+# Theme
+theme = Dracula
+
+# Window
+background-opacity = 1
+window-height = 30
+window-width = 120
+window-padding-x = 12
+window-padding-y = 12
+window-padding-balance = true
+window-show-tab-bar = always
+
+# Use Option key as Alt (useful for shell word navigation, etc.)
+macos-option-as-alt = true
+macos-titlebar-style = tabs
+
+# Shell integration
+shell-integration = zsh
+
+# Don't ask for confirmation when closing a window/tab
+confirm-close-surface = false
+
+# extras
+shell-integration-features = true
+copy-on-select = clipboard
+focus-follows-mouse = true
+link-url = true
