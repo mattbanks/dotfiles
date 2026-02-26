@@ -13,7 +13,7 @@ source ~/Developer/znap/zsh-snap/znap.zsh  # Start Znap
 # fi
 
 # setup plugins
-znap source rupa/z
+znap source agkozak/zsh-z
 znap source zsh-users/zsh-completions
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-history-substring-search
