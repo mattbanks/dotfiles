@@ -16,6 +16,7 @@ window-padding-x = 12
 window-padding-y = 12
 window-padding-balance = true
 window-show-tab-bar = always
+window-inherit-working-directory = false
 resize-overlay = never
 scrollback-limit = 10000
 
