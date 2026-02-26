@@ -151,5 +151,6 @@
   "[typescript]": {
     "editor.formatOnSave": false
   },
-  "dotnetAcquisitionExtension.sharedExistingDotnetPath": "/usr/local/share/dotnet/sdk"
+  "dotnetAcquisitionExtension.sharedExistingDotnetPath": "/usr/local/share/dotnet/sdk",
+  "security.promptForLocalFileProtocolHandling": false
 }
