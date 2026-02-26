@@ -7,11 +7,10 @@
 
 source ~/Developer/znap/zsh-snap/znap.zsh  # Start Znap
 
-# Only load Pure prompt outside of Warp
-if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
-  # set the prompt
-  znap prompt sindresorhus/pure
-fi
+# Pure prompt (disabled in favour of Starship — uncomment to roll back)
+# if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+#   znap prompt sindresorhus/pure
+# fi
 
 # setup plugins
 znap source rupa/z

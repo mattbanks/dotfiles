@@ -9,6 +9,7 @@ brew 'go'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 brew 'sqlite3'
+brew 'starship'
 brew 'uv'
 
 # Pyenv build dependencies
