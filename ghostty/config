@@ -10,8 +10,8 @@ theme = Dracula
 
 # Window
 background-opacity = 1
-window-height = 30
-window-width = 120
+window-height = 44
+window-width = 135
 window-padding-x = 12
 window-padding-y = 12
 window-padding-balance = true
