@@ -4,23 +4,30 @@
 #
 # `dot_update` handles installation, updates, things like that. Run it
 # periodically to make sure you're on the latest and greatest.
-export DOTFILES="$HOME/.dotfiles"
+DOTFILES=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd -P)
+export DOTFILES
 cd "$DOTFILES" || exit 1
 
 # fixes PATH (we could be running from the crontab)
-PATH="$(command -p getconf PATH):/usr/local/bin"
+PATH="$(command -p getconf PATH):/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin"
+export PATH
 
 # load custom config if any
 # shellcheck disable=SC1090
 [ -f ~/.localrc ] && . ~/.localrc
 
+# Install any missing Homebrew dependencies before topic installers use them.
+echo "› $DOTFILES/homebrew/setup.sh"
+"$DOTFILES/homebrew/setup.sh"
+
 # Run all installs
 echo "› $DOTFILES/script/install"
 "$DOTFILES/script/install"
 
-if command -v znap >/dev/null 2>&1; then
-	echo "› znap update"
-	znap pull
+ZNAP_REPO="${XDG_DATA_HOME:-$HOME/.local/share}/znap/zsh-snap"
+if [ -d "$ZNAP_REPO/.git" ]; then
+	echo "› updating znap"
+	git -C "$ZNAP_REPO" pull --ff-only
 fi
 
 echo "› registering last update"

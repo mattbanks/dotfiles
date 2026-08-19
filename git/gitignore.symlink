@@ -15,7 +15,6 @@ node_modules
 .classpath
 .project
 .settings
-.ruby-version
 .vscode/
 dump.rdb
 main.tfvars

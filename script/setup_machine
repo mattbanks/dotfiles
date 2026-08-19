@@ -9,11 +9,12 @@ DOTFILES_ROOT=$(pwd -P)
 set -e
 
 # Make sure we have Xcode command line tools
-XCODE_INSTALLED="xcode-select -p 1>/dev/null;echo $?"
-if [ XCODE_INSTALLED != "0" ]; then
+if xcode-select -p >/dev/null 2>&1; then
 	echo "› Xcode command line tools already installed"
 else
 	xcode-select --install
+	echo "› Finish installing the Xcode command line tools, then run this script again"
+	exit 0
 fi
 
 # Create ~/Developer if it doesn't exist
@@ -23,37 +24,11 @@ fi
 
 # Setup SSH public key if it doesn't exist
 echo "› Checking for SSH key, generating one if it doesn't exist ..."
-  [[ -f ~/.ssh/id_ed25519.pub ]] || ssh-keygen -t ed25519
-
-# Create /usr/local if it doesn't exist,
-# or update the permissions so we own it
-HOMEBREW_PREFIX="/usr/local"
-
-if [ -d "$HOMEBREW_PREFIX" ]; then
-  if ! [ -r "$HOMEBREW_PREFIX" ]; then
-    sudo chown -R "$LOGNAME:admin" /usr/local
-  fi
-else
-  sudo mkdir "$HOMEBREW_PREFIX"
-  sudo chflags norestricted "$HOMEBREW_PREFIX"
-  sudo chown -R "$LOGNAME:admin" "$HOMEBREW_PREFIX"
-fi
+[ -f "$HOME/.ssh/id_ed25519.pub" ] || ssh-keygen -t ed25519
 
 # Install homebrew
-echo "› $DOTFILES/homebrew/setup"
+echo "› $DOTFILES_ROOT/homebrew/setup.sh"
 "$DOTFILES_ROOT/homebrew/setup.sh"
-
-# Run Homebrew through the Brewfile
-echo "› brew bundle ..."
-brew bundle
-
-# Install nvm and Node 18
-echo "› Configuring NVM and Node ..."
-"$DOTFILES_ROOT/nvm/setup.sh"
-
-# Install npm packages
-echo "› Configuring NPM ..."
-"$DOTFILES_ROOT/node/setup.sh"
 
 # Run all installs
 echo "› Running all installs"

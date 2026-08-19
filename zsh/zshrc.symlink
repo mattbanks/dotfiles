@@ -25,29 +25,40 @@ export HOMEBREW_NO_ANALYTICS=1
 zstyle ':znap:*:*' git-maintenance off
 
 # load znap plugins
-source $DOTFILES/znap/znap.sh
+# Znap normally defers compinit until the first prompt. Keep a direct fallback
+# so completion still works if Znap cannot be downloaded or loaded.
+typeset -i znap_available=1
+if ! source "$DOTFILES/znap/znap.sh"; then
+  print -u2 "warning: znap unavailable; loading zsh completion directly"
+  znap_available=0
+fi
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
   source "$file"
 done
 
-autoload -Uz compinit
-for dump in ~/.zcompdump(N.mh+24); do
-  compinit
-done
-compinit -C
-
-
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}; do
   source "$file"
 done
 
-# uv completions
-eval "$(uv generate-shell-completion zsh)"
+# compinit if Znap is not available
+if (( ! znap_available )); then
+  autoload -Uz compinit
+  compinit
+fi
 
-unset config_files updated_at
+# Cache generated uv completions instead of rebuilding them for every shell.
+if (( $+commands[uv] )); then
+  if (( znap_available )); then
+    znap eval uv-completion 'uv generate-shell-completion zsh'
+  else
+    eval "$(uv generate-shell-completion zsh)"
+  fi
+fi
+
+unset config_files updated_at znap_available
 
 # pull in dotfiles-private zsh aliases and data
 # shellcheck disable=SC1090

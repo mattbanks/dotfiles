@@ -1,0 +1,67 @@
+#!/bin/sh
+set -eu
+
+if [ "${1:-}" != "--apply" ]; then
+  echo "Dry run: no changes will be made."
+  echo ""
+  echo "After verifying mise, --apply will:"
+  echo "  - uninstall Homebrew formulas: pyenv-virtualenv, pyenv, go"
+  echo "  - move ~/.nvm, ~/.pyenv, and ~/.rbenv to ~/.Trash"
+  echo "  - move the old ~/Developer/znap tree after verifying the new checkout"
+  echo ""
+  echo "Run $0 --apply to continue."
+  exit 0
+fi
+
+if [ "$#" -ne 1 ]; then
+  echo "usage: $0 [--apply]" >&2
+  exit 64
+fi
+
+if ! command -v mise >/dev/null 2>&1; then
+  echo "mise is not installed; bootstrap the dotfiles first" >&2
+  exit 1
+fi
+
+cd "$HOME"
+for tool in node pnpm python ruby go; do
+  if ! mise where "$tool" >/dev/null 2>&1; then
+    echo "mise-managed $tool is not installed; run 'mise install' first" >&2
+    exit 1
+  fi
+done
+
+if command -v brew >/dev/null 2>&1; then
+  for formula in pyenv-virtualenv pyenv go; do
+    if brew list --formula "$formula" >/dev/null 2>&1; then
+      brew uninstall "$formula"
+    fi
+  done
+fi
+
+TRASH_DIR="$HOME/.Trash"
+MIGRATION_TIMESTAMP=$(date +%Y%m%d%H%M%S)
+mkdir -p "$TRASH_DIR"
+
+for legacy_dir in "$HOME/.nvm" "$HOME/.pyenv" "$HOME/.rbenv"; do
+  if [ -e "$legacy_dir" ] || [ -L "$legacy_dir" ]; then
+    legacy_name=$(basename "$legacy_dir")
+    trash_target="$TRASH_DIR/${legacy_name}-before-mise-$MIGRATION_TIMESTAMP"
+    mv "$legacy_dir" "$trash_target"
+    echo "Moved $legacy_dir to $trash_target"
+  fi
+done
+
+OLD_ZNAP_DIR="$HOME/Developer/znap"
+NEW_ZNAP_FILE="${XDG_DATA_HOME:-$HOME/.local/share}/znap/zsh-snap/znap.zsh"
+if [ -e "$OLD_ZNAP_DIR" ] || [ -L "$OLD_ZNAP_DIR" ]; then
+  if [ -f "$NEW_ZNAP_FILE" ]; then
+    trash_target="$TRASH_DIR/znap-before-xdg-$MIGRATION_TIMESTAMP"
+    mv "$OLD_ZNAP_DIR" "$trash_target"
+    echo "Moved $OLD_ZNAP_DIR to $trash_target"
+  else
+    echo "Kept $OLD_ZNAP_DIR because the new znap checkout is not installed yet" >&2
+  fi
+fi
+
+echo "Legacy runtime-manager cleanup complete."

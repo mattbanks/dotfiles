@@ -1,6 +1,6 @@
 # matt's dotfiles
 
-> Config files for ZSH, Node, Go, Editors, Terminals and more.
+> Config files for ZSH, development runtimes, editors, terminals, and more.
 
 ## Installation
 
@@ -10,15 +10,11 @@ First, make sure you have macOS developer tools installed:
 
 > `xcode-select --install`
 
-Then, install Homebrew ([install instructions here](https://brew.sh)).
-
-In macOS, you need to enable Full Disk Access for iTerm and Terminal:
-
-> Settings.app -> "Security & Privacy" -> "Full Disk Access"
+The bootstrap script installs Homebrew when needed, installs the public `Brewfile`, and then runs each topic installer.
 
 ### Install
 
-Then, run these steps:
+Clone the repo to `~/.dotfiles`, then run the bootstrap script:
 
 ```console
 $ git clone https://github.com/mattbanks/dotfiles.git ~/.dotfiles
@@ -30,6 +26,27 @@ $ zsh # or just close and open your terminal again.
 > All changed files will be backed up with a `.backup` suffix.
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
+
+## Runtime management
+
+[mise](https://mise.jdx.dev/) manages Node, Python, Ruby, and Go. The public defaults live in `mise/config.toml` and are linked into mise's global `conf.d` directory, leaving `~/.config/mise/config.toml` available for machine-local overrides.
+
+The global defaults track Node LTS and the latest stable Python, Ruby, and Go releases after a seven-day release-age buffer. Projects should pin the version they require in `mise.toml` or an idiomatic version file such as `.nvmrc`,
+`.python-version`, or `.ruby-version`.
+
+Python and Ruby use precompiled binaries so a clean setup does not need a local runtime build toolchain.
+
+`uv` remains the Python project and virtual-environment manager. Global Node CLI tools are installed through mise so they are not tied to a particular Node installation. Both npm and pnpm are available; projects can select pnpm through their `packageManager` declaration.
+
+### Migrating an existing installation
+
+After bootstrapping and confirming the mise-managed runtimes work, preview the optional legacy-manager cleanup:
+
+```sh
+$DOTFILES/script/cleanup_legacy_runtimes
+```
+
+Pass `--apply` to uninstall the known Homebrew runtime managers and move `~/.nvm`, `~/.pyenv`, `~/.rbenv`, and the superseded znap checkout to the macOS Trash. Cleanup is never run automatically.
 
 ### Recommended Software
 
@@ -47,9 +64,9 @@ $DOTFILES/macos/set-defaults.sh
 
 And logging out and in again.
 
-### new machine setup
+### New machine setup
 
-To setup a new machine with brew, node, ruby and run all installers in this repo, run:
+After bootstrapping the dotfiles, the optional machine setup script creates an SSH key when needed and applies the macOS defaults:
 
 ```sh
 $DOTFILES/script/setup_machine
