@@ -37,7 +37,7 @@ steoates.autoimport
 streetsidesoftware.code-spell-checker
 styled-components.vscode-styled-components
 stylelint.vscode-stylelint
-tauri-apps.tauri-vscode
+tamasfe.even-better-toml
 xabikos.javascriptsnippets
 zhuangtongfa.material-theme
 zignd.html-css-class-completion
