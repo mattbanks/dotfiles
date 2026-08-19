@@ -10,11 +10,15 @@ go = "latest"
 "npm:http-server" = "latest"
 "npm:npm-check-updates" = "latest"
 "npm:typescript" = "latest"
-"npm:@openai/codex" = "latest"
+# Fast-moving; a 7d delay leaves it several releases behind.
+"npm:@openai/codex" = { version = "latest", minimum_release_age = "24h" }
 
 [settings]
 idiomatic_version_file_enable_tools = ["go", "node", "pnpm", "python", "ruby"]
+# Delay registry-published packages (npm/pipx/cargo) to blunt supply chain attacks,
+# but not first-party runtimes -- there it only delays security patches.
 minimum_release_age = "7d"
+minimum_release_age_excludes = ["go", "node", "python", "ruby"]
 python.compile = false
 python.uv_venv_auto = "source"
 ruby.compile = false
