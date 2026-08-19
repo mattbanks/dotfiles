@@ -23,10 +23,15 @@ update-all() {
 
     echo ""
 
-    # Update npm global packages
-    npmupg
-    if [ $? -ne 0 ]; then
-        echo "⚠️  npm global update failed"
+    # Update mise-managed runtimes and global CLI tools
+    if command -v mise &> /dev/null; then
+        echo "🛠️  Updating mise tools..."
+        (cd "$HOME" && mise upgrade)
+        if [ $? -ne 0 ]; then
+            echo "⚠️  mise update failed"
+        fi
+    else
+        echo "⏭️  Skipping mise (not installed)"
     fi
 
     echo ""

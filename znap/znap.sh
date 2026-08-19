@@ -1,11 +1,14 @@
-#!/bin/sh
+#!/bin/zsh
 
-# Download Znap, if it's not there yet.
-[[ -f ~/Developer/znap/zsh-snap/znap.zsh ]] ||
+# Download Znap into user data, if it's not there yet.
+ZNAP_REPO="${XDG_DATA_HOME:-$HOME/.local/share}/znap/zsh-snap"
+if [[ ! -f "$ZNAP_REPO/znap.zsh" ]]; then
+    mkdir -p "${ZNAP_REPO:h}" || return 1
     git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/Developer/znap/zsh-snap
+        https://github.com/marlonrichert/zsh-snap.git "$ZNAP_REPO" || return 1
+fi
 
-source ~/Developer/znap/zsh-snap/znap.zsh  # Start Znap
+source "$ZNAP_REPO/znap.zsh" || return 1  # Start Znap
 
 # Pure prompt (disabled in favour of Starship — uncomment to roll back)
 # if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
@@ -18,16 +21,5 @@ znap source zsh-users/zsh-completions
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-history-substring-search
 znap source zsh-users/zsh-syntax-highlighting
-znap source lukechilds/zsh-nvm
-znap source davidparsson/zsh-pyenv-lazy
 
-# Note - leaving here in case need to re-enable at a later date
-#
-# Lazy load NVM and Node with znap
-# We need to make sure we lazy load NVM in for global NPM packages too. This is messy.
-# sourcenvm='source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion'
-# znap function nvm $sourcenvm
-# znap function node $sourcenvm
-# znap function npm $sourcenvm
-# znap function npx $sourcenvm
-# znap function ncu $sourcenvm
+unset ZNAP_REPO

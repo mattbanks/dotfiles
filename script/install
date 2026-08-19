@@ -4,9 +4,14 @@
 set -e
 
 cd "$(dirname "$0")"/..
+DOTFILES=$(pwd -P)
+export DOTFILES
 
-# find the installers and run them iteratively
-git ls-tree --name-only -r HEAD | grep install.sh | while read -r installer; do
+# Find topic installers from the checked-out working tree so local additions and
+# deletions are reflected before the next commit.
+find . -mindepth 2 -maxdepth 2 -type f -name install.sh -print | LC_ALL=C sort |
+while read -r installer; do
+	installer=${installer#./}
 	echo "› ${installer}..."
-	sh -c "$installer"
+	sh "$installer"
 done

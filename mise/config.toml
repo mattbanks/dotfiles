@@ -1,0 +1,20 @@
+[tools]
+node = "lts"
+pnpm = "latest"
+python = "latest"
+ruby = "latest"
+go = "latest"
+
+# Global CLI tools are installed independently from any one Node version.
+"npm:fkill-cli" = "latest"
+"npm:http-server" = "latest"
+"npm:npm-check-updates" = "latest"
+"npm:typescript" = "latest"
+"npm:@openai/codex" = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["go", "node", "pnpm", "python", "ruby"]
+minimum_release_age = "7d"
+python.compile = false
+python.uv_venv_auto = "source"
+ruby.compile = false

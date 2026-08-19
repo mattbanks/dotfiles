@@ -2,7 +2,7 @@
 
 add_newline = true
 
-# Increase timeout for slow shims (e.g. pyenv)
+# Allow extra time for version-managed tools and network-aware modules.
 command_timeout = 2000
 
 [aws]
