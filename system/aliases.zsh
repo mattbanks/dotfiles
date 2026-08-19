@@ -6,11 +6,11 @@ fi
 
 # eza is a better ls tool
 if which eza >/dev/null 2>&1; then
-	alias ls='eza'
-	alias l='eza -lah --git'
-	alias la='eza -laah --git'
-	alias ll='eza -lh --git'
-	alias lt='eza -lhT'
+	alias ls='eza -G'
+	alias l='eza -lah --git --icons'
+	alias la='eza -laah --git --icons'
+	alias ll='eza -lh --git --icons'
+	alias lt='eza -lhT --icons'
 else
 	if [ "$(uname -s)" = "Darwin" ]; then
 		alias ls="ls -FG"
