@@ -1,5 +1,16 @@
 #!/bin/sh
+#
+# brew-bump
+#
+# Brings Homebrew fully in sync: refresh metadata, install anything newly
+# declared in the Brewfile, then upgrade and clean up what is installed.
+# `brew upgrade` never installs, so the bundle step is what picks up formulas
+# added to the repo since the last run. --no-upgrade keeps it to installs; the
+# upgrade below owns that, and `brew update` has already refreshed the taps.
+DOTFILES=${DOTFILES:-$(CDPATH= cd -- "$(dirname "$0")/.." && pwd -P)}
+
 brew update
+brew bundle --no-upgrade --file="$DOTFILES/Brewfile"
 brew outdated | xargs brew fetch
 brew upgrade --yes
 brew cleanup

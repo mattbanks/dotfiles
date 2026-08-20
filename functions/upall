@@ -6,9 +6,7 @@ update-all() {
     echo ""
 
     # Update Homebrew
-    # bundle first so formulas added to the Brewfile land before the upgrade.
     echo "🍺 Updating Homebrew..."
-    brew bundle --file="$DOTFILES/Brewfile"
     brew bump
     if [ $? -ne 0 ]; then
         echo "⚠️  Homebrew update failed"
