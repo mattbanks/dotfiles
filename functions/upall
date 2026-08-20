@@ -6,7 +6,9 @@ update-all() {
     echo ""
 
     # Update Homebrew
+    # bundle first so formulas added to the Brewfile land before the upgrade.
     echo "🍺 Updating Homebrew..."
+    brew bundle --file="$DOTFILES/Brewfile"
     brew bump
     if [ $? -ne 0 ]; then
         echo "⚠️  Homebrew update failed"
@@ -26,7 +28,9 @@ update-all() {
     # Update mise-managed runtimes and global CLI tools
     if command -v mise &> /dev/null; then
         echo "🛠️  Updating mise tools..."
-        (cd "$HOME" && mise upgrade)
+        # mise upgrade re-resolves every tracked config when it prunes an old
+        # version, and a single stale entry fails the whole run. Sweep first.
+        (cd "$HOME" && mise install; mise prune --configs; mise upgrade)
         if [ $? -ne 0 ]; then
             echo "⚠️  mise update failed"
         fi

@@ -29,30 +29,30 @@ This will symlink the appropriate files in `.dotfiles` to your home directory.
 
 ## Runtime management
 
-[mise](https://mise.jdx.dev/) manages Node, Python, Ruby, and Go. The public defaults live in `mise/config.toml` and are linked into mise's global `conf.d` directory, leaving `~/.config/mise/config.toml` available for machine-local overrides.
+[mise](https://mise.jdx.dev/) manages Node, Python, and Ruby. The public defaults live in `mise/config.toml` and are linked into mise's global `conf.d` directory, leaving `~/.config/mise/config.toml` available for machine-local overrides.
 
-The global defaults track Node LTS and the latest stable Python, Ruby, and Go releases after a seven-day release-age buffer. Projects should pin the version they require in `mise.toml` or an idiomatic version file such as `.nvmrc`,
+The global defaults track Node LTS and the latest stable Python and Ruby releases after a seven-day release-age buffer. Projects should pin the version they require in `mise.toml` or an idiomatic version file such as `.nvmrc`,
 `.python-version`, or `.ruby-version`.
 
 Python and Ruby use precompiled binaries so a clean setup does not need a local runtime build toolchain.
 
 `uv` remains the Python project and virtual-environment manager. Global Node CLI tools are installed through mise so they are not tied to a particular Node installation. Both npm and pnpm are available; projects can select pnpm through their `packageManager` declaration.
 
-### Migrating an existing installation
-
-After bootstrapping and confirming the mise-managed runtimes work, preview the optional legacy-manager cleanup:
-
-```sh
-$DOTFILES/script/cleanup_legacy_runtimes
-```
-
-Pass `--apply` to uninstall the known Homebrew runtime managers and move `~/.nvm`, `~/.pyenv`, `~/.rbenv`, and the superseded znap checkout to the macOS Trash. Cleanup is never run automatically.
-
 ### Recommended Software
 
-For both Linux and macOS:
+Installed from the `Brewfile` during bootstrap:
 
+- `awscli`: AWS command line interface.
 - `eza`: for better `ls`.
+- `gh`: GitHub CLI.
+- `git`: newer than the version macOS ships.
+- `mise`: runtime and global CLI tool manager.
+- `starship`: the shell prompt.
+- `uv`: Python packaging and virtual environments.
+
+Installed separately:
+
+- [Ghostty](https://ghostty.org): the terminal emulator. `ghostty/install.sh` links `ghostty/config` to `~/.config/ghostty/config`, so the font, theme, and window settings travel with the repo.
 
 ### macOS defaults
 
