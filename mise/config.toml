@@ -13,6 +13,12 @@ ruby = "latest"
 "npm:@openai/codex" = { version = "latest", minimum_release_age = "24h" }
 
 [settings]
+# gh keeps its tokens in the macOS keyring, and mise's built-in gh support reads
+# hosts.yml directly rather than shelling out -- so it finds nothing and falls
+# back to unauthenticated API calls (60/hr, shared machine-wide).
+# --hostname pins the token to the host mise is actually asking about, so a
+# github.com token is never sent to a GitHub Enterprise instance.
+github.credential_command = 'gh auth token --hostname "$MISE_CREDENTIAL_HOST"'
 idiomatic_version_file_enable_tools = ["node", "pnpm", "python", "ruby"]
 # Delay registry-published packages (npm/pipx/cargo) to blunt supply chain attacks,
 # but not first-party runtimes -- there it only delays security patches.
